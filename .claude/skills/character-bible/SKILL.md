@@ -9,8 +9,8 @@ description: The source of truth for every recurring character, so each one look
 
 | Role | Character | Style | Made with |
 |---|---|---|---|
-| YouTube long-form host | `host-01` (candidate; owner confirms) | Low-effort flat cartoon, SVG puppet, lip-synced to the owner's voice | Free tools (`video-assembly`) |
-| PoolParty + Sovereign promos | Not created yet | Realistic AI actor | `higgsfield-api`; **always AI-labeled** |
+| YouTube long-form host | `robot-host` (style test; owner names it) | 2D cartoon killer robot in a hoodie, SVG puppet, lip-synced to the owner's voice | Free tools (`video-assembly`) |
+| PoolParty + The Sovereign promos | Not created yet (same cast for both brands) | Realistic AI actor(s) | `higgsfield-api`; **always AI-labeled** |
 | All other promos | None required | Motion graphics, text, screen recordings, product shots | Free tools first |
 
 Don't put a character into a video just because one exists. Character-free
@@ -53,6 +53,6 @@ images in a PR. Until then, don't use it in any post.
 - Characters are actors: never a fake customer or testimonial.
 
 ## Characters
-- `host-01`: sprout-headed cartoon host. Candidate for the YouTube long-form
-  host. Working name; the owner picks the real name.
-- Realistic promo character: not created yet.
+- `robot-host`: hooded cartoon killer robot, long-form YouTube host. Working
+  name; the owner picks the real name.
+- Realistic promo cast (shared by PoolParty and The Sovereign): not created yet.

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Render a lip-synced SVG puppet clip. Free tools only: Rhubarb + ffmpeg (librsvg).
 
-  python3 studio/render_puppet.py --character host-01 --audio vo.wav \
+  python3 studio/render_puppet.py --character robot-host --audio vo.wav \
       --dialog script.txt --captions captions.json --out clip.mp4
 
 captions.json (optional): [{"start": 0.0, "end": 1.8, "text": "Hi!"}, ...]
@@ -61,9 +61,9 @@ def caption(t, captions):
 
 def frame_svg(rig, t, mouth, captions, label, wave):
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">'
-            f'{background(t)}<g transform="translate(40 380)">{rig.draw(mouth, t, blink_at(t), wave)}</g>'
+            f'{getattr(rig, "background", background)(t)}<g transform="translate(40 380)">{rig.draw(mouth, t, blink_at(t), wave)}</g>'
             f'{caption(t, captions)}'
-            f'<text x="540" y="1840" font-family="DejaVu Sans" font-size="30" fill="#23313F" opacity="0.6" '
+            f'<text x="540" y="1840" font-family="DejaVu Sans" font-size="30" fill="#9AA3B2" '
             f'text-anchor="middle">{escape(label)}</text></svg>')
 
 

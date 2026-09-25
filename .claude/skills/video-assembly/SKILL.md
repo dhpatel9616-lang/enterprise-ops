@@ -23,7 +23,7 @@ No paid editors, no stock sites without a free licence, no paid APIs here
    Spot-check a few timings.
 4. **Render the puppet clip:**
    ```
-   python3 studio/render_puppet.py --character host-01 --audio vo.wav \
+   python3 studio/render_puppet.py --character robot-host --audio vo.wav \
      --dialog dialog.txt --captions captions.json --out clip.mp4
    ```
    Output is 1080×1920 (Shorts/TikTok/Reels). For YouTube long-form, change
@@ -43,5 +43,5 @@ never redraw them. A new character = a new folder with its own `rig.py`
 exposing `draw(mouth, t, blink, wave)`.
 
 ## Example
-`studio/samples/host-01-style-test/make.sh` rebuilds the 10-second style test
+`studio/samples/robot-host-style-test/make.sh` rebuilds the 10-second style test
 end to end (with a robot placeholder voice).
