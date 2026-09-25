@@ -5,7 +5,21 @@ description: The source of truth for every recurring character, so each one look
 
 # Character bible
 
-Each character has a folder in `characters/<id>/`:
+## Roles
+
+| Role | Character | Style | Made with |
+|---|---|---|---|
+| YouTube long-form host | `host-01` (candidate; owner confirms) | Low-effort flat cartoon, SVG puppet, lip-synced to the owner's voice | Free tools (`video-assembly`) |
+| PoolParty + Sovereign promos | Not created yet | Realistic AI actor | `higgsfield-api`; **always AI-labeled** |
+| All other promos | None required | Motion graphics, text, screen recordings, product shots | Free tools first |
+
+Don't put a character into a video just because one exists. Character-free
+promos are normal.
+
+## Folders
+Each character has a folder in `characters/<id>/`.
+
+**Cartoon characters:**
 
 | File | What it is |
 |---|---|
@@ -13,6 +27,17 @@ Each character has a folder in `characters/<id>/`:
 | `rig.py` | The SVG puppet (the drawing itself), used by `studio/render_puppet.py` |
 | `reference-sheet.png` | All 9 mouth shapes, for checking consistency |
 | `reference-pose.png` | Hero pose in a real scene |
+
+**Realistic AI characters:**
+
+| File | What it is |
+|---|---|
+| `README.md` | Description, personality, wardrobe, voice, which brands use it, do/don't list |
+| `prompt.md` | The exact generation prompt, negative prompt, model, seed, and settings |
+| `ref-front.png`, `ref-three-quarter.png`, `ref-full-body.png` | Approved reference images, attached to every new generation |
+
+A realistic character is locked only after the owner approves its reference
+images in a PR. Until then, don't use it in any post.
 
 ## Rules
 - **Never redraw a character from memory.** Render from its `rig.py`. For AI
@@ -28,5 +53,6 @@ Each character has a folder in `characters/<id>/`:
 - Characters are actors: never a fake customer or testimonial.
 
 ## Characters
-- `host-01`: sprout-headed cartoon host (working name; the owner picks the real
-  name and which brand it belongs to).
+- `host-01`: sprout-headed cartoon host. Candidate for the YouTube long-form
+  host. Working name; the owner picks the real name.
+- Realistic promo character: not created yet.
