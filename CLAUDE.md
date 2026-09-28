@@ -45,10 +45,13 @@ See the `brand-voice` skill.
    (the workspace SQL quota is exhausted).
 10. **Build standards:** follow the `build-standards` skill for any Supabase,
    cron, or migration work.
-11. **The mailing address is private.** It lives only in Supabase
-   `settings.outreach.physical_address` and appears only in Wade Capital
-   service outreach emails to businesses. Never put it in this repo (it's
-   public), Notion content, posts, videos, or any other message.
+11. **The mailing address is private.** It lives only in the Supabase
+   `settings` row `business_mailing_address` and appears only in outgoing
+   Wade Capital service emails to businesses. Never hard-code it or put it in
+   this repo (it's public), Notion content, posts, videos, or any other message.
+12. **Never create pages at the top level of the Command Center.** Strategy
+   Memos go in the **Weekly Log** database; if it can't be read, log the
+   problem in **Automation Control** instead.
 
 ## Allowed systems
 
@@ -60,6 +63,10 @@ See the `brand-voice` skill.
 | Supabase `skakrtljfaeopfqigyww` | Enterprise Leads data (outreach); public `studio-videos` bucket for rendered videos |
 | GitHub `enterprise-leads` repo | Outreach sequencer (changes go through PRs) |
 | Higgsfield API (`HF_KEY`) | Paid generation, cheapest model that meets the brief |
+
+## Weekly social posts
+
+Three per week, planned with the `content-mix` skill.
 
 ## Night-shift loop
 
