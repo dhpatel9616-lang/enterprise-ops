@@ -23,11 +23,11 @@ No paid editors, no stock sites without a free licence, no paid APIs here
    Spot-check a few timings.
 4. **Render the puppet clip:**
    ```
-   python3 studio/render_puppet.py --character host-01 --audio vo.wav \
+   python3 studio/render_puppet.py --character robot-host --layout wide --audio vo.wav \
      --dialog dialog.txt --captions captions.json --out clip.mp4
    ```
-   Output is 1080×1920 (Shorts/TikTok/Reels). For YouTube long-form, change
-   `W, H` to 1920×1080 in the script's call site or add a flag in a PR.
+   Default output is 1080×1920 (Shorts/TikTok/Reels). Add `--layout wide`
+   for 1920×1080 YouTube long-form (Robot always uses wide).
 5. **Extra graphics** (title cards, charts, lower thirds): write them as SVG
    in code, render with ffmpeg, and join with the `concat` demuxer or
    `overlay` filter. Keep brand colors from `brand-voice`.
@@ -43,5 +43,5 @@ never redraw them. A new character = a new folder with its own `rig.py`
 exposing `draw(mouth, t, blink, wave)`.
 
 ## Example
-`studio/samples/host-01-style-test/make.sh` rebuilds the 10-second style test
+`studio/samples/robot-host-style-test/make.sh` rebuilds the 10-second style test
 end to end (with a robot placeholder voice).

@@ -15,6 +15,15 @@ description: Honesty and safety rules for every script, video, image, and post. 
 - Real results or quotes only come from real, named, consenting people, with
   the owner's written OK and proof on file.
 
+## Realistic AI characters (PoolParty and Sovereign promos)
+- Every video or image with a realistic AI character gets the platform's AI
+  label **and** an on-screen "AI actor" or "Made with AI" note. No exceptions.
+- They can demonstrate or explain (e.g. show PoolParty features, introduce a
+  Sovereign issue). They never pretend to be a real user, employee, founder,
+  journalist, or eyewitness, and never say "I use this and love it."
+- For Sovereign (a media brand), an AI character never delivers news as if a
+  human reporter were on the scene.
+
 ## Label realistic AI content
 - If a viewer could mistake AI-made footage, voice, or images for something
   real (a real-looking person, place, or event), it must carry the

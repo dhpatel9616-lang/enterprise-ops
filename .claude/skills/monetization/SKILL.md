@@ -1,6 +1,6 @@
 ---
 name: monetization
-description: Revenue rules. We have zero revenue, so every content brief, script, video, post, and outreach email must name its revenue path and CTA. Use whenever planning, writing, or reviewing any content or campaign. Covers the four revenue paths in priority order, affiliate FTC disclosure, and the Sovereign/Wade Capital ownership disclosure.
+description: Revenue rules. We have zero revenue, so every content brief, script, video, post, and outreach email must name its revenue path and CTA. Use whenever planning, writing, or reviewing any content or campaign. Covers the four revenue paths in priority order, the CTA for each content arm, affiliate FTC disclosure, and the ownership disclosure when The Sovereign promotes another Wade Capital product.
 ---
 
 # Monetization
@@ -21,8 +21,8 @@ shipping.
      earn a commission at no extra cost to you. We only list tools we use."
    - Say it out loud in the video too when recommending the tool.
    - Never recommend a tool only because it pays.
-3. **Email capture:** Sovereign Substack, Global Aggregate signup, PoolParty
-   App Store download.
+3. **Audience capture:** The Sovereign's Substack, The Global Aggregate
+   (globalaggregate.org), PoolParty App Store download.
 4. **YouTube Partner Program progress:** subscribers and watch time.
    Thresholds (check current numbers): 1,000 subscribers plus 4,000 public
    watch hours in 12 months, or 10 million Shorts views in 90 days.
@@ -30,11 +30,25 @@ shipping.
 Pick the **highest** path that honestly fits the content. One primary CTA per
 piece; at most one secondary.
 
-## Ownership disclosure
-When Sovereign content promotes or mentions a Wade Capital product or service,
-add this one line (in the caption/description, and on screen for video):
+## CTA by content arm (from the owner)
 
-> Disclosure: Sovereign and Wade Capital share the same owner.
+| Arm | CTA |
+|---|---|
+| YouTube (The Sovereign) | "Subscribe, follow our Instagram, and read our Substack." |
+| PoolParty promotion | "Download PoolParty." (18+ audience until confirmed; see `brand-voice`) |
+| The Global Aggregate promotion | "Use The Global Aggregate" → globalaggregate.org |
+| Substack promotion | Standout excerpt from the piece + "collaborate with us" or "subscribe" |
+| Wade Capital services/R&D | "Inquire about <service>" / "Collaborate with us" |
+
+Instagram: @wadecapitallc. Links that aren't known yet (PoolParty App Store link):
+write "ASK OWNER"; never guess a URL.
+
+## Ownership disclosure
+When The Sovereign promotes or mentions anything else under Wade Capital
+(PoolParty, The Global Aggregate, or a Wade Capital service), add this one
+line in the caption/description, and on screen for video:
+
+> Disclosure: The Sovereign and <product> are both part of Wade Capital.
 
 ## Brief checklist (put this at the top of every script/brief)
 

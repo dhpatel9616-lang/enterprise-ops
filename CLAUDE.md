@@ -3,6 +3,10 @@
 This repo is the control room for the owner's autonomous content studio and
 night-shift routines. Claude drafts and builds. The owner approves.
 
+Wade Capital is the umbrella. Under it: The Sovereign (media), PoolParty
+(app), The Global Aggregate (news platform), and Wade Capital's services.
+See the `brand-voice` skill.
+
 ## Who does what
 
 - **Claude:** writes scripts, storyboards, captions, outreach drafts, code, and
@@ -30,10 +34,14 @@ night-shift routines. Claude drafts and builds. The owner approves.
    `monetization` skill).
 6. **Follow `content-rules`:** AI characters are actors, never fake customers
    or testimonials; label realistic AI content; no real people's likenesses.
-7. **Say "for beginners", never "for kids".** Our audience is adults who are
-   new to a topic.
+7. **Say "for beginners", never "for kids".** Our audience is young,
+   digitally literate people (roughly 14-30) who are new to a topic.
 8. **Secrets stay secret.** Read credentials (for example `HF_KEY`) from
    environment variables. Never print, log, or commit them.
+9. **The mailing address is private.** It lives only in Supabase
+   `settings.outreach.physical_address` and appears only in Wade Capital
+   service outreach emails to businesses. Never put it in this repo (it's
+   public), Notion content, posts, videos, or any other message.
 
 ## Allowed systems
 

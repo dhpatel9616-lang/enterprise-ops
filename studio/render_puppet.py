@@ -1,19 +1,25 @@
 #!/usr/bin/env python3
 """Render a lip-synced SVG puppet clip. Free tools only: Rhubarb + ffmpeg (librsvg).
 
-  python3 studio/render_puppet.py --character host-01 --audio vo.wav \
+  python3 studio/render_puppet.py --character robot-host --audio vo.wav \
       --dialog script.txt --captions captions.json --out clip.mp4
 
 captions.json (optional): [{"start": 0.0, "end": 1.8, "text": "Hi!"}, ...]
 --sheet out.png renders a mouth-shape reference sheet instead of a clip.
 """
-import argparse, importlib.util, json, math, shutil, subprocess, tempfile
+import argparse, importlib.util, json, shutil, subprocess, tempfile
 from pathlib import Path
 from xml.sax.saxutils import escape
 
 ROOT = Path(__file__).resolve().parent.parent
 CHARACTERS = ROOT / ".claude/skills/character-bible/characters"
-FPS, W, H = 30, 1080, 1920
+FPS = 30
+# Frame size, where the character sits, caption box (x, y, w, h), footer label y.
+LAYOUTS = {
+    "tall": dict(W=1080, H=1920, char="translate(40 380)", box=(50, 1480, 980, 150), label_y=1840),  # Shorts/TikTok/Reels
+    "wide": dict(W=1920, H=1080, char="translate(900 80)", box=(60, 850, 860, 130), label_y=1060),  # YouTube long-form
+}
+L = LAYOUTS["tall"]
 
 
 def load_rig(name):
@@ -36,34 +42,23 @@ def blink_at(t):
     return 1.0 if phase < 0.15 else 0.0
 
 
-def background(t):
-    # Code-generated motion graphics: slow sunburst + drifting dots.
-    rays = "".join(
-        f'<path d="M540 900 L{540 + 1600 * math.cos(a):.0f} {900 + 1600 * math.sin(a):.0f} '
-        f'L{540 + 1600 * math.cos(a + 0.12):.0f} {900 + 1600 * math.sin(a + 0.12):.0f} Z" fill="#FFE7C2"/>'
-        for a in (i * math.pi / 8 + t * 0.15 for i in range(16)))
-    dots = "".join(
-        f'<circle cx="{(i * 137 + t * 30 * (1 + i % 3)) % (W + 80) - 40:.0f}" cy="{160 + (i * 211) % 1500}" '
-        f'r="{10 + i % 4 * 6}" fill="{("#F4A6A0", "#7FC8A9", "#F2B134")[i % 3]}" opacity="0.5"/>'
-        for i in range(14))
-    return f'<rect width="{W}" height="{H}" fill="#FFF4E0"/>{rays}{dots}'
-
-
 def caption(t, captions):
     for c in captions:
         if c["start"] <= t < c["end"]:
             text = escape(c["text"])
-            return (f'<rect x="50" y="1480" width="980" height="150" rx="36" fill="#23313F" opacity="0.92"/>'
-                    f'<text x="540" y="1575" font-family="DejaVu Sans" font-weight="bold" font-size="46" '
+            x, y, w, h = L["box"]
+            return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="36" fill="#23313F" opacity="0.92"/>'
+                    f'<text x="{x + w / 2}" y="{y + h / 2 + 16}" font-family="DejaVu Sans" font-weight="bold" font-size="42" '
                     f'fill="#fff" text-anchor="middle">{text}</text>')
     return ""
 
 
 def frame_svg(rig, t, mouth, captions, label, wave):
+    W, H = L["W"], L["H"]
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">'
-            f'{background(t)}<g transform="translate(40 380)">{rig.draw(mouth, t, blink_at(t), wave)}</g>'
+            f'{rig.background(t, W, H)}<g transform="{L["char"]}">{rig.draw(mouth, t, blink_at(t), wave)}</g>'
             f'{caption(t, captions)}'
-            f'<text x="540" y="1840" font-family="DejaVu Sans" font-size="30" fill="#23313F" opacity="0.6" '
+            f'<text x="{W / 2}" y="{L["label_y"]}" font-family="DejaVu Sans" font-size="30" fill="#9AA3B2" '
             f'text-anchor="middle">{escape(label)}</text></svg>')
 
 
@@ -114,5 +109,7 @@ if __name__ == "__main__":
     p.add_argument("--wave-at", type=float, help="second at which the host waves")
     p.add_argument("--label", default="", help="small footer text, e.g. an AI/synthetic disclosure")
     p.add_argument("--sheet", help="write a mouth-shape reference PNG and exit")
+    p.add_argument("--layout", choices=LAYOUTS, default="tall", help="tall = 9:16 shorts, wide = 16:9 YouTube")
     a = p.parse_args()
+    L = LAYOUTS[a.layout]
     render_sheet(a) if a.sheet else render_clip(a)

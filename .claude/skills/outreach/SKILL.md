@@ -48,7 +48,11 @@ CTA: <one question the lead can answer yes to>
 - **CAN-SPAM basics** (the sequencer adds these automatically; keep them in
   any hand-written email too):
   - Sender's real name and a working reply address.
-  - The business's physical mailing address (a PO box is OK).
+  - The mailing address. It lives **only** in Supabase
+    `settings.outreach.physical_address`. It is used **only** in Wade
+    Capital service outreach to businesses (website, social, legal AI,
+    security). Never write it into this repo, Notion pages, social posts,
+    videos, or emails to individuals or researchers.
   - An opt-out line: *Not interested? Reply "unsubscribe" and I won't email
     you again.* Honor it within 10 business days (our system stops at once).
 - No AI characters, testimonials, or claims we can't back up (`content-rules`).
