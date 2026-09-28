@@ -28,8 +28,10 @@ not yet confirmed by the owner.
   people), and point to primary sources.
 - **No sign-off** needed.
 - **For beginners, never "for kids".**
-- **Tone references** (for feel only; never copy): jakeswiz,
-  morganstuphealth, Christopher Hitchens (erudite, confident, cutting wit).
+- **Tone references** (for feel only; never copy): jakeswiz and
+  morganstuphealth for their spin (educational, urgent, with attention to
+  health and learning); Christopher Hitchens for erudite, confident,
+  cutting wit.
 
 ### Words (proposed; owner to confirm or edit)
 - **Use:** "check it yourself", "primary source", "readiness", "prepared,
@@ -45,8 +47,8 @@ events and want to protect themselves and their loved ones with
 uncorrupted information.
 
 Because that includes 14–17-year-olds:
-- **PoolParty** promos (a wagering/prediction app) are aimed at 18+ only
-  until the owner confirms how wagers work and the minimum age.
+- **PoolParty** promos follow the campaign rules in the PoolParty section
+  (no real money shown, alcohol scenes only for 21+ audiences).
 - **Affiliate links** never point to age-restricted products (alcohol,
   tobacco/vapes, gambling, weapons purchases).
 - **Survival/readiness** content stays protective and educational and
@@ -94,10 +96,11 @@ until then:** Wade Capital's dark palette and fonts, with the robot host's red
   media.
 - **Topics:** survival, fitness, cybersecurity, policy, philosophy,
   readiness.
+- **Instagram:** @wadecapitallc.
 - **Content arms and CTAs:**
   | Arm | Format | CTA |
   |---|---|---|
-  | YouTube long-form | Robot host (`character-bible`) | "Subscribe, follow our Instagram, and read our Substack." |
+  | YouTube long-form: "Robot teaches Cybersecurity" | Robot (`character-bible`), 16:9 | "Subscribe, follow our Instagram, and read our Substack." |
   | Substack promotion | Standout excerpts from pieces (quote cards, short reads) | Collaborate with us, or subscribe |
   | Article promo shorts | Realistic AI actor or character-free video on the article's topic | "Read the full piece" → Substack |
 - Note: the Wade Capital website still describes The Sovereign as "an
@@ -107,10 +110,25 @@ until then:** Wade Capital's dark palette and fonts, with the robot host's red
 ## PoolParty
 - **What it is (website):** "A social app for friendly wagers and prediction
   pools with friends." Launching soon on the App Store.
+- **No money moves through the app** (owner, 2026-09-28). Stakes are
+  bragging rights and small favors between friends.
 - **CTA:** "Download PoolParty." (App Store link: not live yet.)
-- **On camera:** the realistic AI actor cast shared with The Sovereign,
-  always AI-labeled (`content-rules`).
-- **Audience:** 18+ only until confirmed (see Audience).
+- **On camera:** `promo-cast`, the realistic AI adults shared with The
+  Sovereign, always AI-labeled (`content-rules`).
+- **Campaign:** "friendly wagers" ads, one everyday scenario per ad (see
+  `campaigns/poolparty-friendly-wagers.md` in the repo root).
+- **Campaign rules:**
+  - Stakes are never cash, Venmo, or anything with money value. Show
+    favors and bragging rights (loser does the dishes, wears the rival
+    jersey, eats the hottest wing). Caption line: "No real money. Just
+    bragging rights."
+  - Everyone on camera looks clearly 25+.
+  - Alcohol scenes: no chugging, no drunkenness, no drinking-and-driving
+    framing; post only where the audience can be limited to 21+ (a YouTube
+    age restriction, or an Instagram account minimum age); never on TikTok.
+    Default to alcohol-free versions (hot-sauce wings, sour candy, dares).
+  - Show the real app only: real screen recordings from the owner, or the
+    phone screen out of view. Never invent app screens or features.
 
 ## The Global Aggregate
 - **What it is (website):** clusters coverage of the same story from sources
@@ -120,10 +138,7 @@ until then:** Wade Capital's dark palette and fonts, with the robot host's red
 - Natural fit with The Sovereign's "uncorrupted information" promise.
 
 ## Open questions (ask the owner; don't guess)
-- The robot host's name.
-- The Sovereign's Instagram handle (needed for the YouTube CTA).
 - The Sovereign's look (colors/logo from the Substack).
-- PoolParty: real money or just-for-fun points, and the minimum age.
-- The realistic actor cast: how many, and roughly what they look like.
-- What specifically to borrow from jakeswiz and morganstuphealth (pacing?
-  humor? editing style?).
+- PoolParty: App Store link and age rating (at launch), and real screen
+  recordings for ads.
+- Approval of the draft `promo-cast`.

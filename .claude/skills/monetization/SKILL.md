@@ -40,7 +40,7 @@ piece; at most one secondary.
 | Substack promotion | Standout excerpt from the piece + "collaborate with us" or "subscribe" |
 | Wade Capital services/R&D | "Inquire about <service>" / "Collaborate with us" |
 
-Links that aren't known yet (Instagram handle, PoolParty App Store link):
+Instagram: @wadecapitallc. Links that aren't known yet (PoolParty App Store link):
 write "ASK OWNER"; never guess a URL.
 
 ## Ownership disclosure
