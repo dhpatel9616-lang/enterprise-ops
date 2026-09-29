@@ -19,10 +19,13 @@ See the `brand-voice` skill.
 ## Hard rules (never break these)
 
 1. **Nothing publishes without the owner's approval.** No "Share now", no
-   scheduled Buffer queue slots, no direct uploads to YouTube/TikTok/Instagram,
-   no sent emails that the owner hasn't approved. Buffer posts are saved as
+   scheduled Buffer queue slots, no direct uploads to TikTok/Instagram, no
+   sent emails that the owner hasn't approved. Buffer posts are saved as
    drafts only. First-touch outreach sends only after the Notion "Approve" box
-   is ticked (see the `outreach` skill).
+   is ticked (see the `outreach` skill). Long-form YouTube uploads are allowed
+   only through the approved uploader workflow and only when the
+   'Autopost — YouTube long-form' switch is Enabled (Notion → Automation
+   Control).
 2. **Never touch PoolParty production:** Supabase project
    `tzebfwmrmzhkeoptwkzy`. No reads, no writes, no migrations, no branches, no
    edge functions. If a task seems to need it, stop and ask.
@@ -38,10 +41,17 @@ See the `brand-voice` skill.
    digitally literate people (roughly 14-30) who are new to a topic.
 8. **Secrets stay secret.** Read credentials (for example `HF_KEY`) from
    environment variables. Never print, log, or commit them.
-9. **The mailing address is private.** It lives only in Supabase
-   `settings.outreach.physical_address` and appears only in Wade Capital
-   service outreach emails to businesses. Never put it in this repo (it's
-   public), Notion content, posts, videos, or any other message.
+9. **Notion: query databases only with view mode or fetch, never SQL mode**
+   (the workspace SQL quota is exhausted).
+10. **Build standards:** follow the `build-standards` skill for any Supabase,
+   cron, or migration work.
+11. **The mailing address is private.** It lives only in the Supabase
+   `settings` row `business_mailing_address` and appears only in outgoing
+   Wade Capital service emails to businesses. Never hard-code it or put it in
+   this repo (it's public), Notion content, posts, videos, or any other message.
+12. **Never create pages at the top level of the Command Center.** Strategy
+   Memos go in the **Weekly Log** database; if it can't be read, log the
+   problem in **Automation Control** instead.
 
 ## Allowed systems
 
@@ -49,10 +59,14 @@ See the `brand-voice` skill.
 |---|---|
 | Notion, "The Enterprise — Command Center" | Content Ideas, Scripts, Build Queue, Raw Leads Inbox (+ "Outreach Approvals" view) |
 | Google Drive, "Voiceovers" folder | Owner's recorded voiceovers |
-| Buffer | Drafts only |
-| Supabase `skakrtljfaeopfqigyww` | Enterprise Leads data (outreach) |
+| Buffer | Drafts only (video posts use a public URL from `studio/upload_video.py`) |
+| Supabase `skakrtljfaeopfqigyww` | Enterprise Leads data (outreach); public `studio-videos` bucket for rendered videos |
 | GitHub `enterprise-leads` repo | Outreach sequencer (changes go through PRs) |
 | Higgsfield API (`HF_KEY`) | Paid generation, cheapest model that meets the brief |
+
+## Weekly social posts
+
+Three per week, planned with the `content-mix` skill.
 
 ## Night-shift loop
 

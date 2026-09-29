@@ -9,7 +9,7 @@ description: The source of truth for every recurring character, so each one look
 
 | Role | Character | Style | Made with |
 |---|---|---|---|
-| YouTube long-form host only ("Robot teaches Cybersecurity") | `robot-host`, named **Robot** | 3D-styled, whimsical killer robot in a hoodie; SVG puppet lip-synced to the owner's voice | Free tools (`video-assembly`), `--layout wide` |
+| YouTube long-form host only ("Robot teaches Cybersecurity") | `robot-host`, named **Robot** | humanoid, combat-worn android (bust); SVG puppet lip-synced to the owner's voice | Free tools (`video-assembly`), `--layout wide` |
 | PoolParty + The Sovereign promos | `promo-cast` (draft, same cast for both brands) | Realistic AI adults | `higgsfield-api`; **always AI-labeled** |
 | All other promos | None required | Motion graphics, text, screen recordings, product shots | Free tools first |
 
@@ -51,6 +51,11 @@ images in a PR. Until then, don't use it in any post.
   mascot, or real person (see `content-rules`). Names and brand fit come from
   the owner (see `brand-voice`).
 - Characters are actors: never a fake customer or testimonial.
+- **Rig performance:** use `fill-opacity` / `stroke-opacity`, never the
+  `opacity` attribute on individual shapes, and avoid SVG filters and
+  per-frame clip-paths. Each makes the renderer draw on a separate layer
+  (Robot went from 0.5 s to 0.07 s per frame after this change). Target
+  under 0.2 s per frame so a 10-minute video renders in about 20 minutes.
 
 ## Characters
 - `robot-host` (**Robot**): long-form YouTube host only.

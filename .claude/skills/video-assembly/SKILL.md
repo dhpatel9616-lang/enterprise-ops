@@ -12,7 +12,11 @@ No paid editors, no stock sites without a free licence, no paid APIs here
 - **ffmpeg** (with librsvg): renders SVG frames, mixes audio, encodes.
 - **Rhubarb Lip Sync**: turns a voiceover into mouth shapes A-H, X.
 - **Python 3 stdlib**: generates SVG frames (characters + motion graphics).
-- Install/refresh all of them: `bash studio/setup.sh`.
+- Install/refresh all of them: `bash studio/setup.sh` (the same script is
+  pasted into the cloud environment's Setup script box, so routines start
+  with everything installed).
+- Public link for a finished video (for Buffer/uploader):
+  `python3 studio/upload_video.py <video.mp4>`.
 
 ## Pipeline
 1. **Get the voiceover** (see `voiceover-workflow`); convert to WAV:

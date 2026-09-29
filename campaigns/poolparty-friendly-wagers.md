@@ -15,8 +15,9 @@ always labeled.
    screen recording as an insert, or keep the phone screen out of view.
 3. **The moment (6–12 s):** the thing happens; reactions.
 4. **Payoff (12–16 s):** the loser pays the favor, the winner gloats.
-5. **End card (last 2–3 s):** PoolParty logo + "Download PoolParty" + "No
-   real money. Just bragging rights." + "AI actors".
+5. **End card (last 2–3 s):** PoolParty logo + tagline "Don't give your
+   money to the casinos. Wager with your friends." + "Download PoolParty" +
+   "No real money. Just bragging rights." + "AI actors".
 
 ## Scenarios
 
@@ -45,7 +46,8 @@ runs only if the owner asks for it.
   Priya doesn't react. Jonah groans.
 - **10–13 s.** Jonah at the sink, surrounded by dishes. Priya hands him one
   more plate.
-- **13–15 s. End card:** "Download PoolParty" · "No real money. Just bragging
+- **13–15 s. End card:** "Don't give your money to the casinos. Wager with
+  your friends." · "Download PoolParty" · "No real money. Just bragging
   rights." · "AI actors"
 - **Caption:** "Priya is undefeated. Settle it with PoolParty. No real money,
   just bragging rights. #PoolParty"

@@ -12,7 +12,13 @@ description: The script → owner records → assemble loop. Claude writes the s
   (id `1894qw4nzqNNxRxWA6Q7JH8Z2PwyY2l6K`).
 
 ## Status flow
-`Ready to Record` → `Recorded` → `Assembled` → `In Buffer`
+`Ready to Record` → `Recorded` → `Assembled` → then either
+- social (Shorts/TikTok/Reels): `In Buffer` (a draft the owner approves), or
+- YouTube long-form: `Ready to Publish` → `Published`. Only the approved
+  uploader workflow moves it to Published, and only while Notion → Automation
+  Control → "Autopost — YouTube long-form" is Enabled.
+
+Find items with a Notion **view** or **fetch**, never SQL mode (CLAUDE.md).
 
 ## 1. Write (Claude)
 Create a Scripts item:
@@ -53,7 +59,9 @@ Length, captions, CTA, disclosures, AI label need. Set **Assembled**. Upload
 the MP4 to Drive next to the voiceover so the owner can watch it.
 
 ## 5. Buffer (draft only)
-Create a Buffer **draft** per platform with the caption, CTA, disclosures,
+Buffer needs a public link to the video: run
+`url=$(python3 studio/upload_video.py <video.mp4>)`. Then create a Buffer
+**draft** per platform with that video URL, the caption, CTA, disclosures,
 and any "NEEDS AI LABEL" note. Never schedule or publish. Set **In Buffer**
 and tell the owner in plain words: "Open Buffer → Drafts, watch it, and click
 Approve/Schedule if you like it."

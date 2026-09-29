@@ -8,7 +8,8 @@ Rules for Claude live in [`CLAUDE.md`](CLAUDE.md); skills live in
 |---|---|
 | `.claude/skills/` | brand-voice, platform-formats, content-rules, character-bible, higgsfield-api, video-assembly, voiceover-workflow, monetization, outreach, and the Ponytail coding skills |
 | `.claude/rules/` | Ponytail ruleset (MIT), loaded from `CLAUDE.md` |
-| `studio/` | Free video tools: puppet renderer, caption timing, setup script |
+| `studio/` | Free video tools: puppet renderer, caption timing, environment setup script, public video upload |
+| `supabase/migrations/` | Database/storage changes as files (applied by the owner; see `build-standards`) |
 | `studio/samples/robot-host-style-test/` | 10-second style test of Robot (YouTube long-form host) |
 | `campaigns/` | Campaign plans (e.g. PoolParty "Friendly Wagers") |
 
