@@ -7,7 +7,8 @@
 captions.json (optional): [{"start": 0.0, "end": 1.8, "text": "Hi!"}, ...]
 --sheet out.png renders a mouth-shape reference sheet instead of a clip.
 """
-import argparse, importlib.util, json, shutil, subprocess, tempfile
+import argparse, importlib.util, json, os, shutil, subprocess, tempfile
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from xml.sax.saxutils import escape
 
@@ -47,7 +48,7 @@ def caption(t, captions):
         if c["start"] <= t < c["end"]:
             text = escape(c["text"])
             x, y, w, h = L["box"]
-            return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="36" fill="#23313F" opacity="0.92"/>'
+            return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="36" fill="#23313F" fill-opacity="0.92"/>'
                     f'<text x="{x + w / 2}" y="{y + h / 2 + 16}" font-family="DejaVu Sans" font-weight="bold" font-size="42" '
                     f'fill="#fff" text-anchor="middle">{text}</text>')
     return ""
@@ -62,22 +63,37 @@ def frame_svg(rig, t, mouth, captions, label, wave):
             f'text-anchor="middle">{escape(label)}</text></svg>')
 
 
+def encode_chunk(rig, a, cues, captions, start, count, tmp):
+    # Writes one chunk's SVG frames, encodes them, then frees the disk space.
+    d = tmp / f"chunk{start:06d}"
+    d.mkdir()
+    for i in range(count):
+        t = (start + i) / FPS
+        mouth = next((c["value"] for c in cues if c["start"] <= t < c["end"]), "X")
+        wave = max(0.0, 1 - abs(t - a.wave_at) / 1.2) if a.wave_at is not None else 0.0
+        (d / f"{i:05d}.svg").write_text(frame_svg(rig, t, mouth, captions, a.label, wave))
+    out = tmp / f"chunk{start:06d}.mp4"
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", str(d / "%05d.svg"),
+                    "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "23", "-threads", "1", str(out)], check=True)
+    shutil.rmtree(d)
+    return out
+
+
 def render_clip(a):
     rig = load_rig(a.character)
     cues = mouth_cues(a.audio, a.dialog)
     captions = json.loads(Path(a.captions).read_text()) if a.captions else []
     seconds = a.seconds or cues[-1]["end"]
+    frames, chunk = int(seconds * FPS), 20 * FPS  # 20 s chunks, one per CPU at a time
     tmp = Path(tempfile.mkdtemp())
     try:
-        for i in range(int(seconds * FPS)):
-            t = i / FPS
-            mouth = next((c["value"] for c in cues if c["start"] <= t < c["end"]), "X")
-            wave = max(0.0, 1 - abs(t - a.wave_at) / 1.2) if a.wave_at is not None else 0.0
-            (tmp / f"{i:05d}.svg").write_text(frame_svg(rig, t, mouth, captions, a.label, wave))
-        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", str(tmp / "%05d.svg"),
-                        "-i", str(a.audio), "-af", "apad", "-t", f"{seconds:.2f}",
-                        "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "23", "-c:a", "aac", "-b:a", "128k",
-                        "-movflags", "+faststart", str(a.out)], check=True)
+        with ThreadPoolExecutor(os.cpu_count() or 2) as pool:
+            parts = list(pool.map(lambda s: encode_chunk(rig, a, cues, captions, s, min(chunk, frames - s), tmp),
+                                  range(0, frames, chunk)))
+        (tmp / "parts.txt").write_text("".join(f"file '{p}'\n" for p in parts))
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(tmp / "parts.txt"),
+                        "-i", str(a.audio), "-af", "apad", "-t", f"{seconds:.2f}", "-c:v", "copy",
+                        "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", str(a.out)], check=True)
     finally:
         shutil.rmtree(tmp)
 

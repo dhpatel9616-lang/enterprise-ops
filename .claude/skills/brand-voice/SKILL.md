@@ -112,6 +112,7 @@ until then:** Wade Capital's dark palette and fonts, with the robot host's red
   pools with friends." Launching soon on the App Store.
 - **No money moves through the app** (owner, 2026-09-28). Stakes are
   bragging rights and small favors between friends.
+- **Tagline:** "Don't give your money to the casinos. Wager with your friends."
 - **CTA:** "Download PoolParty." (App Store link: not live yet.)
 - **On camera:** `promo-cast`, the realistic AI adults shared with The
   Sovereign, always AI-labeled (`content-rules`).
