@@ -86,6 +86,9 @@ until then:** Wade Capital's dark palette and fonts, with the robot host's red
   designers, researchers, operators, advisors); "Inquire about <service>"
   for services.
 - **Site:** https://wadecapital.netlify.app · **Email:** wadecapitallc@gmail.com
+- **Coming soon (owner to-do):** buy a Wade Capital domain, move the site to it,
+  and send outreach from a matching email address. Until then, use the
+  netlify address above; never invent a domain.
 - Money/investing mentions carry: "Nothing here is investment, legal, or tax
   advice."
 

@@ -1,7 +1,8 @@
 # enterprise-ops: operating rules
 
 This repo is the control room for the owner's autonomous content studio and
-night-shift routines. Claude drafts and builds. The owner approves.
+night-shift routines. Claude drafts, builds, and publishes automatically behind
+kill switches the owner controls in Notion.
 
 Wade Capital is the umbrella. Under it: The Sovereign (media), PoolParty
 (app), The Global Aggregate (news platform), and Wade Capital's services.
@@ -9,23 +10,28 @@ See the `brand-voice` skill.
 
 ## Who does what
 
-- **Claude:** writes scripts, storyboards, captions, outreach drafts, code, and
-  videos. Opens pull requests (PRs). Puts social posts into Buffer **as drafts**.
-- **Owner:** approves every social post in Buffer, approves every first-touch
-  outreach email in Notion, and merges every PR. The owner has no programming
-  experience: anything they must do gets explained click by click, in plain
-  words, with no jargon.
+- **Claude:** writes scripts, storyboards, captions, outreach, code, and
+  videos, and publishes them automatically where rule 1 allows. Opens pull
+  requests (PRs).
+- **Owner:** merges every PR and controls the kill switches in Notion →
+  Automation Control. The owner has no programming experience: anything they
+  must do gets explained click by click, in plain words, with no jargon.
 
 ## Hard rules (never break these)
 
-1. **Nothing publishes without the owner's approval.** No "Share now", no
-   scheduled Buffer queue slots, no direct uploads to TikTok/Instagram, no
-   sent emails that the owner hasn't approved. Buffer posts are saved as
-   drafts only. First-touch outreach sends only after the Notion "Approve" box
-   is ticked (see the `outreach` skill). Long-form YouTube uploads are allowed
-   only through the approved uploader workflow and only when the
-   'Autopost — YouTube long-form' switch is Enabled (Notion → Automation
-   Control).
+1. **Automatic publishing, behind kill switches** (owner's permission,
+   2026-09-30). Notion → Automation Control:
+   - **"Autopost — Social (IG / TikTok / Shorts)" Enabled:** schedule posts
+     in Buffer with automatic publishing. Disabled: Buffer drafts only.
+   - **"Autopost — YouTube long-form" Enabled:** upload with
+     `studio/youtube_upload.py`. Disabled: leave the video in Drive
+     "Ready to Publish".
+   - Even when enabled, save as a **draft** (and say why in the run notes)
+     any post that names real politicians, candidates, or private people,
+     touches elections or breaking news, makes a claim you can't source, or
+     fails `content-rules`.
+   - Outreach emails send automatically within the sequencer's daily caps
+     (Enterprise-leads repo).
 2. **Never touch PoolParty production:** Supabase project
    `tzebfwmrmzhkeoptwkzy`. No reads, no writes, no migrations, no branches, no
    edge functions. If a task seems to need it, stop and ask.
@@ -59,7 +65,7 @@ See the `brand-voice` skill.
 |---|---|
 | Notion, "The Enterprise — Command Center" | Content Ideas, Scripts, Build Queue, Raw Leads Inbox (+ "Outreach Approvals" view) |
 | Google Drive, "Voiceovers" folder | Owner's recorded voiceovers |
-| Buffer | Drafts only (video posts use a public URL from `studio/upload_video.py`) |
+| Buffer | Posts per rule 1 (video posts use a public URL from `studio/upload_video.py`) |
 | Supabase `skakrtljfaeopfqigyww` | Enterprise Leads data (outreach); public `studio-videos` bucket for rendered videos |
 | GitHub `enterprise-leads` repo | Outreach sequencer (changes go through PRs) |
 | Higgsfield API (`HF_KEY`) | Paid generation, cheapest model that meets the brief |
@@ -74,8 +80,8 @@ Three per week, planned with the `content-mix` skill.
 2. For each idea: write a script and storyboard into **Scripts** (status
    *Ready to Record*) using `voiceover-workflow`, `platform-formats`,
    `brand-voice`, `monetization`, and `content-rules`.
-3. For each *Recorded* script: assemble the video with `video-assembly`, save a
-   Buffer draft, set status *In Buffer*.
+3. For each *Recorded* script: assemble the video with `video-assembly` and
+   publish per rule 1.
 4. For each Build Queue item: build on a `claude/` branch, open a PR, paste the
    PR link into the item, and set it to *PR Open*.
 5. Leave a short plain-language summary of what's waiting for the owner.
