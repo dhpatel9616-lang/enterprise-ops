@@ -7,7 +7,7 @@ Needs ENTERPRISE_SUPABASE_URL and ENTERPRISE_SUPABASE_SERVICE_KEY (Enterprise
 project skakrtljfaeopfqigyww). Prints only the public URL on success, so
 routines can do: url=$(python3 studio/upload_video.py out.mp4)
 """
-import os, sys, time, urllib.error, urllib.request
+import os, sys, time, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
 
 BUCKET = "studio-videos"
@@ -16,7 +16,9 @@ TYPES = {".mp4": "video/mp4", ".mov": "video/quicktime"}
 
 
 def main(path):
-    url, key = os.environ.get("ENTERPRISE_SUPABASE_URL", "").rstrip("/"), os.environ.get("ENTERPRISE_SUPABASE_SERVICE_KEY")
+    raw, key = os.environ.get("ENTERPRISE_SUPABASE_URL", "").strip(), (os.environ.get("ENTERPRISE_SUPABASE_SERVICE_KEY") or "").strip()
+    parts = urllib.parse.urlparse(raw)
+    url = f"{parts.scheme}://{parts.netloc}" if parts.netloc else ""  # tolerate ".../rest/v1/" pasted from the dashboard
     if not url or not key:
         sys.exit("upload_video: set ENTERPRISE_SUPABASE_URL and ENTERPRISE_SUPABASE_SERVICE_KEY in the environment.")
     if POOLPARTY_PROD in url:
