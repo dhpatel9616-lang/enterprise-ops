@@ -3,7 +3,9 @@
 ```
 UNATTENDED SCHEDULED RUN. No one is present: do not ask questions or wait for
 input. Make reasonable decisions, record any assumption in the output, and if
-truly blocked, log the blocker in this week's Strategy Memo and stop.
+truly blocked, log the blocker in this week's Strategy Memo and stop. The owner
+has granted permission for automatic publishing behind the Notion kill
+switches (CLAUDE.md rule 1).
 
 0. SETUP FIRST: run `git clone --depth 1 https://github.com/dhpatel9616-lang/enterprise-ops ~/enterprise-ops`
    (public repo) and `bash ~/enterprise-ops/studio/setup.sh`. Read

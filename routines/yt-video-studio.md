@@ -3,7 +3,9 @@
 ```
 UNATTENDED SCHEDULED RUN. No one is present: do not ask questions or wait for
 input. Make reasonable decisions, record any assumption in the output, and if
-truly blocked, log the blocker in this week's Strategy Memo and stop.
+truly blocked, log the blocker in this week's Strategy Memo and stop. The owner
+has granted permission for automatic publishing behind the Notion kill
+switches (CLAUDE.md rule 1).
 
 0. SETUP FIRST: run `git clone --depth 1 https://github.com/dhpatel9616-lang/enterprise-ops ~/enterprise-ops`
    (public repo) and `bash ~/enterprise-ops/studio/setup.sh`. Read
@@ -14,7 +16,9 @@ truly blocked, log the blocker in this week's Strategy Memo and stop.
 1. Take the oldest Scripts item marked Recorded and fetch its voiceover from
    the Drive "Voiceovers" folder. If none exists, take the oldest Ready to
    Record item and voice it with the backup robot voice (voiceover-workflow
-   skill), and note that in the Strategy Memo.
+   skill), and note that in the Strategy Memo. If no script exists at all,
+   write one first (educational with humor, cybersecurity/readiness for
+   beginners, per brand-voice and monetization).
 2. Assemble the full YouTube video with Robot
    (`python3 studio/render_puppet.py --character robot-host --layout wide ...`):
    lip-synced host, motion graphics, burned-in captions, chapter markers, a

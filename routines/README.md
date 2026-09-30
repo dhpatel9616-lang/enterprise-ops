@@ -1,6 +1,10 @@
 # Routine prompts (paste-ready)
 
-These routines were created outside Claude, so only the owner can edit them:
+These routines were created outside Claude, so only the owner can edit them.
+They run in the environment named in each routine's settings: that environment
+needs the keys (HF_KEY, ENTERPRISE_SUPABASE_URL, ENTERPRISE_SUPABASE_SERVICE_KEY,
+YOUTUBE_*), network access to *.supabase.co, *.higgsfield.ai, *.googleapis.com,
+and `studio/setup.sh` in its Setup script box. To edit a routine:
 open https://claude.ai/code/routines, click the routine, replace its prompt with
 the text in the matching file (everything inside the grey box), and save.
 
