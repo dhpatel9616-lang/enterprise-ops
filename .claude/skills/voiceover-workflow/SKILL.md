@@ -1,6 +1,6 @@
 ---
 name: voiceover-workflow
-description: The script → owner records → assemble loop. Claude writes the script and a storyboard to the Notion Scripts database, waits for the owner's recording in the Google Drive "Voiceovers" folder, then assembles the video and saves it as a Buffer draft. Use for any video that uses the owner's voice.
+description: The script → owner records → assemble loop. Claude writes the script and a storyboard to the Notion Scripts database, waits for the owner's recording in the Google Drive "Voiceovers" folder, then assembles the video and publishes it per CLAUDE.md rule 1. Use for any video that uses the owner's voice.
 ---
 
 # Voiceover workflow
@@ -71,10 +71,11 @@ the last take and cut the stumble (ffmpeg `atrim`), and note it in Notion.
 Length, captions, CTA, disclosures, AI label need. Set **Assembled**. Upload
 the MP4 to Drive next to the voiceover so the owner can watch it.
 
-## 5. Buffer (draft only)
+## 5. Publish (CLAUDE.md rule 1)
 Buffer needs a public link to the video: run
-`url=$(python3 studio/upload_video.py <video.mp4>)`. Then create a Buffer
-**draft** per platform with that video URL, the caption, CTA, disclosures,
-and any "NEEDS AI LABEL" note. Never schedule or publish. Set **In Buffer**
-and tell the owner in plain words: "Open Buffer → Drafts, watch it, and click
-Approve/Schedule if you like it."
+`url=$(python3 studio/upload_video.py <video.mp4>)`. If the "Autopost — Social"
+switch is Enabled, schedule the post in Buffer with automatic publishing;
+otherwise save a draft. Include the caption, CTA, disclosures, and any AI
+label. Set **In Buffer**. Long-form YouTube goes through
+`studio/youtube_upload.py` when "Autopost — YouTube long-form" is Enabled
+(then **Published**), otherwise stays in Drive "Ready to Publish".
