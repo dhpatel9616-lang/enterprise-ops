@@ -5,7 +5,17 @@ description: The weekly social post plan - exactly 3 posts a week (one Sovereign
 
 # Weekly content mix
 
-Every week: **3 social posts**, saved as Buffer **drafts** (CLAUDE.md rule 1).
+Every week: **3 social posts**, each a vertical 9:16 video under 60 s, handled
+per CLAUDE.md rule 1. Buffer channels:
+
+| Channel | Account | Gets |
+|---|---|---|
+| Instagram | @wadecapitallc | all 3 posts |
+| TikTok | @wadethesovereign | posts 1 and 2 (Sovereign, PoolParty/Global Aggregate) |
+| YouTube (Shorts) | Wade Capital | the weekly Short cut from the long-form video |
+
+Buffer's free plan holds only 10 scheduled posts at a time, so schedule at most
+one week ahead. Video posts need a public link: `python3 studio/upload_video.py`.
 
 | # | Post | CTA | Link |
 |---|---|---|---|
