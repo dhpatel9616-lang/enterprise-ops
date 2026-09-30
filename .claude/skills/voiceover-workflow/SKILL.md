@@ -50,6 +50,19 @@ Create a Scripts item:
 Search the Voiceovers folder for each *Ready to Record* item's filename (any
 audio extension). Not there → leave it. Found → set **Recorded**.
 
+**Backup voice (so a week never ships nothing):** if the weekly video routine
+finds no Recorded item, it voices the oldest *Ready to Record* script as Robot
+with free text-to-speech:
+
+```
+espeak-ng -v en-us+m3 -s 155 -f script.txt -w raw.wav
+ffmpeg -i raw.wav -af "asetrate=22050*0.92,aresample=44100,atempo=1.087,aecho=0.8:0.6:10:0.25" vo.wav
+```
+
+Note "Robot's voice is synthetic" in the description. The owner's own voice is
+strongly preferred: YouTube's Partner Program rejects channels that look
+mass-produced, and a human voice is the biggest signal against that.
+
 ## 3. Assemble (Claude)
 Download the file, then follow `video-assembly`. If a line was re-read, keep
 the last take and cut the stumble (ffmpeg `atrim`), and note it in Notion.
