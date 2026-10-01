@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Buffer__create_post",
+      "mcp__Buffer__edit_post",
+      "mcp__Buffer__get_post",
+      "mcp__Buffer__list_posts",
+      "mcp__Buffer__list_channels",
+      "mcp__Buffer__get_channel",
+      "mcp__Buffer__get_account",
+      "mcp__Buffer__get_aggregated_post_metrics"
+    ]
+  }
+}
