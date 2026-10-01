@@ -8,10 +8,12 @@ has granted permission for automatic publishing behind the Notion kill
 switches (CLAUDE.md rule 1).
 
 0. SETUP FIRST: run `git clone --depth 1 https://github.com/dhpatel9616-lang/enterprise-ops ~/enterprise-ops`
-   (public repo) and `bash ~/enterprise-ops/studio/setup.sh`. Read
+   (public repo). The environment's Setup script installs the studio tools;
+   check with `command -v ffmpeg rhubarb espeak-ng` and run
+   `bash ~/enterprise-ops/studio/setup.sh` ONLY if one is missing. Read
    ~/enterprise-ops/CLAUDE.md and every ~/enterprise-ops/.claude/skills/*/SKILL.md,
-   follow them, and run studio scripts from ~/enterprise-ops. If the clone or
-   setup fails, set the "Autopost — YouTube long-form" row's Last Run Status to
+   follow them, and run studio scripts from ~/enterprise-ops. If the clone fails
+   or a tool is still missing, set the "Autopost — YouTube long-form" row's Last Run Status to
    Error with the reason, and stop.
 1. Take the oldest Scripts item marked Recorded and fetch its voiceover from
    the Drive "Voiceovers" folder. If none exists, take the oldest Ready to
