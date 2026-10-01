@@ -17,8 +17,9 @@ switches (CLAUDE.md rule 1).
    the Drive "Voiceovers" folder. If none exists, take the oldest Ready to
    Record item and voice it with the backup robot voice (voiceover-workflow
    skill), and note that in the Strategy Memo. If no script exists at all,
-   write one first (educational with humor, cybersecurity/readiness for
-   beginners, per brand-voice and monetization).
+   write one first (educational with humor, for beginners, per brand-voice
+   and monetization). Rotate Robot's topics: grid-down survival,
+   cybersecurity, history, politics (nonpartisan).
 2. Assemble the full YouTube video with Robot
    (`python3 studio/render_puppet.py --character robot-host --layout wide ...`):
    lip-synced host, motion graphics, burned-in captions, chapter markers, a

@@ -1,67 +1,125 @@
 ---
 name: content-mix
-description: The weekly social post plan - exactly 3 posts a week (one Sovereign article promo, one PoolParty or Global Aggregate promo alternating weekly, one Wade Capital consulting post), each with its fixed CTA. Use when planning or drafting the week's social posts or Buffer drafts.
+description: What we make and when. Short-form promos (9:16) for The Sovereign, The Global Aggregate, and PoolParty built from real material from each product (Substack issues, real Global Aggregate story clusters, real app screens), political/historical "clipping" ads, and the two long-form lanes (Robot tutorials, clipping montages). Use when planning or drafting the week's posts, Buffer drafts, or long-form videos.
 ---
 
-# Weekly content mix
+# Content mix
 
-Every week: **3 social posts**, each a vertical 9:16 video under 60 s, handled
-per CLAUDE.md rule 1. Buffer channels:
+Source: owner, 2026-10-01. **We promote our three products. We don't
+promote Wade Capital services on social** (small-business outreach is phone
+and email only; see the Enterprise-leads repo).
 
-| Channel | Account | Gets |
-|---|---|---|
-| Instagram | @wadecapitallc | all 3 posts |
-| TikTok | @wadethesovereign | posts 1 and 2 (Sovereign, PoolParty/Global Aggregate) |
-| YouTube (Shorts) | Wade Capital | the weekly Short cut from the long-form video |
-
-Buffer's free plan holds only 10 scheduled posts at a time, so schedule at most
-one week ahead. Video posts need a public link: `python3 studio/upload_video.py`.
-
-| # | Post | CTA | Link |
+| Lane | Format | Who's on screen | Where |
 |---|---|---|---|
-| 1 | **The Sovereign** article promo | "Read The Sovereign and help us build it" | Subscribe: https://sovereignnewsletter.substack.com/subscribe · Collaborate: https://wadecapital.netlify.app/contact.html |
-| 2 | **PoolParty** *or* **The Global Aggregate** (alternate weekly) | PoolParty: "Download PoolParty" · Global Aggregate: "Visit The Global Aggregate" | PoolParty: App Store link · Global Aggregate: https://globalaggregate.org |
-| 3 | **Wade Capital** consulting | "Book a free 15-minute automation audit" | Booking link (see Open items) |
+| **Short-form promos** for The Sovereign, The Global Aggregate, PoolParty | 9:16, 15–45 s | Real material from the product, plus realistic `promo-cast` actors and situations when a scene needs people | IG Reels, TikTok, YouTube Shorts |
+| **Clipping ads** (political and historical moments) | 9:16, 15–45 s | Real archival or public footage | Same, always as **drafts** (see below) |
+| **Robot tutorials**: grid-down survival, cybersecurity, history, politics | 16:9, 8–15 min, mostly animated | Robot (cartoon, `character-bible`) | YouTube long-form |
+| **Clipping montages** | 16:9, long-form | Real footage from the clipping repo, with our narration and context | YouTube long-form |
 
-## Post 1: Sovereign article promo
-- Built **only from published Substack issues**. Use a real excerpt (quote
-  it word for word, marked as a quote) and images from that issue, plus the
-  issue's title and link.
-- **Never invent, paraphrase-as-quote, or "improve" a quote.** No excerpt you
-  can't point to in a published issue.
-- Source: the Substack archive or RSS feed
-  (`https://sovereignnewsletter.substack.com/feed`). If it can't be read,
-  don't write this post: log it in Notion → Automation Control (Last Run
-  Notes) and say so in the weekly summary.
-- Pick the issue most recently published that hasn't been promoted yet.
+Realistic AI people and situations are **for promotion only**, never in
+long-form content (`character-bible`).
 
-## Post 2: PoolParty / Global Aggregate (alternate)
-- **Odd ISO week number → PoolParty. Even → The Global Aggregate.** (Check
-  with `date +%V`.) This keeps the alternation correct even if a week is
-  skipped.
-- PoolParty follows the campaign rules in `brand-voice` (no money on screen,
-  actors 25+, AI label on realistic AI people). Until the App Store link
-  exists, PoolParty weeks post The Global Aggregate instead, noted in the
-  weekly summary.
-- If the post is branded as The Sovereign, add the ownership disclosure from
-  `monetization`.
+## Weekly short-form slate
+Three promos a week, one per product, plus clipping ads when there are good
+clips:
 
-## Post 3: Wade Capital consulting
-- One concrete automation or security tip a small business can act on, then
-  the audit offer. Real services only (website & social studio, legal AI,
-  automation readiness audit, security & risk assessment; see `brand-voice`).
-- No invented client stories, results, or testimonials (`content-rules`).
+| Day | Post | CTA | Link |
+|---|---|---|---|
+| Tue | **The Sovereign** issue promo | "Read the full piece" | the issue's Substack link |
+| Thu | **The Global Aggregate** story promo | "Use The Global Aggregate" | https://globalaggregate.org |
+| Sat | **PoolParty** promo (see Blocked) | "Download PoolParty" | App Store link |
+| any | Clipping ad (optional, up to 2) | "Watch the full montage" or "Read The Sovereign" | YouTube video or Substack |
+
+Channels (Buffer): Instagram @wadecapitallc and TikTok @wadethesovereign get
+every promo; YouTube Shorts gets the Sovereign and clipping posts. Buffer's
+free plan holds 10 scheduled posts, so schedule one week ahead at most.
+
+## The quality bar (why the text reels were rejected)
+A promo must **show the real thing and teach one real thing**. Plain text
+on a background fails both. Every promo has:
+1. **A hook in the first 2 seconds** that is a real detail: a striking line
+   from the issue, two clashing real headlines, a real app moment.
+2. **Real material on screen most of the time**: the issue's own images
+   and verbatim quotes, screenshots of the real Global Aggregate page and
+   real headlines, real app screens. Data shown as big numbers with their
+   source on screen ("28 outlets · 14 countries · source: globalaggregate.org").
+3. **Motion**: slow push-ins on images, quotes that type or slide in, cuts
+   every 2–4 s, captions burned in, music from a free-licence library.
+4. **One takeaway** a viewer could repeat to a friend, then the CTA card.
+
+If the real material can't be fetched (site blocked, no new issue), **skip
+the post** and say why in the run notes. Never fall back to a text-only reel
+or stock filler.
+
+## The Sovereign promo
+- From the newest published issue not yet promoted
+  (`https://sovereignnewsletter.substack.com/feed`; images are on
+  `substackcdn.com`).
+- Beats: hook quote → 2–3 real pull quotes over the issue's images (or a
+  realistic `promo-cast` situation that illustrates the topic, AI-labeled)
+  → the one-line argument → "Read the full piece" card with the issue
+  title.
+- Quotes are **word for word** from the published issue. Never invent,
+  trim mid-sentence to change meaning, or "improve" a quote.
+- Issues that name real private people, or turn on a real public figure,
+  go out as drafts (CLAUDE.md rule 1).
+
+## The Global Aggregate promo
+- Pick one real story cluster on https://globalaggregate.org that is not
+  breaking news or election news (rule 1). Prefer science, economy,
+  culture, and world events where countries frame things differently.
+- Beats: two or three real headlines about the same event from different
+  countries (outlet + country flag + date on screen) → the number of
+  outlets and countries covering it → a screen capture of the real cluster
+  page → "Use The Global Aggregate".
+- Headlines are shown exactly as published, with the outlet's name. Add
+  the ownership disclosure when the post is branded as The Sovereign
+  (`monetization`).
+
+## PoolParty promo
+- Realistic `promo-cast` scenes (`campaigns/poolparty-friendly-wagers.md`)
+  plus **real app screens** from the owner's recordings. Never invent app
+  screens.
+- **Paused until PoolParty's initial launch** (owner, 2026-10-01). Target
+  launch: **Friday, October 9, 2026**. Until it launches, skip the Saturday
+  post and say so in the run notes. Before the first ad, confirm with the
+  owner the App Store link and the honest money message (see Open items).
+
+## Clipping ads and montages
+- Clipping work currently lives outside this setup (a "clipping" folder on
+  the owner's computer, worked on in a separate Claude Code chat; no repo
+  yet). Until it has a repo or shared folder we can reach, there are no
+  clipping posts. Footage must be one of: public domain (US federal government works such as official
+  House/Senate floor video, pre-1930 film), openly licensed with
+  attribution, or a short excerpt used for commentary that adds our own
+  context (fair use). Credit the source on screen. If you can't tell which,
+  don't use it.
+- Never edit a clip to change what someone said or meant; keep enough
+  context that the point stands on its own. No AI-altered footage of real
+  people, ever (`content-rules`).
+- Nonpartisan (`brand-voice`): over a month, balance who is shown, and
+  frame each clip around an idea, not a side.
+- Because they show real politicians, **clipping posts are always Buffer
+  drafts** for the owner to approve (CLAUDE.md rule 1), even with Autopost
+  on.
 
 ## Making the videos
-Use `studio/text_reel.py` with a small JSON spec per post (examples in
-`campaigns/2026-w40/`). Save each week's specs in `campaigns/<year>-w<week>/`.
+- Short-form: `studio/text_reel.py` with `image` scenes (real images with a
+  slow push-in, quotes, big numbers); put each week's specs and the
+  downloaded source files in `campaigns/<year>-w<week>/`. Realistic scenes
+  come from `higgsfield-api` (cheapest model that meets the brief).
+- Long-form: `voiceover-workflow` + `video-assembly` (Robot, `--layout wide`).
 
 ## Every post
 - Voice from `brand-voice`, format from `platform-formats`, honesty rules
-  from `content-rules`, and revenue path + CTA recorded per `monetization`.
+  from `content-rules`, revenue path + CTA per `monetization`.
 - One CTA per post, exactly as written above.
 
 ## Open items (ask the owner; don't guess)
-- Booking link for the free 15-minute automation audit (until then, use the
-  contact page: https://wadecapital.netlify.app/contact.html).
+- **PoolParty and money.** The app's real screens show dollar stakes ("$…
+  total staked", "Mark as Paid", "% paid on time"). The campaign's line "No
+  real money. Just bragging rights." would be false. Decide the true
+  message before any PoolParty ad runs.
 - PoolParty App Store link (at launch).
+- A home for the clipping work that routines can reach (GitHub repo or
+  shared Drive folder).

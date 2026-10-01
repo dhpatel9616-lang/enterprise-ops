@@ -9,8 +9,8 @@ description: The source of truth for every recurring character, so each one look
 
 | Role | Character | Style | Made with |
 |---|---|---|---|
-| YouTube long-form host only ("Robot teaches Cybersecurity") | `robot-host`, named **Robot** | humanoid, combat-worn android (bust); SVG puppet lip-synced to the owner's voice | Free tools (`video-assembly`), `--layout wide` |
-| PoolParty + The Sovereign promos | `promo-cast` (draft, same cast for both brands) | Realistic AI adults | `higgsfield-api`; **always AI-labeled** |
+| Long-form YouTube tutorials (grid-down survival, cybersecurity, history, politics) | `robot-host`, named **Robot** | cartoon robot with a screen face; SVG puppet lip-synced to the owner's voice | Free tools (`video-assembly`), `--layout wide` |
+| Short-form promos (PoolParty, The Sovereign, The Global Aggregate) | `promo-cast` (approved by the owner) | Realistic AI adults | `higgsfield-api`; **always AI-labeled** |
 | All other promos | None required | Motion graphics, text, screen recordings, product shots | Free tools first |
 
 Don't put a character into a video just because one exists. Character-free
@@ -59,5 +59,5 @@ images in a PR. Until then, don't use it in any post.
 
 ## Characters
 - `robot-host` (**Robot**): long-form YouTube host only.
-- `promo-cast`: four fictional adult friends for PoolParty and The Sovereign
-  promos (draft; no reference images until the owner approves).
+- `promo-cast`: four fictional adult friends (approved) for short-form promos
+  of all three brands. Promotion only, never long-form content.

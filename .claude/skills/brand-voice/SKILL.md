@@ -103,9 +103,9 @@ until then:** Wade Capital's dark palette and fonts, with the robot host's red
 - **Content arms and CTAs:**
   | Arm | Format | CTA |
   |---|---|---|
-  | YouTube long-form: "Robot teaches Cybersecurity" | Robot (`character-bible`), 16:9 | "Subscribe, follow our Instagram, and read our Substack." |
-  | Substack promotion | Standout excerpts from pieces (quote cards, short reads) | Collaborate with us, or subscribe |
-  | Article promo shorts | Realistic AI actor or character-free video on the article's topic | "Read the full piece" → Substack |
+  | YouTube long-form: Robot tutorials (grid-down survival, cybersecurity, history, politics) | Robot, cartoon (`character-bible`), 16:9 | "Subscribe, follow our Instagram, and read our Substack." |
+  | YouTube long-form: clipping montages | Real political/historical footage with our context (`content-mix`) | Same as above |
+  | Short-form promos | The issue's real quotes and images, plus realistic `promo-cast` scenes when people are needed (`content-mix`) | "Read the full piece" → Substack |
 - Note: the Wade Capital website still describes The Sovereign as "an
   independent civic media publication for students and young professionals
   who care about policy." The owner's newer positioning above wins.

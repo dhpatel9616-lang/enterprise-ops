@@ -40,6 +40,12 @@ description: Honesty and safety rules for every script, video, image, and post. 
 - Don't make characters that resemble existing copyrighted characters or
   mascots.
 - Don't use other creators' footage, music, or art without a licence.
+- **Clipping is the exception for real footage**: unaltered clips of real
+  public events (speeches, hearings, archival film) are allowed when they
+  are public domain, openly licensed, or a short excerpt with our own
+  commentary (fair use), with the source credited on screen. Never alter
+  what a real person says or does, and never AI-generate a real person.
+  Rules and sourcing: `content-mix` → Clipping.
 
 ## Claims
 - No invented numbers, earnings claims, or guarantees. Money, security, and

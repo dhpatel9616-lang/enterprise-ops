@@ -1,6 +1,6 @@
 ---
 name: outreach
-description: Personalized first-touch cold emails for sourced leads (Enterprise Leads pipeline), tailored by lead type - small business gets the website studio or security audit offer, law firms get legal AI. Every draft names its offer and CTA and meets CAN-SPAM basics. Use when writing or reviewing outreach copy, personalizing leads, or reporting pipeline numbers.
+description: Personalized cold emails and AI phone calls for sourced leads (Enterprise Leads pipeline), tailored by lead type - small businesses get the automation menu (websites, file management, AI voice agents, social media), law firms get legal AI. Every draft names its offer and CTA and meets CAN-SPAM basics. Use when writing or reviewing outreach copy, personalizing leads, or reporting pipeline numbers.
 ---
 
 # Outreach
@@ -9,12 +9,14 @@ description: Personalized first-touch cold emails for sourced leads (Enterprise 
 1. GitHub Actions in the `enterprise-leads` repo source leads (Google Places)
    into Supabase `skakrtljfaeopfqigyww` → `leads` table and Notion
    **Raw Leads Inbox**.
-2. `outreach-sequencer.js` drafts **touch 1** as a Gmail draft (Gmail OAuth)
-   and copies it to Notion (*Drafted Message*, *Offer*).
-3. The owner reviews it in Notion's **Outreach Approvals** view (phone
-   friendly) and ticks **Approve**. Only then does the next run send it.
-4. Follow-ups (touches 2-6) send automatically until the lead replies or opts
-   out (`check-replies.js` marks replies; an opt-out is a reply).
+2. `outreach-sequencer.js` sends touch 1 and follow-ups automatically within
+   the daily caps (CLAUDE.md rule 1) and copies each one to Notion
+   (*Drafted Message*, *Offer*). Copy lives in the Supabase `settings` row
+   `outreach`.
+3. `bland-calls.js` places AI phone calls to screened business landlines
+   (never cell phones) for leads with no working email or no reply after two
+   emails. It says it's an AI in its first sentence.
+4. Sending stops when the lead replies or opts out (`check-replies.js`).
 
 Never touch Supabase `tzebfwmrmzhkeoptwkzy` (PoolParty production).
 
@@ -22,9 +24,8 @@ Never touch Supabase `tzebfwmrmzhkeoptwkzy` (PoolParty production).
 
 | Lead | Signal | Offer | CTA |
 |---|---|---|---|
-| Small business | no site, broken site, not mobile-friendly | Wade Capital website studio | "Want me to send a free mock-up of a refreshed homepage?" |
+| Small business (email and phone) | no site, broken site, not mobile-friendly, or no social presence | **Automation tailored to the business**, always naming the menu: websites, file management, AI voice agents, social media. Lead with the one the evidence supports (free sample site, sample week of posts). | "Worth a 10-minute call this week?" |
 | Small business | site works but no SSL, outdated software, exposed login/admin pages, public data leaks | Wade Capital security/risk audit | "Can I send you a free 1-page security check-up for your site?" |
-| Small business | site fine, no social presence | Social media management | "Want a sample week of posts for {business}?" |
 | Law firm (category `legal`) | any | Legal AI: AI Governance Readiness Audit | "Open to a 15-minute call to see where AI could save your team hours, safely?" |
 
 One offer per email. When two fit, pick the one with the clearest evidence.
