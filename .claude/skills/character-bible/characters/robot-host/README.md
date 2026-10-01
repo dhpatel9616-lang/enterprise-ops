@@ -5,14 +5,15 @@ grid-down survival, cybersecurity, history, and politics. Long-form content
 only. Not for promos, ads, or PoolParty (those use realistic `promo-cast`).
 
 ## Concept
-A friendly cartoon robot with a screen for a face. Once a field unit, now a
-patient teacher: it has seen how things break (power grids, passwords,
-governments), so it shows beginners how to stay ready and think for
-themselves. Approachable and a bit goofy on the outside; sharp, witty, and
-caring underneath. One piece of tape on its head is the only hint of a
-rough past.
-**Status:** v4 (owner, 2026-10-01: "cartoonish… approachable… more
-robotic", cheap to render). Waiting for the owner's OK on this look.
+A friendly cartoon robot with a screen for a face that came back from a
+war. It has seen how things break (power grids, passwords, governments), so
+it shows beginners how to stay ready and think for themselves. Battered and
+patched up, but warm: the damage says "survivor", never "threat".
+Approachable and a bit goofy on the outside; sharp, witty, and caring
+underneath.
+**Status:** v4.1. The owner approved the cartoon direction and asked for
+more battered, war-torn wear (2026-10-01). Original design: no red eyes, no
+chrome skull, nothing lifted from film robots.
 
 ## Look
 - Rounded-square steel-blue head with thick dark outlines, a glossy
@@ -23,7 +24,13 @@ robotic", cheap to render). Waiting for the owner's OK on this look.
 - Mouth is drawn on the same screen (shapes A–H, X; see
   `reference-sheet.png`): a line when closed, ovals when open, a tongue
   for "L", teeth for "F/V".
-- A cross of cream tape on the top-right of its head.
+- Battle damage (fixed positions, flat shapes): a cracked face screen
+  over its left eye (that eye stutters now and then), bullet strikes with
+  bare-metal rings, scorch marks, paint chipped to bare metal, scratches, a
+  riveted patch plate, a cross of cream tape, a bent antenna, and a missing
+  ear panel with red and yellow wires hanging out.
+- Tattered brown scarf at the neck with a frayed tail; faded stencil "07"
+  on its chest; tape wrapped around one forearm; one dead chest light.
 - Boxy body with a chest panel: four blinking status lights and a gold bar
   (Wade gold `#B8975A`). Tube arms with round hands; its right arm waves
   (`--wave-at`).
@@ -42,7 +49,10 @@ robotic", cheap to render). Waiting for the owner's OK on this look.
 | Eyes, brows, mouth glow | `#8DF7E8` |
 | Antenna bulb, tongue | `#FF5A3C` |
 | Chest bar, accent | `#B8975A` |
-| Tape | `#E9E2CF` |
+| Tape, stencil | `#E9E2CF` |
+| Bare metal (chips, scratches, strike rings) | `#C9D1D9` |
+| Soot (scorch marks, bullet pits) | `#0E1620` |
+| Scarf | `#7A5A3C` |
 | Background glow / edge | `#1D3350` / `#0A121D` |
 
 ## Motion

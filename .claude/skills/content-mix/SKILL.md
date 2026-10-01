@@ -80,13 +80,16 @@ or stock filler.
 - Realistic `promo-cast` scenes (`campaigns/poolparty-friendly-wagers.md`)
   plus **real app screens** from the owner's recordings. Never invent app
   screens.
-- **Blocked** until the owner settles the money question (see Open items)
-  and the App Store link exists. Until then, skip the Saturday post and
-  say so in the run notes.
+- **Paused until PoolParty's initial launch** (owner, 2026-10-01). Target
+  launch: **Friday, October 9, 2026**. Until it launches, skip the Saturday
+  post and say so in the run notes. Before the first ad, confirm with the
+  owner the App Store link and the honest money message (see Open items).
 
 ## Clipping ads and montages
-- Footage comes from the clipping repo (owner to share which one) and must
-  be one of: public domain (US federal government works such as official
+- Clipping work currently lives outside this setup (a "clipping" folder on
+  the owner's computer, worked on in a separate Claude Code chat; no repo
+  yet). Until it has a repo or shared folder we can reach, there are no
+  clipping posts. Footage must be one of: public domain (US federal government works such as official
   House/Senate floor video, pre-1930 film), openly licensed with
   attribution, or a short excerpt used for commentary that adds our own
   context (fair use). Credit the source on screen. If you can't tell which,
@@ -118,6 +121,5 @@ or stock filler.
   real money. Just bragging rights." would be false. Decide the true
   message before any PoolParty ad runs.
 - PoolParty App Store link (at launch).
-- Which repo holds the clipping work.
-- Network access for `substackcdn.com` and `globalaggregate.org` in the
-  cloud environment (images and screenshots).
+- A home for the clipping work that routines can reach (GitHub repo or
+  shared Drive folder).
