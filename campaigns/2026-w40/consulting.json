@@ -1,0 +1,12 @@
+{"eyebrow": "WADE CAPITAL",
+ "scenes": [
+  {"text": "Small business owners:", "seconds": 1.6},
+  {"text": "stop doing these by hand.", "seconds": 1.8},
+  {"text": "1. Copying website leads into a spreadsheet.", "seconds": 2.4},
+  {"text": "2. Texting appointment reminders one by one.", "seconds": 2.4},
+  {"text": "3. Retyping the same invoice every month.", "seconds": 2.4},
+  {"text": "All three can run on their own.", "seconds": 2.2}
+ ],
+ "cta": {"text": "Book a free 15-minute automation audit", "url": "wadecapital.netlify.app",
+         "note": "Tap Contact. We'll show you which tasks to automate first."},
+ "cta_seconds": 3.8}

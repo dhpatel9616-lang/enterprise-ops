@@ -52,6 +52,10 @@ one week ahead. Video posts need a public link: `python3 studio/upload_video.py`
   automation readiness audit, security & risk assessment; see `brand-voice`).
 - No invented client stories, results, or testimonials (`content-rules`).
 
+## Making the videos
+Use `studio/text_reel.py` with a small JSON spec per post (examples in
+`campaigns/2026-w40/`). Save each week's specs in `campaigns/<year>-w<week>/`.
+
 ## Every post
 - Voice from `brand-voice`, format from `platform-formats`, honesty rules
   from `content-rules`, and revenue path + CTA recorded per `monetization`.

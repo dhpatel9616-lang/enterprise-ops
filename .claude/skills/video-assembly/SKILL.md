@@ -15,6 +15,9 @@ No paid editors, no stock sites without a free licence, no paid APIs here
 - Install/refresh all of them: `bash studio/setup.sh` (the same script is
   pasted into the cloud environment's Setup script box, so routines start
   with everything installed).
+- Branded text videos for social (no character needed):
+  `python3 studio/text_reel.py <spec.json> <out.mp4>` (see `campaigns/2026-w40/`
+  for example specs).
 - Public link for a finished video (for Buffer/uploader):
   `python3 studio/upload_video.py <video.mp4>`.
 
