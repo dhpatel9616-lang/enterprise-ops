@@ -70,9 +70,16 @@ See the `brand-voice` skill.
 | GitHub `enterprise-leads` repo | Outreach sequencer (changes go through PRs) |
 | Higgsfield API (`HF_KEY`) | Paid generation, cheapest model that meets the brief |
 
-## Weekly social posts
+## What we make (`content-mix` skill)
 
-Three per week, planned with the `content-mix` skill.
+- **Short-form promos** (9:16) for The Sovereign, The Global Aggregate, and
+  PoolParty, built from real material from each product. Realistic AI
+  people and situations appear only in promos. Political and historical
+  clipping ads go out as drafts.
+- **Long-form** (16:9): Robot tutorials (cartoon) on grid-down survival,
+  cybersecurity, history, and politics; and clipping montages.
+- Wade Capital services are sold by phone and email outreach only, never on
+  social.
 
 ## Night-shift loop
 

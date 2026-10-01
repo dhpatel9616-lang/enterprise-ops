@@ -15,23 +15,28 @@ switches (CLAUDE.md rule 1).
    the reason, and stop.
 1. Read the "Autopost — Social" row in Notion Automation Control. If Enabled is
    checked, you will SCHEDULE posts; if unchecked, save them as Buffer drafts.
-2. Produce this week's 3 posts exactly as the content-mix skill defines them
-   (Sovereign article promo from real Substack excerpts; PoolParty or Global
-   Aggregate by ISO week; Wade Capital consulting post), each one vertical 9:16
-   video under 60 seconds for the channels in the skill's channel map, with
-   platform-specific captions, hashtags, the skill's fixed CTA, and AI labels
-   where required. Robot is for long-form YouTube only; don't use him here.
-3. Use code-generated visuals first (video-assembly). Use Higgsfield only for
-   PoolParty campaign ads (promo-cast, campaigns/poolparty-friendly-wagers.md),
-   at the cheapest model that meets the brief; stop generating once this
-   week's logged Higgsfield spend reaches $5.
+2. Produce this week's short-form promos exactly as the content-mix skill
+   defines them: one each for The Sovereign, The Global Aggregate, and
+   PoolParty (skip PoolParty while the skill lists it as blocked), plus up
+   to 2 clipping ads when good clips exist. Each is a vertical 9:16 video
+   built from REAL material (the issue's own quotes and images, real Global
+   Aggregate headlines and screenshots, real app screens), meeting the
+   skill's quality bar, with platform captions, hashtags, the fixed CTA, and
+   AI labels where required. Never post a text-only reel: if the real
+   material can't be fetched, skip that post and log why. No Wade Capital
+   service promotion on social. Robot is for long-form only.
+3. Render with `python3 studio/text_reel.py` (image scenes) and free tools
+   first (video-assembly). Use Higgsfield for realistic promo-cast scenes
+   (promotion only), at the cheapest model that meets the brief; stop
+   generating once this week's logged Higgsfield spend reaches $5.
 4. Before scheduling, check each post against content-rules and brand-voice.
    Save as a draft instead (and note why in the memo) any post that names real
    politicians, candidates, or private individuals, references elections or
-   breaking news, or makes a factual claim you cannot source.
+   breaking news, or makes a factual claim you cannot source. Clipping ads
+   are always drafts.
 5. Get each video's public link with `python3 studio/upload_video.py`, then
-   schedule in Buffer with automatic publishing for Tuesday, Thursday, and
-   Saturday at each platform's best engagement time for a US Eastern audience.
+   schedule in Buffer with automatic publishing (Sovereign Tuesday, Global
+   Aggregate Thursday, PoolParty Saturday) at each platform's best engagement time for a US Eastern audience.
 6. Update Scripts statuses, set Last Run, Last Run Status, and Last Run Notes
    on the Automation Control row, and add a run summary to this week's
    Strategy Memo.

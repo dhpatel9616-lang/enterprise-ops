@@ -14,6 +14,8 @@ shipping.
 1. **Inbound leads for Wade Capital:** website studio and security/risk audit
    services. CTA examples: "Book a free 15-minute website review",
    "Get a security check-up". (Exact links: ask the owner; don't guess URLs.)
+   This path runs through phone and email outreach (Enterprise-leads repo),
+   not social posts: we don't promote services on social (`content-mix`).
 2. **Affiliate links** in YouTube descriptions, only for tools we genuinely
    use and recommend.
    - FTC disclosure, plain and close to the links, above the "more" fold:
@@ -34,11 +36,12 @@ piece; at most one secondary.
 
 | Arm | CTA |
 |---|---|
-| YouTube (The Sovereign) | "Subscribe, follow our Instagram, and read our Substack." |
+| YouTube long-form (Robot tutorials, clipping montages) | "Subscribe, follow our Instagram, and read our Substack." |
+| Clipping ads (short-form) | "Watch the full montage" (YouTube) or "Read The Sovereign" |
 | PoolParty promotion | "Download PoolParty." (18+ audience until confirmed; see `brand-voice`) |
 | The Global Aggregate promotion | "Use The Global Aggregate" → globalaggregate.org |
-| Substack promotion | Standout excerpt from the piece + "collaborate with us" or "subscribe" |
-| Wade Capital services/R&D | "Inquire about <service>" / "Collaborate with us" |
+| Substack promotion | Standout excerpt from the piece + "Read the full piece" |
+| Wade Capital services (outreach emails and calls only) | "Worth a 10-minute call?" / "Inquire about <service>" |
 
 Instagram: @wadecapitallc. Links that aren't known yet (PoolParty App Store link):
 write "ASK OWNER"; never guess a URL.

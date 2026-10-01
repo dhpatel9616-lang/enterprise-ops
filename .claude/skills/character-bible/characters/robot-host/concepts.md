@@ -1,3 +1,7 @@
+> **Rejected for Robot (owner, 2026-10-01): too hyperrealistic.** Robot is a
+> cartoon (see `README.md`). Realistic people and situations are for
+> promotion only (`promo-cast`). Kept here for reference.
+
 # Robot: five realistic directions (owner picks one)
 
 Brief from the owner (2026-09-30): more realistic, more human, less "killer",

@@ -1,51 +1,54 @@
 # Robot
 
-**Show:** "Robot teaches Cybersecurity". **Used only for The Sovereign's
-YouTube long-form videos** (16:9, `--layout wide`). Not for Shorts, ads, or
-PoolParty.
+**Shows:** Robot's long-form YouTube tutorials (16:9, `--layout wide`) on
+grid-down survival, cybersecurity, history, and politics. Long-form content
+only. Not for promos, ads, or PoolParty (those use realistic `promo-cast`).
 
 ## Concept
-A decommissioned combat android that switched sides. It has seen every way
-systems get broken, so it teaches humans how to protect themselves and the
-people they love. Humanoid and battle-worn, detailed rather than cartoonish;
-sharp and witty, caring underneath. Original design; never drift toward any
-existing film robot (no chrome skull endoskeleton, no film catchphrases).
-**Status:** v3, still being refined with the owner.
+A friendly cartoon robot with a screen for a face. Once a field unit, now a
+patient teacher: it has seen how things break (power grids, passwords,
+governments), so it shows beginners how to stay ready and think for
+themselves. Approachable and a bit goofy on the outside; sharp, witty, and
+caring underneath. One piece of tape on its head is the only hint of a
+rough past.
+**Status:** v4 (owner, 2026-10-01: "cartoonish… approachable… more
+robotic", cheap to render). Waiting for the owner's OK on this look.
 
 ## Look
-- Humanoid android head: olive-drab armored cranium with panel seams, heavy
-  dark brow ridge, gunmetal face plate with cheekbone plates and a nose
-  bridge with two vents, a narrow jaw.
-- Two recessed eye sockets with glowing orange lenses. The **right lens is
-  cracked and flickers**. Metal shutters close to blink.
-- Hinged lower jaw that drops to show a glowing orange mouth (mouth shapes
-  A–H, X; see `reference-sheet.png`); horizontal slats when closed.
-- Battle damage (fixed positions, same in every frame): bullet dents, bare
-  metal where paint chipped, scorch marks, fine scratches, a missing cheek
-  panel on its right showing red and yellow wires, grime.
-- Neck of hydraulic pistons and a red cable. Olive armor torso with big
-  shoulder pauldrons, faded stencil "07" on the left pauldron, rivets.
-- Tattered brown scarf wrapped at the collar, one frayed tail hanging down.
-- Cool blue rim light on its left edge from the room's screens.
-- Scene: dim bunker-lab, dark navy glow, faint grid, drifting green
-  terminal glyphs. In widescreen, Robot sits on the right third.
+- Rounded-square steel-blue head with thick dark outlines, a glossy
+  highlight, side "ear" bolts, and an antenna with a blinking red bulb.
+- Face is a dark screen. Eyes are glowing mint pills with small brows that
+  lift when it talks and glance slowly left and right. It blinks by
+  squashing the pills.
+- Mouth is drawn on the same screen (shapes A–H, X; see
+  `reference-sheet.png`): a line when closed, ovals when open, a tongue
+  for "L", teeth for "F/V".
+- A cross of cream tape on the top-right of its head.
+- Boxy body with a chest panel: four blinking status lights and a gold bar
+  (Wade gold `#B8975A`). Tube arms with round hands; its right arm waves
+  (`--wave-at`).
+- Scene: cozy navy workshop with soft shelves and boxes, a few drifting
+  code symbols. In widescreen, Robot sits on the right third
+  (`reference-pose.png`).
+- Flat colors only: no filters, textures, or per-frame clip paths
+  (rig performance rule).
 
 ## Palette
 | Part | Hex |
 |---|---|
-| Armor paint (light / mid / dark) | `#7A8266` / `#4E5540` / `#262A20` |
-| Face plate gunmetal | `#8C939B` → `#2A2E33` |
-| Bare chipped metal | `#C9CDD2` → `#43474D` |
-| Dark metal (brow, neck, torso panel) | `#3B3F45` → `#15171A` |
-| Eyes / mouth glow | `#FF6A2B` core, `#FFE2B0` hot spot |
-| Scarf | `#6E5642` → `#2A1F16` |
-| Stencil | `#C9C39A` |
-| Rim light | `#7FB6FF` |
-| Background glow / edge | `#23384F` / `#06080C` |
+| Body / shade / highlight | `#5B8DB8` / `#3E6A91` / `#8DB6D9` |
+| Outline | `#14202E` |
+| Face screen | `#0B1628` |
+| Eyes, brows, mouth glow | `#8DF7E8` |
+| Antenna bulb, tongue | `#FF5A3C` |
+| Chest bar, accent | `#B8975A` |
+| Tape | `#E9E2CF` |
+| Background glow / edge | `#1D3350` / `#0A121D` |
 
 ## Motion
-Slow breathing bob (3.2 s), slight head tilt that leans in while talking,
-blink roughly every 3 s, cracked lens flickers, jaw follows the voice.
+Gentle bob (3 s), slight head tilt that leans in while talking, blink
+roughly every 3 s, slow eye glance, antenna bulb blinks, chest lights
+cycle, jaw-free mouth follows the voice on the screen.
 
 ## Voice
 Performed by the owner (see `voiceover-workflow`). An ffmpeg robot filter can
