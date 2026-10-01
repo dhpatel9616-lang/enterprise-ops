@@ -11,6 +11,13 @@ Every call costs real money and we have zero revenue. Free first: if
 ## Credential
 - Read the key from the `HF_KEY` environment variable. Never print, log,
   paste into Notion, or commit it.
+- `HF_KEY` must be the key ID and secret joined by a colon
+  (`HF_KEY=<key id>:<key secret>`, from console.higgsfield.ai). Send it as
+  `Authorization: Key $HF_KEY` to `https://api.higgsfield.ai/<model path>`.
+  Requests are asynchronous: poll the returned `status_url`, then download the
+  result within 7 days (outputs expire).
+- Check price first with the free estimate endpoint:
+  `POST https://api.higgsfield.ai/estimate/<model path>` with the same body.
 - If `HF_KEY` is missing, stop and tell the owner in plain words: "Add your
   Higgsfield key as a secret named HF_KEY in the cloud environment settings."
 
