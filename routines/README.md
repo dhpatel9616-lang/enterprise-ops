@@ -12,4 +12,11 @@ the text in the matching file (everything inside the grey box), and save.
 |---|---|---|
 | YT Video Studio | `yt-video-studio.md` | Schedule: **Fridays 1:37 AM Eastern** (so Thursday-night recordings make it) |
 | Social Studio | `social-studio.md` | nothing |
-| Strategist, Builder + Leads | `setup-step.md` | add the setup step to the top of the existing prompt |
+| Builder + Leads | `builder-leads.md` | replace the whole prompt |
+| Strategist | `setup-step.md` | add the setup step to the top of the existing prompt |
+
+**Studio tools come from the environment, not the routine.** Scheduled runs
+are not allowed to run `setup.sh` themselves (the 2026-10-01 YouTube run was
+blocked this way). Paste the whole of `studio/setup.sh` into the Setup script
+box of the environment each routine uses (cloud environment menu → Edit →
+Setup script). The prompts only run it as a fallback when a tool is missing.
