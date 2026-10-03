@@ -36,7 +36,9 @@ description: Honesty and safety rules for every script, video, image, and post. 
 ## No real people's likenesses
 - Don't generate, imitate, or edit in the face, body, or voice of any real
   person (celebrities, politicians, creators, private people), including the
-  owner, unless the owner explicitly provides and approves their own.
+  owner, unless the owner explicitly provides and approves their own, or the
+  person has given consent recorded in `character-bible` (currently: Robot's
+  cloned voice). Never clone a voice from a public recording.
 - Don't make characters that resemble existing copyrighted characters or
   mascots.
 - Don't use other creators' footage, music, or art without a licence.

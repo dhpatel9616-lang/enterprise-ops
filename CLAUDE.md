@@ -69,6 +69,7 @@ See the `brand-voice` skill.
 | Supabase `skakrtljfaeopfqigyww` | Enterprise Leads data (outreach); public `studio-videos` bucket for rendered videos |
 | GitHub `enterprise-leads` repo | Outreach sequencer (changes go through PRs) |
 | Higgsfield API (`HF_KEY`) | Paid generation, cheapest model that meets the brief |
+| ElevenLabs (`ELEVENLABS_API_KEY`, `ELEVENLABS_VOICE_ID`) | Robot's cloned voice (`studio/ai_voice.py`); later, business voice agents |
 
 ## What we make (`content-mix` skill)
 
