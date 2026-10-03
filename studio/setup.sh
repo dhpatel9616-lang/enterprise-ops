@@ -29,8 +29,15 @@ if ! command -v rhubarb >/dev/null; then
   rm -rf "$tmp"
 fi
 
+# Robot's AI voice (studio/ai_voice.py): Kokoro engine from PyPI, model files from GitHub.
+python3 -c "import kokoro_onnx, soundfile" 2>/dev/null || pip install -q kokoro-onnx soundfile
+$SUDO mkdir -p /opt/kokoro && $SUDO chmod 777 /opt/kokoro
+for f in kokoro-v1.0.onnx voices-v1.0.bin; do
+  [ -f "/opt/kokoro/$f" ] || curl -fsSL -o "/opt/kokoro/$f" "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/$f"
+done
+
 # Fail loudly if anything the renderer relies on is still missing.
 ffmpeg -hide_banner -decoders 2>/dev/null | grep -c librsvg >/dev/null || { echo "setup: ffmpeg has no SVG (librsvg) support" >&2; exit 1; }
 rhubarb --version >/dev/null
-python3 -c "import json, subprocess, urllib.request"
+python3 -c "import json, subprocess, urllib.request, kokoro_onnx, soundfile"
 echo "studio setup OK: $(ffmpeg -version | head -1 | cut -d' ' -f1-3), rhubarb $(rhubarb --version 2>&1 | grep -o "[0-9.]*[0-9]"), espeak-ng $(espeak-ng --version | cut -d' ' -f4)"

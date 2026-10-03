@@ -61,8 +61,12 @@ roughly every 3 s, slow eye glance, antenna bulb blinks, chest lights
 cycle, jaw-free mouth follows the voice on the screen.
 
 ## Voice
-Performed by the owner (see `voiceover-workflow`). An ffmpeg robot filter can
-be added if the owner wants it.
+AI voice, natural and lightly British: `studio/ai_voice.py` (Kokoro, voice
+`bm_george` until the owner picks from the auditions in
+`studio/samples/voice-test/`). Dry, warm, a little wry; it occasionally
+corrects its own Britishisms for an American audience ("petrol station,
+sorry, gas station"). The owner may record an episode instead; see
+`voiceover-workflow`.
 
 ## Don't
 - Don't show it hurting people or give real-world weapon or attack
