@@ -103,6 +103,29 @@ or stock filler.
   drafts** for the owner to approve (CLAUDE.md rule 1), even with Autopost
   on.
 
+## Robot's long-form series (one episode a week)
+Owner-approved order (2026-10-03). Each is a page in Notion → Scripts.
+Ep. 1 is a full script; Ep. 2–7 are briefs titled "(brief)" with no Status.
+
+1. How Civilization Ends in 72 Hours (pilot)
+2. One Password Shut Down the East Coast's Gas
+3. Every Empire Thinks It's the Exception
+4. When the Sun Attacks (the Carrington Event)
+5. Stuxnet, the First Digital Weapon
+6. What Happens When Money Stops Working
+7. The Hackers Who Turned Off the Lights
+
+**Writing next week's script** (YT Video Studio step 5): take the lowest-
+numbered "(brief)" page, verify every fact against its sources (drop or
+soften anything you can't confirm), and add a `## Spoken script` section in
+Robot's voice: ~1,400–1,600 words (~10 min), a cold-open hook from a real
+moment, chapters, one practical takeaway, and the CTA. Add a `## Storyboard`
+and a `## Sources` section, remove "(brief)" from the title, and set it to
+Ready to Record. Match Ep. 1's structure and tone. After Ep. 7, propose the
+next three in the Strategy Memo for the owner to pick; don't start
+generic topics (the owner rejected "who runs America", "survival lessons
+from history", and "map of everything you depend on" as too generic).
+
 ## Making the videos
 - Short-form: `studio/text_reel.py` with `image` scenes (real images with a
   slow push-in, quotes, big numbers); put each week's specs and the

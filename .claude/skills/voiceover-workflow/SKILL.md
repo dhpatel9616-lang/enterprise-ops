@@ -50,18 +50,24 @@ Create a Scripts item:
 Search the Voiceovers folder for each *Ready to Record* item's filename (any
 audio extension). Not there → leave it. Found → set **Recorded**.
 
-**Backup voice (so a week never ships nothing):** if the weekly video routine
-finds no Recorded item, it voices the oldest *Ready to Record* script as Robot
-with free text-to-speech:
+**Robot's AI voice (the default for Robot episodes, owner 2026-10-03):** if
+the weekly video routine finds no Recorded item, it voices the oldest
+*Ready to Record* long-form script with Robot's AI voice:
 
 ```
-espeak-ng -v en-us+m3 -s 155 -f script.txt -w raw.wav
-ffmpeg -i raw.wav -af "asetrate=22050*0.92,aresample=44100,atempo=1.087,aecho=0.8:0.6:10:0.25" vo.wav
+python3 studio/ai_voice.py spoken.txt vo.wav
 ```
 
-Note "Robot's voice is synthetic" in the description. The owner's own voice is
-strongly preferred: YouTube's Partner Program rejects channels that look
-mass-produced, and a human voice is the biggest signal against that.
+`spoken.txt` = the page's **Spoken script** section only (no headings or
+storyboard notes), paragraphs separated by blank lines. Free, offline,
+British (`character-bible` names the voice). Then add "Robot's voice is
+AI-generated." to the description and set `synthetic_media: true` in the
+upload metadata. The owner can still record any episode by hand; a Recorded
+file always wins.
+
+Keep each episode original and researched (real stories, sources on screen):
+YouTube's Partner Program rejects channels that look mass-produced, and an
+AI voice reading thin, repetitive scripts is the pattern it looks for.
 
 ## 3. Assemble (Claude)
 Download the file, then follow `video-assembly`. If a line was re-read, keep
