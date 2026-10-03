@@ -16,7 +16,7 @@ more battered, war-torn wear (2026-10-01). Original design: no red eyes, no
 chrome skull, nothing lifted from film robots.
 
 ## Look
-- Rounded-square steel-blue head with thick dark outlines, a glossy
+- Rounded-square dusty-pink head (owner, 2026-10-03: Robot is a she) with thick dark outlines, a glossy
   highlight, side "ear" bolts, and an antenna with a blinking red bulb.
 - Face is a dark screen. Eyes are glowing mint pills with small brows that
   lift when it talks and glance slowly left and right. It blinks by
@@ -43,8 +43,8 @@ chrome skull, nothing lifted from film robots.
 ## Palette
 | Part | Hex |
 |---|---|
-| Body / shade / highlight | `#5B8DB8` / `#3E6A91` / `#8DB6D9` |
-| Outline | `#14202E` |
+| Body / shade / highlight (pink) | `#E07FA6` / `#B9567F` / `#F6B8CF` |
+| Outline | `#2A1622` |
 | Face screen | `#0B1628` |
 | Eyes, brows, mouth glow | `#8DF7E8` |
 | Antenna bulb, tongue | `#FF5A3C` |
