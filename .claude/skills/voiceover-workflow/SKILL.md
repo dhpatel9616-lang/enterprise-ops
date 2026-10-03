@@ -60,7 +60,10 @@ python3 studio/ai_voice.py spoken.txt vo.wav
 
 `spoken.txt` = the page's **Spoken script** section only (no headings or
 storyboard notes), paragraphs separated by blank lines. Free, offline,
-British (`character-bible` names the voice). Then add "Robot's voice is
+Uses Robot's ElevenLabs voice when `ELEVENLABS_API_KEY` and
+`ELEVENLABS_VOICE_ID` are set, otherwise the free Kokoro voice
+(`character-bible`). Log the ElevenLabs characters used per episode in
+`studio/logs/generation-costs.csv`. Then add "Robot's voice is
 AI-generated." to the description and set `synthetic_media: true` in the
 upload metadata. The owner can still record any episode by hand; a Recorded
 file always wins.

@@ -61,12 +61,19 @@ roughly every 3 s, slow eye glance, antenna bulb blinks, chest lights
 cycle, jaw-free mouth follows the voice on the screen.
 
 ## Voice
-AI voice, natural and lightly British: `studio/ai_voice.py` (Kokoro, voice
-`bm_george` until the owner picks from the auditions in
-`studio/samples/voice-test/`). Dry, warm, a little wry; it occasionally
-corrects its own Britishisms for an American audience ("petrol station,
-sorry, gas station"). The owner may record an episode instead; see
-`voiceover-workflow`.
+A woman's voice (owner, 2026-10-03, for engagement): an ElevenLabs clone
+of the owner's partner, who agreed to it (consent recorded below).
+`studio/ai_voice.py` uses it automatically when `ELEVENLABS_API_KEY` and
+`ELEVENLABS_VOICE_ID` are set; until then it falls back to the free Kokoro
+voice `bf_emma`. Delivery: dry, warm, a little wry. The owner may record an
+episode instead; see `voiceover-workflow`.
+
+**Consent:** the voice owner agreed (via the owner, 2026-10-03) to have her
+voice cloned for Robot's videos on this channel. Use the clone only for
+Robot's narration and Wade Capital content she has agreed to; never for
+anything that impersonates her, puts words in her mouth as herself, or for
+other people's projects. If she withdraws consent, delete the clone in
+ElevenLabs and switch back to Kokoro the same day.
 
 ## Don't
 - Don't show it hurting people or give real-world weapon or attack
