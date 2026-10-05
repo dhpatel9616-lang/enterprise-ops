@@ -11,7 +11,7 @@ background(t) draws this character's scene.
 """
 import math
 
-INK, BODY, SHADE, LIGHT = "#14202E", "#5B8DB8", "#3E6A91", "#8DB6D9"
+INK, BODY, SHADE, LIGHT = "#2A1622", "#E07FA6", "#B9567F", "#F6B8CF"
 SCREEN, GLOW, BULB, GOLD = "#0B1628", "#8DF7E8", "#FF5A3C", "#B8975A"
 METAL, SOOT, SCARF = "#C9D1D9", "#0E1620", "#7A5A3C"
 

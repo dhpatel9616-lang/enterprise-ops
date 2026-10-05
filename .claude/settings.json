@@ -8,7 +8,11 @@
       "mcp__Buffer__list_channels",
       "mcp__Buffer__get_channel",
       "mcp__Buffer__get_account",
-      "mcp__Buffer__get_aggregated_post_metrics"
+      "mcp__Buffer__get_aggregated_post_metrics",
+      "mcp__Notion__notion-update-page",
+      "mcp__Notion__notion-create-pages",
+      "mcp__Notion__notion-fetch",
+      "mcp__Notion__notion-query-data-sources"
     ]
   }
 }
