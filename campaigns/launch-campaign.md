@@ -59,3 +59,50 @@ Robot's Short (from the YouTube episode) posts Sunday on top of these.
 - Rule 1 means **draft, not skip**: if a post needs the owner's eye, make it
   and save it as a Buffer draft with a one-line reason.
 - Higgsfield spend cap: $5/week.
+
+## Reach: captions, keywords, hashtags (every post)
+
+Search now drives discovery on all three apps: TikTok and Instagram read the
+caption, the on-screen text and the spoken words; YouTube reads the title and
+description. So every post says what it's about in plain search words.
+
+**Every post has:**
+1. **A keyword-first first line** (it's the hook *and* the search phrase):
+   "Hobbes vs. Locke explained in 30 seconds", "How 30 countries reported the
+   same story". The same phrase appears as on-screen text in the first 2 s.
+2. **One or two sentences** of value, then the CTA.
+3. **A question** to drive comments ("Which side are you on?", "Which
+   headline surprised you?"). On Instagram, put it as the first comment too.
+4. **Hashtags:** 3–5 per post (Instagram, TikTok), 3 in the YouTube Shorts
+   description. One brand tag + two niche tags + one or two topic tags. Rotate;
+   never paste the same block every time. Skip #fyp/#viral style tags (no
+   signal).
+5. **YouTube Shorts title:** under 60 characters, keyword first (the hook
+   phrase), no hashtags in the title.
+6. **Alt text** on any image post (accessibility, and it's indexed).
+
+**Keyword and hashtag bank** (pick per post; add issue- or story-specific tags):
+
+| Brand | Search phrases to use in captions/on-screen | Hashtags |
+|---|---|---|
+| The Sovereign | philosophy explained, political philosophy, critical thinking, civics for beginners, history of ideas, law and society, media criticism, education | brand: #TheSovereign · niche: #politicalphilosophy #criticalthinking #civics #historyofideas #prelaw #lawstudent · topic: #philosophy #politics #history #education #substack |
+| The Global Aggregate | world news explained, how countries report the news, media bias, news literacy, compare headlines, international news | brand: #TheGlobalAggregate · niche: #medialiteracy #newsliteracy #mediabias #internationalrelations #geopolitics · topic: #worldnews #news #globalnews #journalism #students |
+| Robot (Shorts) | survival tips for beginners, emergency preparedness, cybersecurity for beginners, history explained | brand: #RobotExplains · niche: #emergencypreparedness #cybersecuritytips #prepared #historyexplained · topic: #survival #cybersecurity #history |
+
+**Timing (US Eastern), one post per brand per day max:** TikTok 7–9 PM,
+Instagram 11 AM–1 PM or 7–9 PM, YouTube Shorts 2–4 PM. Spread the three
+platforms across those windows rather than posting all at once.
+
+**Learn and adjust (Strategist, weekly):** from Buffer metrics, name the top
+2 posts by reach and by comments, which hook phrase and ad type they used, and
+make next week lean that way. Retire hashtags that never appear on top posts.
+
+## Profiles (one-time, owner)
+Each profile's name and bio carry the main keyword, because profile text is
+searchable too:
+- Instagram @wadecapitallc and TikTok @wadethesovereign: name field
+  "The Sovereign · World News & Ideas"; bio "Philosophy, politics & world news
+  explained for beginners. Compare 30 countries' headlines ↓" with the link
+  to globalaggregate.org or a link page listing the Substack and the site.
+- YouTube channel description: first line "Robot explains survival,
+  cybersecurity, history and politics for beginners."
