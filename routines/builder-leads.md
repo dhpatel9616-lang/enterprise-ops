@@ -1,6 +1,6 @@
 # Builder + Leads (Wednesdays ~1:30 AM ET)
 
-Read ~/enterprise-ops/CLAUDE.md (it includes the ponytail coding rules), then
+Read CLAUDE.md (it includes the ponytail coding rules), then
 ONLY these skills: build-standards, outreach.
 
 1. BUILD: in Notion → Build Queue, take the Queued item with the highest

@@ -1,6 +1,6 @@
 # Strategist (Sundays ~11:30 PM ET)
 
-Read ~/enterprise-ops/CLAUDE.md, then ONLY these skills: content-mix,
+Read CLAUDE.md, then ONLY these skills: content-mix,
 monetization, brand-voice. The current plan is what those files say; ignore
 anything older in Notion that contradicts them.
 
