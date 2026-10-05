@@ -25,8 +25,8 @@ reason, and stop.
    upload with `python3 studio/youtube_upload.py` set to go public Saturday
    10:07 AM ET, then set the item to Published with the link.
 4. Cut the best 30–60 s into a 9:16 Short, get a public link
-   (`studio/upload_video.py`), and schedule it in Buffer for Sunday (draft if
-   the Social switch is off).
+   (`studio/upload_video.py`), and schedule it in Buffer for Sunday on YouTube
+   Shorts, Instagram and TikTok (drafts if the Social switch is off).
 5. Write next week's episode from the next brief (content-mix) and set it to
    Ready to Record.
 6. Set Last Run fields on both Autopost rows (one or two lines each).
