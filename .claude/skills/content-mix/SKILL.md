@@ -20,15 +20,16 @@ Realistic AI people and situations are **for promotion only**, never in
 long-form content (`character-bible`).
 
 ## Weekly short-form slate
-Three promos a week, one per product, plus clipping ads when there are good
-clips:
+The launch campaign (`campaigns/launch-campaign.md`) sets the week: five ads
+Mon–Fri alternating The Sovereign and The Global Aggregate, each on Instagram
+Reels, TikTok and YouTube Shorts, plus Robot's Short on Sunday. PoolParty
+joins after launch; clipping ads when a source exists.
 
-| Day | Post | CTA | Link |
-|---|---|---|---|
-| Tue | **The Sovereign** issue promo | "Read the full piece" | the issue's Substack link |
-| Thu | **The Global Aggregate** story promo | "Use The Global Aggregate" | https://globalaggregate.org |
-| Sat | **PoolParty** promo (see Blocked) | "Download PoolParty" | App Store link |
-| any | Clipping ad (optional, up to 2) | "Watch the full montage" or "Read The Sovereign" | YouTube video or Substack |
+**Rule 1 means draft, not skip.** A post that names politicians or private
+people, touches elections or breaking news, or makes an unsourced claim is
+still made, then saved as a Buffer draft with a one-line reason. Only skip
+something that can't be made honestly at all. War, crime, and hard news in
+general are not banned; they're drafts when rule 1 applies.
 
 Channels (Buffer): Instagram @wadecapitallc and TikTok @wadethesovereign get
 every promo; YouTube Shorts gets the Sovereign, Robot and clipping posts. Buffer's
@@ -84,9 +85,11 @@ Sovereign or Global Aggregate promos.
   visitor):
   `trending_clusters?select=cluster_id,country_count,source_count,article_count,latest_activity&order=country_count.desc&limit=30`,
   then `articles?select=title,source,country,url,published_at&cluster_id=eq.<id>`.
-- Pick one cluster from the last 48 hours that isn't breaking news or an
-  election story (rule 1), with 3+ countries. Prefer science, economy,
-  culture, and world events where countries frame things differently.
+- Story ads: pick a cluster from the last 48 hours with 3+ countries, preferring
+  science, economy, sport, culture, space, health, business. Rule 1 clusters
+  (elections, breaking news, named private people) are made as drafts.
+- Generic brand ads (By the numbers, How it works, Who it's for) need no
+  story and can always post; see `campaigns/launch-campaign.md`.
 - Beats: two or three real headlines from different countries (outlet +
   country + date, exactly as published) → "covered by N outlets in M
   countries" → "Use The Global Aggregate". Render the headline cards with
