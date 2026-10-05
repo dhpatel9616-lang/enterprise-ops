@@ -1,12 +1,12 @@
 # YT Video Studio (Fridays ~12:30 AM ET)
 
-Read ~/enterprise-ops/CLAUDE.md, then ONLY these skills: content-mix,
+Read CLAUDE.md, then ONLY these skills: content-mix,
 voiceover-workflow, video-assembly, character-bible, brand-voice,
 content-rules, monetization, platform-formats. Run studio scripts from
-~/enterprise-ops.
+the repo root.
 
 Tools: check `command -v ffmpeg rhubarb` and `python3 -c "import kokoro_onnx"`;
-only if something is missing run `bash ~/enterprise-ops/studio/setup.sh`.
+only if something is missing run `bash studio/setup.sh`.
 Still missing: set the "Autopost — YouTube long-form" row to Error with the
 reason, and stop.
 

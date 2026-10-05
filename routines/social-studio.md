@@ -1,13 +1,13 @@
 # Social Studio (Mondays ~12:30 AM ET)
 
-Read ~/enterprise-ops/CLAUDE.md, then ONLY these skills in
-~/enterprise-ops/.claude/skills/: content-mix, brand-voice, content-rules,
+Read CLAUDE.md, then ONLY these skills in
+.claude/skills/: content-mix, brand-voice, content-rules,
 platform-formats, monetization, video-assembly (and higgsfield-api only if a
-promo needs realistic people). Run studio scripts from ~/enterprise-ops.
+promo needs realistic people). Run studio scripts from the repo root.
 
 Tools: the environment's Setup script installs them. Check with
 `command -v ffmpeg rhubarb`; only if one is missing run
-`bash ~/enterprise-ops/studio/setup.sh`. Still missing: set the "Autopost — Social"
+`bash studio/setup.sh`. Still missing: set the "Autopost — Social"
 row (Notion → Automation Control) to Error with the reason, and stop.
 
 1. Read the "Autopost — Social" row. Enabled = schedule in Buffer with
