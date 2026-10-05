@@ -1,22 +1,29 @@
-# Routine prompts (paste-ready)
+# Routines
 
-These routines were created outside Claude, so only the owner can edit them.
-They run in the environment named in each routine's settings: that environment
-needs the keys (HF_KEY, ENTERPRISE_SUPABASE_URL, ENTERPRISE_SUPABASE_SERVICE_KEY,
-YOUTUBE_*), network access to *.supabase.co, *.higgsfield.ai, *.googleapis.com,
-and `studio/setup.sh` in its Setup script box. To edit a routine:
-open https://claude.ai/code/routines, click the routine, replace its prompt with
-the text in the matching file (everything inside the grey box), and save.
+Each routine's prompt in claude.ai/code/routines is the same short text, with
+its own file name. The real instructions live in this folder, so changing a
+routine only takes a merged PR, never another paste.
 
-| Routine | File | Also change |
+| Routine | File | Schedule (Eastern) |
 |---|---|---|
-| YT Video Studio | `yt-video-studio.md` | Schedule: **Fridays 1:37 AM Eastern** (so Thursday-night recordings make it) |
-| Social Studio | `social-studio.md` | nothing |
-| Builder + Leads | `builder-leads.md` | replace the whole prompt |
-| Strategist | `setup-step.md` | add the setup step to the top of the existing prompt |
+| Strategist | `strategist.md` | Sunday ~11:30 PM |
+| Social Studio | `social-studio.md` | Monday ~12:30 AM |
+| Builder + Leads | `builder-leads.md` | Wednesday ~1:30 AM |
+| To-Do Email | `todo-email.md` | Thursday ~8 AM |
+| YT Video Studio | `yt-video-studio.md` | Friday ~12:30 AM |
 
-**Studio tools come from the environment, not the routine.** Scheduled runs
-are not allowed to run `setup.sh` themselves (the 2026-10-01 YouTube run was
-blocked this way). Paste the whole of `studio/setup.sh` into the Setup script
-box of the environment each routine uses (cloud environment menu → Edit →
-Setup script). The prompts only run it as a fallback when a tool is missing.
+The prompt to paste (replace FILE with the file name above):
+
+```
+UNATTENDED SCHEDULED RUN. Nobody is watching: don't ask questions; make
+reasonable decisions and note them. Run
+`git clone --depth 1 https://github.com/dhpatel9616-lang/enterprise-ops ~/enterprise-ops`,
+then read ~/enterprise-ops/routines/FILE and follow it exactly. If the clone
+fails, send a push notification with the error and stop.
+```
+
+All routines use the same environment. Its Setup script box holds the whole of
+`studio/setup.sh`; its variables hold the keys (HF_KEY, ENTERPRISE_SUPABASE_URL,
+ENTERPRISE_SUPABASE_SERVICE_KEY, YOUTUBE_*, ELEVENLABS_*). Builder + Leads also
+needs enterprise-ops and Enterprise-leads under its Repositories, so it can push
+PRs. Use Sonnet for every routine; none needs a bigger model.
