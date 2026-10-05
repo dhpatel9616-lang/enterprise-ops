@@ -37,7 +37,7 @@ def image_scene(s, k, p, uri):
     return (f'<image href="{uri}" x="0" y="0" width="{W}" height="{H}" preserveAspectRatio="xMidYMid slice" '
             f'transform="translate({W / 2} {H / 2}) scale({z:.4f}) translate({-W / 2} {-H / 2})"/>'
             f'<rect width="{W}" height="{H}" fill="url(#fade)"/>'
-            + lines(s.get("text", ""), 22, 70, 1420, CREAM, opacity=k, dy=30 * (1 - k))
+            + (lines(s.get("text", ""), 28, 56, 1400, CREAM, opacity=k, dy=30 * (1 - k)) if len(s.get("text", "")) > 90 else lines(s.get("text", ""), 22, 70, 1420, CREAM, opacity=k, dy=30 * (1 - k)))
             + (lines(s["source"], 46, 30, 1640, GOLD, "DejaVu Sans", "bold", k) if s.get("source") else ""))
 
 
