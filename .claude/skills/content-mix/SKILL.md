@@ -77,16 +77,22 @@ CTA. It counts as promotion for the YouTube channel; it doesn't replace the
 Sovereign or Global Aggregate promos.
 
 ## The Global Aggregate promo
-- Pick one real story cluster on https://globalaggregate.org that is not
-  breaking news or election news (rule 1). Prefer science, economy,
+- Data comes straight from the site's own database (globalaggregate.org sits
+  behind a bot checkpoint we can't switch off; it's hosted by Rocket).
+  Read-only REST on `https://nikvqivovodrfybfjjka.supabase.co/rest/v1/` with
+  the public key in `GA_SUPABASE_ANON_KEY` (the same key the site gives every
+  visitor):
+  `trending_clusters?select=cluster_id,country_count,source_count,article_count,latest_activity&order=country_count.desc&limit=30`,
+  then `articles?select=title,source,country,url,published_at&cluster_id=eq.<id>`.
+- Pick one cluster from the last 48 hours that isn't breaking news or an
+  election story (rule 1), with 3+ countries. Prefer science, economy,
   culture, and world events where countries frame things differently.
-- Beats: two or three real headlines about the same event from different
-  countries (outlet + country flag + date on screen) → the number of
-  outlets and countries covering it → a screen capture of the real cluster
-  page → "Use The Global Aggregate".
-- Headlines are shown exactly as published, with the outlet's name. Add
-  the ownership disclosure when the post is branded as The Sovereign
-  (`monetization`).
+- Beats: two or three real headlines from different countries (outlet +
+  country + date, exactly as published) → "covered by N outlets in M
+  countries" → "Use The Global Aggregate". Render the headline cards with
+  `text_reel.py` image scenes (our own branded cards; no screenshots needed).
+- If `GA_SUPABASE_ANON_KEY` isn't set, skip and say so in the run notes.
+  Add the ownership disclosure when branded as The Sovereign (`monetization`).
 
 ## PoolParty promo
 - Realistic `promo-cast` scenes (`campaigns/poolparty-friendly-wagers.md`)
