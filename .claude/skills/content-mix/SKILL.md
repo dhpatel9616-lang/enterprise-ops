@@ -31,7 +31,7 @@ clips:
 | any | Clipping ad (optional, up to 2) | "Watch the full montage" or "Read The Sovereign" | YouTube video or Substack |
 
 Channels (Buffer): Instagram @wadecapitallc and TikTok @wadethesovereign get
-every promo; YouTube Shorts gets the Sovereign and clipping posts. Buffer's
+every promo; YouTube Shorts gets the Sovereign, Robot and clipping posts. Buffer's
 free plan holds 10 scheduled posts, so schedule one week ahead at most.
 
 ## The quality bar (why the text reels were rejected)
@@ -52,17 +52,29 @@ the post** and say why in the run notes. Never fall back to a text-only reel
 or stock filler.
 
 ## The Sovereign promo
-- From the newest published issue not yet promoted
-  (`https://sovereignnewsletter.substack.com/feed`; images are on
-  `substackcdn.com`).
-- Beats: hook quote → 2–3 real pull quotes over the issue's images (or a
-  realistic `promo-cast` situation that illustrates the topic, AI-labeled)
-  → the one-line argument → "Read the full piece" card with the issue
-  title.
+- Pick the newest published issue that hasn't been promoted yet (check
+  Buffer's sent and scheduled posts for the issue title). Older issues are
+  evergreen: keep working back through the archive
+  (`https://sovereignnewsletter.substack.com/feed`) before repeating one.
+- Skip an issue only if it can't be promoted honestly (it rests on a private
+  person, or on images we have no right to use). An issue that turns on a
+  real public figure is still made, but saved as a Buffer draft
+  (CLAUDE.md rule 1). Log which issue you used and why others were skipped.
+- Visuals: the issue's own images when they load (`substackcdn.com`); most
+  issues only carry the newsletter logo, so the default is 2–3 realistic
+  `promo-cast` scenes from `higgsfield-api` that illustrate the issue's idea
+  (cheapest image model, AI-labeled), never other publishers' charts or
+  photos.
+- Beats: hook quote → 2–3 verbatim pull quotes over the scenes → the
+  one-line argument → "Read the full piece" card with the issue title.
 - Quotes are **word for word** from the published issue. Never invent,
   trim mid-sentence to change meaning, or "improve" a quote.
-- Issues that name real private people, or turn on a real public figure,
-  go out as drafts (CLAUDE.md rule 1).
+
+## Robot's Short (channel promotion)
+The weekly 30–60 s Short cut from Robot's episode (YT Video Studio) goes to
+YouTube Shorts, Instagram and TikTok, with "Full episode on YouTube" as the
+CTA. It counts as promotion for the YouTube channel; it doesn't replace the
+Sovereign or Global Aggregate promos.
 
 ## The Global Aggregate promo
 - Pick one real story cluster on https://globalaggregate.org that is not
