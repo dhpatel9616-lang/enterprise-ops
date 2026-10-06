@@ -30,7 +30,10 @@ Issue notes (as of 2026-10-06):
 ## The Global Aggregate (CTA: "Use The Global Aggregate" → globalaggregate.org)
 
 Generic brand ads don't depend on any one news story, so they can always post
-automatically. Story ads use a real cluster and follow rule 1 (draft when
+automatically. **Every Global Aggregate ad needs real visuals under the
+words**: 2–3 AI-labeled scenes (people reading news on phones, a newsroom,
+a globe of headlines) or real headline cards from the database. A starfield
+or plain background with text is a text reel, and text reels never ship. Story ads use a real cluster and follow rule 1 (draft when
 required).
 
 | Ad type | What it is | Material |
@@ -39,6 +42,10 @@ required).
 | **How it works** | Search one event → see every country's headline → spot the framing | Branded walkthrough cards of the real features: trending stories, world map, filter by country, saved filters |
 | **Who it's for** | Students writing papers, debaters, anyone who wants to "check it yourself" | Brand cards + real counts |
 | **Same story, different world** | 2–3 real headlines about one event from different countries | A real cluster from `trending_clusters`; prefer science, economy, sport, culture, space, health, business. War/crime/election/breaking clusters are still allowed but saved as drafts (rule 1) |
+
+**Buffer's free plan holds 10 scheduled posts at once**, so 5 ads × Instagram
++ TikTok fills it; YouTube Shorts get Robot's Short only until the plan is
+upgraded.
 
 ## Weekly rhythm
 
@@ -72,7 +79,8 @@ description. So every post says what it's about in plain search words.
    same story". The same phrase appears as on-screen text in the first 2 s.
 2. **One or two sentences** of value, then the CTA.
 3. **A question** to drive comments ("Which side are you on?", "Which
-   headline surprised you?"). On Instagram, put it as the first comment too.
+   headline surprised you?"), in the caption (Buffer's free plan can't post
+   a first comment).
 4. **Hashtags:** 3–5 per post (Instagram, TikTok), 3 in the YouTube Shorts
    description. One brand tag + two niche tags + one or two topic tags. Rotate;
    never paste the same block every time. Skip #fyp/#viral style tags (no

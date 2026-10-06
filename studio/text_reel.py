@@ -37,7 +37,7 @@ def image_scene(s, k, p, uri):
     return (f'<image href="{uri}" x="0" y="0" width="{W}" height="{H}" preserveAspectRatio="xMidYMid slice" '
             f'transform="translate({W / 2} {H / 2}) scale({z:.4f}) translate({-W / 2} {-H / 2})"/>'
             f'<rect width="{W}" height="{H}" fill="url(#fade)"/>'
-            + lines(s.get("text", ""), 22, 70, 1420, CREAM, opacity=k, dy=30 * (1 - k))
+            + (lambda t: lines(t, *((22, 70, 1400) if len(t) < 110 else (28, 56, 1320) if len(t) < 190 else (34, 46, 1250)), CREAM, opacity=k, dy=30 * (1 - k)))(s.get("text", ""))  # long quotes shrink to stay clear of the source line
             + (lines(s["source"], 46, 30, 1640, GOLD, "DejaVu Sans", "bold", k) if s.get("source") else ""))
 
 
@@ -54,7 +54,8 @@ def frame(spec, t, total, uris):
         k, c = ease((t - start) / 0.45), spec["cta"]
         body = (f'<rect x="90" y="{680 + 30 * (1 - k):.0f}" width="900" height="500" rx="6" fill="{NAVY}" fill-opacity="{k:.2f}" stroke="{GOLD}" stroke-opacity="{k:.2f}" stroke-width="3"/>'
                 + lines(c["text"], 20, 64, 860, CREAM, opacity=k)
-                + lines(c["url"], 26, 50, 1080, GOLD, "DejaVu Sans", "bold", k)
+                + (lines(c["url"], 26, 50, 1080, GOLD, "DejaVu Sans", "bold", k) if len(c["url"]) <= 26
+                   else lines(c["url"], 44, 34, 1080, GOLD, "DejaVu Sans", "bold", k))  # long URLs shrink, never break mid-word
                 + (lines(c["note"], 46, 30, 1270, GRAY, "DejaVu Sans", opacity=k) if c.get("note") else ""))
     progress = W * t / total
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">'
