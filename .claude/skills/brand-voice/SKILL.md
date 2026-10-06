@@ -135,8 +135,8 @@ until then:** Wade Capital's dark palette and fonts, with the robot host's red
     phone screen out of view. Never invent app screens or features.
 
 ## The Global Aggregate
-- **What it is (website):** clusters coverage of the same story from sources
-  across 30 countries, "so you can see how one event is reported around the
+- **What it is (website):** clusters coverage of the same story from 195 news
+  RSS feeds (owner, 2026-10-06; never say "30 countries"), "so you can see how one event is reported around the
   world."
 - **CTA:** "Use The Global Aggregate" → https://globalaggregate.org
 - Natural fit with The Sovereign's "uncorrupted information" promise.
