@@ -12,7 +12,8 @@ the top level of the Command Center), then email it to dhpatel9616@gmail.com
    - Outreach, last 7 days, from Supabase via ENTERPRISE_SUPABASE_URL /
      ENTERPRISE_SUPABASE_SERVICE_KEY (REST, read only; or the Supabase connector on project skakrtljfaeopfqigyww): leads added, first
      emails, follow-ups, replies, bounces, AI calls and outcomes, call spend.
-   - Social: posts published and their metrics (Buffer).
+   - Social: posts published and their metrics (Buffer); then do the "Learn and
+     adjust" step in campaigns/launch-campaign.md (top 2 posts, what to lean into).
    - YouTube: episodes published this week (Notion Scripts with links).
    - Spend: Higgsfield and ElevenLabs from studio/logs/generation-costs.csv.
 2. Pipeline status against content-mix: which promos ran or were skipped and

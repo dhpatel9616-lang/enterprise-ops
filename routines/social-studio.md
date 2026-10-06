@@ -20,6 +20,9 @@ row (Notion → Automation Control) to Error with the reason, and stop.
    save it as a Buffer draft with a one-line reason. If a source truly can't
    be fetched, fall back to a generic brand ad for that day instead of
    leaving it empty.
+   Captions, hashtags, titles, first comments and timing follow the "Reach"
+   section of `campaigns/launch-campaign.md` (keyword-first line, 3–5 rotating
+   hashtags, a comment question, no #fyp).
 3. Render with `python3 studio/text_reel.py`; public link with
    `python3 studio/upload_video.py`; schedule at a good time for a US Eastern
    audience. Higgsfield spend cap: $5/week, logged.
