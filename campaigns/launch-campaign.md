@@ -10,6 +10,23 @@ real material on screen, motion, one takeaway, one CTA.
 
 ## The Sovereign (CTA: "Read The Sovereign" → sovereignnewsletter.substack.com)
 
+**Format (owner, 2026-10-06): every Sovereign ad is one of two things, never
+AI stock scenes with quotes:**
+- **(b) Excerpt reel (default):** `studio/excerpt_reel.py`. The newsletter's
+  own look (navy, logo, EB Garamond, like Substack's share cards): a 2-second
+  hook in big caps (the search phrase, a question), ONE verbatim excerpt
+  revealed word by word, then the issue title, subtitle and "Read the full
+  issue". Pick the punchiest sentence in the issue, not the first one.
+- **(a) A character speaking the words** (Robot or a labeled promo-cast actor
+  with the cloned/free voice) once the voice pipeline is set up.
+
+**Captions are never bland:** a hook line people would stop for (an emoji is
+fine), one or two vivid specific sentences from the issue (names, numbers,
+the real example), the CTA, a question that invites a take, and 5–6 hashtags:
+brand + topic tags + one community tag (#philosophytok, #gamertok,
+#lawstudent). TikTok title = the hook. No "(AI-generated)" label unless AI
+imagery is actually in it.
+
 Rotate these ad types; never repeat the same issue two weeks running.
 
 | Ad type | What it is | Material |
@@ -38,7 +55,7 @@ required).
 
 | Ad type | What it is | Material |
 |---|---|---|
-| **By the numbers** | "Today: N articles from M outlets in 30 countries, side by side" | Live counts from the site's database (`articles`, distinct `source` / `country`, last 24 h) |
+| **By the numbers** | "Today: N articles from 195 news feeds, side by side" (never "30 countries") | Live counts from the site's database (`articles`, distinct `source` / `country`, last 24 h) |
 | **How it works** | Search one event → see every country's headline → spot the framing | Branded walkthrough cards of the real features: trending stories, world map, filter by country, saved filters |
 | **Who it's for** | Students writing papers, debaters, anyone who wants to "check it yourself" | Brand cards + real counts |
 | **Same story, different world** | 2–3 real headlines about one event from different countries | A real cluster from `trending_clusters`; prefer science, economy, sport, culture, space, health, business. War/crime/election/breaking clusters are still allowed but saved as drafts (rule 1) |
@@ -110,7 +127,7 @@ Each profile's name and bio carry the main keyword, because profile text is
 searchable too:
 - Instagram @wadecapitallc and TikTok @wadethesovereign: name field
   "The Sovereign · World News & Ideas"; bio "Philosophy, politics & world news
-  explained for beginners. Compare 30 countries' headlines ↓" with the link
+  explained for beginners. Compare headlines from 195 news feeds ↓" with the link
   to globalaggregate.org or a link page listing the Substack and the site.
 - YouTube channel description: first line "Robot explains survival,
   cybersecurity, history and politics for beginners."

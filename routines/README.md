@@ -8,6 +8,7 @@ routine only takes a merged PR, never another paste.
 |---|---|---|
 | Strategist | `strategist.md` | Sunday ~11:30 PM |
 | Social Studio | `social-studio.md` | Monday ~12:30 AM |
+| SEO Writer | `seo-writer.md` | Monday ~2:30 AM |
 | Builder + Leads | `builder-leads.md` | Wednesday ~1:30 AM |
 | To-Do Email | (self-contained prompt; Claude edits it directly) | Thursday ~8 AM |
 | YT Video Studio | `yt-video-studio.md` | Friday ~12:30 AM |
@@ -26,8 +27,8 @@ notification saying "enterprise-ops is not attached to this routine" and stop.
 Each routine needs **enterprise-ops** under its Repositories (routine
 settings), because scheduled runs aren't allowed to `git clone` code
 themselves. Builder + Leads also needs **Enterprise-leads** there, so it can
-push PRs.
+push PRs. SEO Writer also needs **wade-capital-website**.
 
 All routines use the same environment. Its Setup script box holds the whole of
 `studio/setup.sh`; its variables hold the keys (HF_KEY, ENTERPRISE_SUPABASE_URL,
-ENTERPRISE_SUPABASE_SERVICE_KEY, YOUTUBE_*, ELEVENLABS_*). Use Sonnet for every routine; none needs a bigger model.
+ENTERPRISE_SUPABASE_SERVICE_KEY, YOUTUBE_*). Use Sonnet for every routine; none needs a bigger model.

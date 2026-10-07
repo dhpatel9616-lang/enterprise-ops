@@ -32,6 +32,10 @@ See the `brand-voice` skill.
      fails `content-rules`.
    - Outreach emails send automatically within the sequencer's daily caps
      (Enterprise-leads repo).
+   - **"Autopublish — Website guides (Wade Capital)" Enabled:** the SEO Writer
+     routine commits one how-to guide a week straight to the
+     wade-capital-website `main` branch (the only automatic push to `main`;
+     owner, 2026-10-06). Disabled: it opens a PR instead.
 2. **Never touch PoolParty production:** Supabase project
    `tzebfwmrmzhkeoptwkzy`. No reads, no writes, no migrations, no branches, no
    edge functions. If a task seems to need it, stop and ask.
@@ -68,8 +72,9 @@ See the `brand-voice` skill.
 | Buffer | Posts per rule 1 (video posts use a public URL from `studio/upload_video.py`) |
 | Supabase `skakrtljfaeopfqigyww` | Enterprise Leads data (outreach); public `studio-videos` bucket for rendered videos |
 | GitHub `enterprise-leads` repo | Outreach sequencer (changes go through PRs) |
+| GitHub `wade-capital-website` repo | Wade Capital site (Netlify); weekly guides per rule 1, everything else through PRs |
 | Higgsfield API (`HF_KEY`) | Paid generation, cheapest model that meets the brief |
-| ElevenLabs (`ELEVENLABS_API_KEY`, `ELEVENLABS_VOICE_ID`) | Robot's cloned voice (`studio/ai_voice.py`); later, business voice agents |
+| Chatterbox (free, open source) | Robot's cloned voice (`studio/ai_voice.py`; reference clip in the private Supabase bucket `voice-samples`) |
 
 ## What we make (`content-mix` skill)
 
