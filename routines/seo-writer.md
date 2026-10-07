@@ -18,6 +18,10 @@ repository is attached to this routine.
    - Only true, checkable statements. No invented statistics, customers,
      testimonials or case studies; no prices.
    - Link to one related guide when one exists (`/guides/<file>.html`).
+   - Answer the title's question plainly in the first two sentences (AI
+     assistants quote that), use the exact search phrase in the title, the
+     description and one h2, and end with a 3–5 question "Quick answers"
+     h2 section (short, direct answers).
 4. Publish it from `guides/_template.html`: copy to `guides/<slug>.html`
    (slug = short, lowercase, hyphens) and fill {{TITLE}}, {{DESCRIPTION}}
    (under 160 characters), {{SLUG}}, {{DATE}} (YYYY-MM-DD), {{DATE_LONG}}
@@ -25,7 +29,8 @@ repository is attached to this routine.
    sections, p, ul/ol). No {{...}} may remain.
 5. Add the guide to the top of the list in `guides/index.html` (after the
    GUIDES:LIST marker, same format as the other lines) and to `sitemap.xml`
-   (after the GUIDES:SITEMAP marker, with lastmod). Check the topic in
+   (after the GUIDES:SITEMAP marker, with lastmod). Add it to `llms.txt` under
+   "Guides for small business owners" (same format). Check the topic in
    TOPICS.md with the file name. Add 2 new topic ideas at the bottom when
    fewer than 5 are unchecked.
 6. Enabled → commit to `main` and push (it goes live on Netlify in about a
