@@ -61,19 +61,20 @@ roughly every 3 s, slow eye glance, antenna bulb blinks, chest lights
 cycle, jaw-free mouth follows the voice on the screen.
 
 ## Voice
-A woman's voice (owner, 2026-10-03, for engagement): an ElevenLabs clone
-of the owner's partner, who agreed to it (consent recorded below).
-`studio/ai_voice.py` uses it automatically when `ELEVENLABS_API_KEY` and
-`ELEVENLABS_VOICE_ID` are set; until then it falls back to the free Kokoro
-voice `bf_emma`. Delivery: dry, warm, a little wry. The owner may record an
+A woman's voice (owner, 2026-10-03, for engagement): a clone of the owner's
+partner, Marley, who agreed to it (consent recorded below). Owner picked the
+free Chatterbox clone over ElevenLabs on 2026-10-06. `studio/ai_voice.py`
+uses it automatically (reference clip in the private Supabase bucket
+`voice-samples`; never copy it anywhere public). If Chatterbox fails it falls
+back to the free Kokoro voice `bf_emma`. Delivery: dry, warm, a little wry. The owner may record an
 episode instead; see `voiceover-workflow`.
 
 **Consent:** the voice owner agreed (via the owner, 2026-10-03) to have her
 voice cloned for Robot's videos on this channel. Use the clone only for
 Robot's narration and Wade Capital content she has agreed to; never for
 anything that impersonates her, puts words in her mouth as herself, or for
-other people's projects. If she withdraws consent, delete the clone in
-ElevenLabs and switch back to Kokoro the same day.
+other people's projects. If she withdraws consent, delete the files in the
+`voice-samples` bucket and switch back to Kokoro the same day.
 
 ## Don't
 - Don't show it hurting people or give real-world weapon or attack

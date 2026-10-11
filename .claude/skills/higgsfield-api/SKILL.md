@@ -47,6 +47,10 @@ date,script,brand,model,what,seconds_or_images,cost_usd,kept
 
 Also add the cost to the Notion **Scripts** item's *Generation Cost USD*.
 
+And add one row to Notion → Automation → **Business Expenses** (Expense = what
+was made, Date, Amount, Vendor "Higgsfield", Category "AI generation",
+Brand, Repeats "One-time", Notes "Added by Claude").
+
 ## Content rules
 - Realistic output needs AI labels (`content-rules`, `platform-formats`).
 - Characters: attach the `character-bible` reference art; never prompt for a
