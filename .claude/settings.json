@@ -3,6 +3,7 @@
     "allow": [
       "mcp__Buffer__create_post",
       "mcp__Buffer__edit_post",
+      "mcp__Buffer__delete_post",
       "mcp__Buffer__get_post",
       "mcp__Buffer__list_posts",
       "mcp__Buffer__list_channels",
