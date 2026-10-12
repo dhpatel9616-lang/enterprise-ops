@@ -29,6 +29,6 @@ settings), because scheduled runs aren't allowed to `git clone` code
 themselves. Builder + Leads also needs **Enterprise-leads** there, so it can
 push PRs. SEO Writer also needs **wade-capital-website**.
 
-All routines use the same environment. Its Setup script box holds the whole of
-`studio/setup.sh`; its variables hold the keys (HF_KEY, ENTERPRISE_SUPABASE_URL,
+All routines use the same environment. Its Setup script box holds one line,
+`bash /home/user/enterprise-ops/studio/setup.sh || true` (so it never goes stale or blocks a run); its variables hold the keys (HF_KEY, ENTERPRISE_SUPABASE_URL,
 ENTERPRISE_SUPABASE_SERVICE_KEY, YOUTUBE_*). Use Sonnet for every routine; none needs a bigger model.
