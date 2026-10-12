@@ -6,9 +6,9 @@ content-rules, monetization, platform-formats. Run studio scripts from
 the repo root.
 
 Tools: check `command -v ffmpeg rhubarb` and `python3 -c "import kokoro_onnx"`;
-only if something is missing run `bash studio/setup.sh`.
+only if something is missing run `bash studio/setup.sh` and read its output.
 Still missing: set the "Autopost — YouTube long-form" row to Error with the
-reason, and stop.
+exact "setup: ..." lines from that output (they name what failed), and stop.
 
 1. In Notion → Scripts, take the oldest item with Status Recorded (use the
    owner's file from Drive "Voiceovers"); if none, the oldest Ready to Record
