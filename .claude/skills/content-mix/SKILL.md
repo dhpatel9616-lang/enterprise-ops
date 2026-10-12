@@ -31,9 +31,16 @@ still made, then saved as a Buffer draft with a one-line reason. Only skip
 something that can't be made honestly at all. War, crime, and hard news in
 general are not banned; they're drafts when rule 1 applies.
 
-Channels (Buffer): Instagram @wadecapitallc and TikTok @wadethesovereign get
-every promo; YouTube Shorts gets the Sovereign, Robot and clipping posts. Buffer's
-free plan holds 10 scheduled posts, so schedule one week ahead at most.
+**Two sets of accounts (owner, 2026-10-12). Never mix them.**
+- **Main accounts** (main Buffer account): Instagram @wadecapitallc, TikTok
+  @wadethesovereign, YouTube "Wade Capital". Long-form videos (Robot), promos
+  and ad campaigns for The Global Aggregate, PoolParty and The Sovereign.
+  **No clips here.**
+- **Clip accounts** (@sovereignclips, their own Buffer account, set up by the
+  owner): TikTok, Instagram and one more channel (see the campaign file).
+  Only political/historical clips. Posted from the clipping work, not from
+  these routines.
+Each free Buffer account holds 10 scheduled posts, so schedule one week ahead at most.
 
 ## The quality bar (why the text reels were rejected)
 A promo must **show the real thing and teach one real thing**. Plain text
