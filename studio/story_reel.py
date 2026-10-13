@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Story ad (9:16): scenes and story cards on top, Robot narrating below,
-big captions underneath (campaigns/launch-campaign.md, owner 2026-10-13).
+"""Story ad (9:16): the story's scenes and cards fill the screen (over a blurred
+copy of themselves), Robot narrates from a small corner bubble, big captions
+underneath. Owner, 2026-10-13: "the robot ... should not be the focus of the ad".
 
   python3 studio/story_reel.py spec.json out.mp4
 
@@ -11,7 +12,7 @@ spec.json (paths relative to the spec file):
            {"start": 11, "end": 13.7, "card": {"big": "GUILTY.", "small": "by the letter of the law", "accent": "#E5484D"}},
            {"start": 38.9, "end": 44, "card": {"big": "Legal Positivism", "small": "The Sovereign · link in bio", "logo": true}}]}
 
-puppet = Robot rendered WITHOUT captions (`render_puppet.py --layout tall`).
+puppet = Robot rendered WITHOUT captions (`render_puppet.py --layout tall`); only the head is used.
 Videos are slowed (or looped) to fill their slot; cards are rendered once.
 """
 import json, shutil, subprocess, sys, tempfile, textwrap
@@ -20,7 +21,8 @@ from xml.sax.saxutils import escape
 
 HERE = Path(__file__).parent
 W, H, FPS = 1080, 1920, 30
-TOP_Y, TOP_H = 150, 608          # the 16:9 scene window
+TOP_Y, TOP_H = 170, 1215         # the scene window (8:9, ~1.6x upscale of a 768p clip)
+PIP = 260                        # Robot bubble size
 BG, CREAM, MIST = "#0A1522", "#F3EDE0", "#AEB9D3"
 
 
@@ -31,17 +33,17 @@ def dur(path):
 
 def card_png(card, out):
     big = textwrap.wrap(card["big"], 16)
-    size = 110 if len(big) == 1 else 84
+    size = 130 if len(big) == 1 else 100
     y0 = TOP_H / 2 - (len(big) - 1) * size * 0.55 + (0 if not card.get("small") else -30)
     logo = ""
     if card.get("logo"):
         import base64
         b64 = base64.b64encode((HERE / "brand" / "sovereign-logo.png").read_bytes()).decode()
-        logo = f'<image href="data:image/png;base64,{b64}" x="{W / 2 - 110}" y="20" width="220" height="144"/>'
+        logo = f'<image href="data:image/png;base64,{b64}" x="{W / 2 - 160}" y="{TOP_H / 2 - 380}" width="320" height="210"/>'
         y0 += 60
     lines = "".join(f'<text x="{W / 2}" y="{y0 + i * size * 1.1:.0f}" font-family="Oswald" font-weight="bold" font-size="{size}" '
                     f'fill="{card.get("accent", CREAM)}" text-anchor="middle">{escape(l)}</text>' for i, l in enumerate(big))
-    small = (f'<text x="{W / 2}" y="{y0 + len(big) * size * 1.1 + 10:.0f}" font-family="EB Garamond" font-size="48" fill="{MIST}" '
+    small = (f'<text x="{W / 2}" y="{y0 + len(big) * size * 1.1 + 10:.0f}" font-family="EB Garamond" font-size="56" fill="{MIST}" '
              f'text-anchor="middle">{escape(card["small"])}</text>') if card.get("small") else ""
     svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{TOP_H}"><rect width="{W}" height="{TOP_H}" fill="#101C30"/>'
            f'<rect x="0" y="0" width="{W}" height="{TOP_H}" fill="none" stroke="#2A3A57" stroke-width="4"/>{logo}{lines}{small}</svg>')
@@ -55,13 +57,11 @@ def main(spec_path, out):
     total = dur(base / spec["audio"])
     tmp = Path(tempfile.mkdtemp())
     try:
-        inputs = ["-f", "lavfi", "-i", f"color=c={BG}:s={W}x{H}:r={FPS}:d={total:.2f}",
+        # Scenes and cards are composed into one window first, then laid over a blurred, dimmed copy of
+        # that same window, so the whole 9:16 frame is the story.
+        inputs = ["-f", "lavfi", "-i", f"color=c={BG}:s={W}x{TOP_H}:r={FPS}:d={total:.2f}",
                   "-i", str(base / spec["puppet"]), "-i", str(base / spec["audio"])]
-        # Robot: crop the character out of the full puppet frame, scale, park it below the scene window.
-        # Backdrop = Robot's own scene, blurred and dimmed, so the cropped character has no visible box edge.
-        graph = [f"[1:v]split[p1][p2]", f"[p1]boxblur=30,eq=brightness=-0.06[bgp]",
-                 f"[p2]crop=1080:1180:0:330,scale=918:-2[robot]", "[0:v][bgp]overlay=0:0[bg]", "[bg][robot]overlay=81:770[v0]"]
-        last, n = "v0", 3
+        graph, last, n = [], "0:v", 3
         for i, seg in enumerate(spec["top"]):
             a, b = seg["start"], min(seg["end"], total)
             if "video" in seg:
@@ -75,20 +75,31 @@ def main(spec_path, out):
                 card_png(seg["card"], png)
                 inputs += ["-loop", "1", "-t", f"{b:.2f}", "-i", str(png)]
                 graph.append(f"[{n}:v]format=rgba[s{i}]")
-            graph.append(f"[{last}][s{i}]overlay=0:{TOP_Y}:enable='between(t,{a:.2f},{b:.2f})':eof_action=pass[v{i + 1}]")
+            graph.append(f"[{last}][s{i}]overlay=0:0:enable='between(t,{a:.2f},{b:.2f})':eof_action=pass[v{i + 1}]")
             last, n = f"v{i + 1}", n + 1
-        # Series label above the scene window, captions below Robot (pre-wrapped; textfile avoids escaping).
+        # Robot: just the head (from the tall puppet frame), in a round bubble with a thin ring, bottom right of the scene.
+        r = PIP // 2
+        graph += [f"[{last}]split[w1][w2]",
+                  f"[w1]scale=-2:{H},crop={W}:{H},boxblur=40,eq=brightness=-0.04:saturation=1.2[bg]", f"[bg][w2]overlay=0:{TOP_Y}[v]",
+                  f"[1:v]crop=640:640:220:430,scale={PIP}:{PIP},format=rgba,"
+                  f"geq=r='r(X,Y)':g='g(X,Y)':b='b(X,Y)':a='if(lt(hypot(X-{r},Y-{r}),{r - 6}),255,0)'[head]",
+                  f"color=c={MIST}:s={PIP}x{PIP},format=rgba,geq=r='r(X,Y)':g='g(X,Y)':b='b(X,Y)':"
+                  f"a='if(lt(hypot(X-{r},Y-{r}),{r}),255,0)'[ring]",
+                  f"[ring][head]overlay=0:0:shortest=1[pip]",
+                  f"[v][pip]overlay={W - PIP - 30}:{TOP_Y + TOP_H - PIP // 2 - 40}:shortest=1[vr]"]
+        last = "vr"
+        # Series label above the scene window, captions below it (pre-wrapped; textfile avoids escaping).
         if spec.get("series"):
             (tmp / "series.txt").write_text(spec["series"])
             graph.append(f"[{last}]drawtext=fontfile={HERE / 'fonts/Oswald-Bold.ttf'}:textfile={tmp / 'series.txt'}:"
-                         f"fontsize=46:fontcolor={MIST}:x=(w-text_w)/2:y=70[vs]")
+                         f"fontsize=46:fontcolor={MIST}:borderw=3:bordercolor=black:x=(w-text_w)/2:y=80[vs]")
             last = "vs"
         for i, c in enumerate(json.loads((base / spec["captions"]).read_text())):
-            for j, line in enumerate(textwrap.wrap(c["text"], 30)[:2]):
+            for j, line in enumerate(textwrap.wrap(c["text"], 28)[:3]):
                 f = tmp / f"cap{i}_{j}.txt"
                 f.write_text(line)
-                graph.append(f"[{last}]drawtext=fontfile={HERE / 'fonts/Oswald-Bold.ttf'}:textfile={f}:fontsize=64:fontcolor=white:"
-                             f"borderw=5:bordercolor=black:x=(w-text_w)/2:y={1730 + j * 78}:enable='between(t,{c['start']:.2f},{c['end']:.2f})'[c{i}_{j}]")
+                graph.append(f"[{last}]drawtext=fontfile={HERE / 'fonts/Oswald-Bold.ttf'}:textfile={f}:fontsize=72:fontcolor=white:"
+                             f"borderw=5:bordercolor=black:x=(w-text_w)/2:y={TOP_Y + TOP_H + 120 + j * 82}:enable='between(t,{c['start']:.2f},{c['end']:.2f})'[c{i}_{j}]")
                 last = f"c{i}_{j}"
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *inputs, "-filter_complex", ";".join(graph),
                         "-map", f"[{last}]", "-map", "2:a", "-t", f"{total:.2f}", "-r", str(FPS), "-c:v", "libx264",

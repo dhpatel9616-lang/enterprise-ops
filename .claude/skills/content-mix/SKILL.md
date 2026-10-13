@@ -42,6 +42,13 @@ general are not banned; they're drafts when rule 1 applies.
   work, never from these routines.
 Each free Buffer account holds 10 scheduled posts, so schedule one week ahead at most.
 
+## Provocative first (owner, 2026-10-13)
+For every product, lead with the most charged, engaging real story we have
+(outrage, scandal, power, money, status, a claim people will argue with),
+not the safest one. A bland explainer is the last pick. Facts stay real and
+sourced, allegations stay allegations, and rule 1 still decides draft vs.
+automatic: making a draft for the owner's OK is better than playing it safe.
+
 ## The quality bar (why the text reels were rejected)
 A promo must **show the real thing and teach one real thing**. Plain text
 on a background fails both. Every promo has:

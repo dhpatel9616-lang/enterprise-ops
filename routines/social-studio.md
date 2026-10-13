@@ -14,10 +14,14 @@ row (Notion → Automation Control) to Error with the reason, and stop.
    automatic publishing; unchecked = Buffer drafts only.
 2. Make this week's five ads from `campaigns/launch-campaign.md` (Mon–Fri,
    its rhythm table and story series), following content-mix. Every ad is a
-   narrated story in real video (hook → setup → turn → payoff → CTA): Robot's
-   voice (`studio/ai_voice.py`), Robot on screen (`studio/render_puppet.py`,
-   tall layout) cut with real material (excerpt cards, real headline cards)
-   and at most 1–2 short AI video shots. Never a slideshow or text-only reel.
+   narrated story in real video (hook → setup → turn → payoff → CTA),
+   **provocative first** (the campaign's order: the most charged real story
+   leads; rule 1 makes it a draft, never a reason to pick a blander one).
+   Robot's voice (`studio/ai_voice.py`), the puppet rendered without captions
+   (`studio/render_puppet.py --layout tall`), then `studio/story_reel.py`:
+   scenes and cards full-frame, Robot only a small corner bubble. 2–3 short AI
+   video shots plus real material (excerpt cards, real headline cards). Never
+   a slideshow or text-only reel.
    PoolParty only after content-mix says it has launched. Rule 1 means DRAFT,
    not skip. If a source truly can't be fetched, make a different series'
    story for that day instead of leaving it empty.
