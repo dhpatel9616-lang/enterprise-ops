@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Upload a rendered video to the public `studio-videos` bucket and print its URL.
+"""Upload a rendered video (or podcast file) to the public `studio-videos` bucket and print its URL.
 
   python3 studio/upload_video.py path/to/video.mp4
+  main(path, name="podcast/sovereign/feed.xml", upsert=True)   # fixed name, replaced in place (studio/podcast.py)
 
 Needs ENTERPRISE_SUPABASE_URL and ENTERPRISE_SUPABASE_SERVICE_KEY (Enterprise
 project skakrtljfaeopfqigyww). Prints only the public URL on success, so
@@ -12,10 +13,10 @@ from pathlib import Path
 
 BUCKET = "studio-videos"
 POOLPARTY_PROD = "tzebfwmrmzhkeoptwkzy"  # never upload here (CLAUDE.md rule 2)
-TYPES = {".mp4": "video/mp4", ".mov": "video/quicktime"}
+TYPES = {".mp4": "video/mp4", ".mov": "video/quicktime", ".mp3": "audio/mpeg", ".jpg": "image/jpeg", ".xml": "application/rss+xml"}
 
 
-def main(path):
+def main(path, name=None, upsert=False):
     raw, key = os.environ.get("ENTERPRISE_SUPABASE_URL", "").strip(), (os.environ.get("ENTERPRISE_SUPABASE_SERVICE_KEY") or "").strip()
     parts = urllib.parse.urlparse(raw)
     url = f"{parts.scheme}://{parts.netloc}" if parts.netloc else ""  # tolerate ".../rest/v1/" pasted from the dashboard
@@ -25,15 +26,16 @@ def main(path):
         sys.exit("upload_video: refusing to use PoolParty production.")
     f = Path(path)
     if not f.is_file() or f.suffix.lower() not in TYPES:
-        sys.exit(f"upload_video: {path} is not an .mp4 or .mov file.")
+        sys.exit(f"upload_video: {path} is not one of {', '.join(TYPES)}.")
 
     # Date prefix + timestamp keeps names unique without overwriting older videos.
-    name = f"{time.strftime('%Y/%m')}/{int(time.time())}-{f.name.replace(' ', '-')}"
+    name = name or f"{time.strftime('%Y/%m')}/{int(time.time())}-{f.name.replace(' ', '-')}"
     with f.open("rb") as body:
         req = urllib.request.Request(
             f"{url}/storage/v1/object/{BUCKET}/{name}", data=body, method="POST",
             headers={"Authorization": f"Bearer {key}", "apikey": key, "Content-Type": TYPES[f.suffix.lower()],
-                     "Content-Length": str(f.stat().st_size), "x-upsert": "false"})
+                     "Content-Length": str(f.stat().st_size), "x-upsert": str(upsert).lower(),
+                     "cache-control": "max-age=300" if upsert else "max-age=3600"})  # replaced files (the feed) refresh fast
         try:
             urllib.request.urlopen(req, timeout=600).read()
         except urllib.error.HTTPError as e:
@@ -46,6 +48,7 @@ def main(path):
     except urllib.error.HTTPError as e:
         sys.exit(f"upload_video: uploaded, but the public URL returned {e.code}. Is the bucket migration applied?")
     print(public)
+    return public
 
 
 if __name__ == "__main__":

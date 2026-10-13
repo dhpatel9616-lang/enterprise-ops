@@ -7,6 +7,8 @@ description: How to use the pay-as-you-go Higgsfield API for AI image/video gene
 
 Every call costs real money and we have zero revenue. Free first: if
 `video-assembly` (ffmpeg, SVG puppets, code-made graphics) can do it, use that.
+For scenes and real footage, search `studio/find_footage.py` first (free
+archive, government, Commons and Pixabay video). Spend cap: $2/week.
 
 ## Credential
 - Read the key from the `HF_KEY` environment variable. Never print, log,

@@ -8,7 +8,7 @@ underneath. Owner, 2026-10-13: "the robot ... should not be the focus of the ad"
 spec.json (paths relative to the spec file):
   {"series": "PHILOSOPHY IN 30 SECONDS",
    "audio": "vo.wav", "puppet": "robot.mp4", "captions": "captions.json",
-   "top": [{"start": 0, "end": 11, "video": "highway.mp4"},
+   "top": [{"start": 0, "end": 11, "video": "highway.mp4", "credit": "Video: U.S. Department of Defense"},
            {"start": 11, "end": 13.7, "card": {"big": "GUILTY.", "small": "by the letter of the law", "accent": "#E5484D"}},
            {"start": 38.9, "end": 44, "card": {"big": "Legal Positivism", "small": "The Sovereign · link in bio", "logo": true}}]}
 
@@ -77,6 +77,12 @@ def main(spec_path, out):
                 graph.append(f"[{n}:v]format=rgba[s{i}]")
             graph.append(f"[{last}][s{i}]overlay=0:0:enable='between(t,{a:.2f},{b:.2f})':eof_action=pass[v{i + 1}]")
             last, n = f"v{i + 1}", n + 1
+            if seg.get("credit"):  # real footage names its source on screen (content-mix)
+                (tmp / f"credit{i}.txt").write_text(seg["credit"])
+                graph.append(f"[{last}]drawtext=expansion=none:fontfile={HERE / 'fonts/Oswald-Bold.ttf'}:textfile={tmp / f'credit{i}.txt'}:"
+                             f"fontsize=30:fontcolor=white@0.85:borderw=2:bordercolor=black:x=28:y=h-56:"
+                             f"enable='between(t,{a:.2f},{b:.2f})'[cr{i}]")
+                last = f"cr{i}"
         # Robot: just the head (from the tall puppet frame), in a round bubble with a thin ring, bottom right of the scene.
         r = PIP // 2
         graph += [f"[{last}]split[w1][w2]",
@@ -99,7 +105,7 @@ def main(spec_path, out):
                 f = tmp / f"cap{i}_{j}.txt"
                 f.write_text(line)
                 graph.append(f"[{last}]drawtext=expansion=none:fontfile={HERE / 'fonts/Oswald-Bold.ttf'}:textfile={f}:fontsize=72:fontcolor=white:"
-                             f"borderw=5:bordercolor=black:x=(w-text_w)/2:y={TOP_Y + TOP_H + 120 + j * 82}:enable='between(t,{c['start']:.2f},{c['end']:.2f})'[c{i}_{j}]")
+                             f"borderw=5:bordercolor=black:x=(w-text_w)/2:y={TOP_Y + TOP_H + 120 + j * 82}:enable='gte(t,{c['start']:.2f})*lt(t,{c['end']:.2f})'[c{i}_{j}]")
                 last = f"c{i}_{j}"
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *inputs, "-filter_complex", ";".join(graph),
                         "-map", f"[{last}]", "-map", "2:a", "-t", f"{total:.2f}", "-r", str(FPS), "-c:v", "libx264",
