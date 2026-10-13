@@ -127,9 +127,13 @@ Sovereign or Global Aggregate promos.
   people, ever (`content-rules`).
 - Nonpartisan (`brand-voice`): over a month, balance who is shown, and
   frame each clip around an idea, not a side.
-- Because they show real politicians, **clipping posts are always Buffer
-  drafts** for the owner to approve (CLAUDE.md rule 1), even with Autopost
-  on.
+- Clips post **only to the clip accounts**, through Clip Studio
+  (`routines/clip-studio.md`, `studio/buffer_clips.py`), automatically
+  when "Autopost — Clips" is on; drafts when they touch elections,
+  candidates or voting, are under 24 hours old, or can't be sourced
+  (owner, 2026-10-13). The clipping work drops finished clips in the
+  `civic-clips` bucket under `queue/<clip-id>/`; it never posts to Buffer
+  itself.
 
 ## Robot's long-form series (one episode a week)
 Owner-approved order (2026-10-03). Each is a page in Notion → Scripts.
