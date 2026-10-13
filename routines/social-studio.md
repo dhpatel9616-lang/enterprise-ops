@@ -13,19 +13,24 @@ row (Notion → Automation Control) to Error with the reason, and stop.
 1. Read the "Autopost — Social" row. Enabled = schedule in Buffer with
    automatic publishing; unchecked = Buffer drafts only.
 2. Make this week's five ads from `campaigns/launch-campaign.md` (Mon–Fri,
-   alternating The Sovereign and The Global Aggregate), following
-   content-mix. Also read that file's rhythm table and issue notes.
-   PoolParty only after content-mix says it has launched. Real material only;
-   never a text-only reel. Rule 1 means DRAFT, not skip: make the post and
-   save it as a Buffer draft with a one-line reason. If a source truly can't
-   be fetched, fall back to a generic brand ad for that day instead of
-   leaving it empty.
-   Captions, hashtags, titles, first comments and timing follow the "Reach"
-   section of `campaigns/launch-campaign.md` (keyword-first line, 3–5 rotating
-   hashtags, a comment question, no #fyp).
-3. Render with `python3 studio/text_reel.py`; public link with
-   `python3 studio/upload_video.py`; schedule at a good time for a US Eastern
-   audience. Higgsfield spend cap: $5/week, logged.
+   its rhythm table and story series), following content-mix. Every ad is a
+   narrated story in real video (hook → setup → turn → payoff → CTA): Robot's
+   voice (`studio/ai_voice.py`), Robot on screen (`studio/render_puppet.py`,
+   tall layout) cut with real material (excerpt cards, real headline cards)
+   and at most 1–2 short AI video shots. Never a slideshow or text-only reel.
+   PoolParty only after content-mix says it has launched. Rule 1 means DRAFT,
+   not skip. If a source truly can't be fetched, make a different series'
+   story for that day instead of leaving it empty.
+   Captions follow the campaign file: hook line, story detail, the product's
+   link + "link in bio", a question, 8–12 rotating hashtags, no AI disclaimer
+   text (set the platform AI flag only if realistic AI imagery is used).
+3. Public link with `python3 studio/upload_video.py`; schedule per the
+   campaign's timing. Higgsfield spend cap: $5/week, logged.
+   **Buffer guard:** only Buffer organization `6ab6c71cddecb7a5c80b918f` and
+   only its channels `6ab6cac8ea19ca0bdeea0fba` (Instagram @wadecapitallc),
+   `6ab6caf4ea19ca0bdeea114e` (TikTok @wadethesovereign) and
+   `6ab6d22fea19ca0bdeea4810` (YouTube @WadeCapital). Never post to any other
+   organization or channel (the clip accounts), and never post clips here.
 4. Draft instead of scheduling anything rule 1 says must be a draft (with the reason in the Buffer note).
 5. Set Last Run, Last Run Status, Last Run Notes (one or two lines) on the row.
 

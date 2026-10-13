@@ -17,7 +17,8 @@ description: Honesty and safety rules for every script, video, image, and post. 
 
 ## Realistic AI characters (PoolParty and Sovereign promos)
 - Every video or image with a realistic AI character gets the platform's AI
-  label **and** an on-screen "AI actor" or "Made with AI" note. No exceptions.
+  label (set the AI flag on every platform). No caption disclaimer (owner,
+  2026-10-13: platforms add their own label; a caption note looks ungenuine).
 - They can demonstrate or explain (e.g. show PoolParty features, introduce a
   Sovereign issue). They never pretend to be a real user, employee, founder,
   journalist, or eyewitness, and never say "I use this and love it."
@@ -27,8 +28,9 @@ description: Honesty and safety rules for every script, video, image, and post. 
 ## Label realistic AI content
 - If a viewer could mistake AI-made footage, voice, or images for something
   real (a real-looking person, place, or event), it must carry the
-  platform's AI label **and** a short on-screen or caption note such as
-  "Made with AI." Details per platform: `platform-formats`.
+  platform's AI label (Buffer `isAiGenerated`, TikTok's AI toggle, YouTube's
+  altered-content answer). No caption note. Details per platform:
+  `platform-formats`.
 - Clearly cartoon content (like our SVG hosts) doesn't need the platform
   label, but never pretend it's hand-drawn by a person if it wasn't.
 - If you're unsure whether something counts as realistic, label it.
