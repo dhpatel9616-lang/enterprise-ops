@@ -33,7 +33,8 @@ See the `brand-voice` skill.
    - **"Autopost — Clips" Enabled:** Clip Studio posts clips to the clip
      accounts only, through `studio/buffer_clips.py` (their own Buffer
      account), as drafts when they touch elections/candidates/voting, are
-     under 24 hours old, or can't be sourced (owner, 2026-10-13).
+     under 24 hours old, can't be sourced, or use a TV-network news excerpt
+     (owner, 2026-10-13 / 10-14).
    - Outreach emails send automatically within the sequencer's daily caps
      (Enterprise-leads repo).
    - **"Autopublish — Website guides (Wade Capital)" Enabled:** the SEO Writer
@@ -77,15 +78,19 @@ See the `brand-voice` skill.
 | Supabase `skakrtljfaeopfqigyww` | Enterprise Leads data (outreach); public `studio-videos` bucket for rendered videos |
 | GitHub `enterprise-leads` repo | Outreach sequencer (changes go through PRs) |
 | GitHub `wade-capital-website` repo | Wade Capital site (Netlify); weekly guides per rule 1, everything else through PRs |
-| Higgsfield API (`HF_KEY`) | Paid generation, cheapest model that meets the brief |
+| Free footage: Internet Archive, NASA, Wikimedia Commons, Pixabay (`PIXABAY_API_KEY`) | Scenes and real footage for ads and clips, searched first (`studio/find_footage.py`); nothing stored |
+| Higgsfield API (`HF_KEY`) | Paid generation, last resort, cheapest model that meets the brief |
 | Chatterbox (free, open source) | Robot's cloned voice (`studio/ai_voice.py`; reference clip in the private Supabase bucket `voice-samples`) |
+| Kokoro (free, open source) | The Sovereign podcast's male AI voice (`studio/podcast.py`, own feed in the `studio-videos` bucket) |
 
 ## What we make (`content-mix` skill)
 
 - **Short-form promos** (9:16) for The Sovereign, The Global Aggregate, and
   PoolParty, built from real material from each product. Realistic AI
-  people and situations appear only in promos. Political and historical
-  clips go only to the clip accounts (Clip Studio, rule 1).
+  people and situations appear only in promos. Stand-alone political and
+  historical clips go only to the clip accounts (Clip Studio, rule 1); real
+  footage (government briefings, archive film) may appear inside a Global
+  Aggregate or Sovereign story ad (owner, 2026-10-14).
 - **Long-form** (16:9): Robot tutorials (cartoon) on grid-down survival,
   cybersecurity, history, and politics; and clipping montages.
 - **Two sets of social accounts (owner, 2026-10-12):** promo + media

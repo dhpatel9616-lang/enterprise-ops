@@ -47,13 +47,23 @@ A 25–45 second **story with a narrator**, in this shape:
 - **Picture: the story fills the screen, not Robot** (owner, 2026-10-13:
   "the robot … should not be the focus of the ad"). `studio/story_reel.py`
   puts the scenes and cards full-frame and Robot in a small corner bubble as
-  the narrator. Scenes: 2–3 short AI video shots (Higgsfield Hailuo
-  text-to-video, $0.28 each, ≤ $1 per ad) of the places and moments in the
-  story ("a campus protest at night", "a phone feed at 2 a.m."), cut with real
-  material: verbatim excerpt cards, real headline cards from The Global
-  Aggregate's database, real app screens (PoolParty). Big numbers with their
-  source. Cuts every 2–4 s; captions always on. Generic people only, never a
-  real person's likeness or a real school's logo.
+  the narrator. Cuts every 2–4 s; captions always on. Big numbers with their
+  source.
+- **Footage, free first (owner, 2026-10-14: AI scenes add up).** In order:
+  1. the product's own material: verbatim excerpt cards, real headline cards
+     from The Global Aggregate's database, real app screens (PoolParty);
+  2. real footage from `studio/find_footage.py`: government briefings,
+     press conferences, hearings and archive film (archive, NASA, Commons).
+     **The Global Aggregate and The Sovereign lean on this:** the real
+     moment beats a recreation. Use the government's own recording, never a
+     TV network's broadcast, on these accounts. Credit it on screen (the
+     `credit` field in the story_reel spec). Never cut it to change meaning.
+     A post showing a real politician is a rule-1 draft;
+  3. free stock scenes from Pixabay (`--source pixabay`) for generic places
+     and moments ("a campus at night", "a phone feed at 2 a.m.");
+  4. only then Higgsfield (Hailuo text-to-video, $0.28 per shot): PoolParty's
+     labeled AI actors, or a Sovereign scene nothing above covers. Generic
+     people only, never a real person's likeness or a real school's logo.
 - No slideshows of still images, no stock filler, no text-only reels.
 
 **Story series** (people follow series; use the series name on screen and as
@@ -135,7 +145,7 @@ Timing (Eastern): TikTok 7–9 PM, Instagram 11 AM–1 PM or 7–9 PM, Shorts
   with a one-line reason.
 - Ownership disclosure when a Sovereign-branded post promotes The Global
   Aggregate (`monetization`).
-- Higgsfield spend cap: $5/week. Log every generation.
+- Higgsfield spend cap: $2/week (owner, 2026-10-14). Log every generation.
 - Buffer free plan: 10 scheduled posts per organization at once.
 
 **Learn and adjust (Strategist, weekly):** from Buffer metrics, the top 2

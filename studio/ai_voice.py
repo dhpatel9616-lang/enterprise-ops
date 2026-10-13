@@ -93,7 +93,7 @@ def kokoro(paras, voice, speed, tmp):
     k = Kokoro(str(MODEL_DIR / FILES[0]), str(MODEL_DIR / FILES[1]))
     chunks, sr = [], 24000
     for i, para in enumerate(paras, 1):
-        audio, sr = k.create(para, voice=voice or KOKORO_VOICE, speed=speed, lang="en-gb")
+        audio, sr = k.create(para, voice=voice or KOKORO_VOICE, speed=speed, lang="en-us" if (voice or KOKORO_VOICE)[0] == "a" else "en-gb")
         chunks += [audio, np.zeros(int(sr * PAUSE), dtype=audio.dtype)]
         print(f"ai_voice: kokoro paragraph {i}/{len(paras)}", file=sys.stderr)
     out = tmp / "raw.wav"

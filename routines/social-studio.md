@@ -19,9 +19,10 @@ row (Notion → Automation Control) to Error with the reason, and stop.
    leads; rule 1 makes it a draft, never a reason to pick a blander one).
    Robot's voice (`studio/ai_voice.py`), the puppet rendered without captions
    (`studio/render_puppet.py --layout tall`), then `studio/story_reel.py`:
-   scenes and cards full-frame, Robot only a small corner bubble. 2–3 short AI
-   video shots plus real material (excerpt cards, real headline cards). Never
-   a slideshow or text-only reel.
+   scenes and cards full-frame, Robot only a small corner bubble. Footage in
+   the campaign's order: real material and `studio/find_footage.py` (real
+   briefings and archive film, then Pixabay stock) before any Higgsfield
+   shot. Never a slideshow or text-only reel.
    PoolParty only after content-mix says it has launched. Rule 1 means DRAFT,
    not skip. If a source truly can't be fetched, make a different series'
    story for that day instead of leaving it empty.
@@ -29,14 +30,18 @@ row (Notion → Automation Control) to Error with the reason, and stop.
    link + "link in bio", a question, 8–12 rotating hashtags, no AI disclaimer
    text (set the platform AI flag only if realistic AI imagery is used).
 3. Public link with `python3 studio/upload_video.py`; schedule per the
-   campaign's timing. Higgsfield spend cap: $5/week, logged.
+   campaign's timing. Higgsfield spend cap: $2/week, logged.
    **Buffer guard:** only Buffer organization `6ab6c71cddecb7a5c80b918f` and
    only its channels `6ab6cac8ea19ca0bdeea0fba` (Instagram @wadecapitallc),
    `6ab6caf4ea19ca0bdeea114e` (TikTok @wadethesovereign) and
    `6ab6d22fea19ca0bdeea4810` (YouTube @WadeCapital). Never post to any other
    organization or channel (the clip accounts), and never post clips here.
 4. Draft instead of scheduling anything rule 1 says must be a draft (with the reason in the Buffer note).
-5. Set Last Run, Last Run Status, Last Run Notes (one or two lines) on the row.
+5. **Podcast:** `python3 studio/podcast.py` (voices any new Sovereign issue
+   with the free male voice and updates the podcast feed; "no new issue" is
+   fine). **Medium:** for a new issue, add to the run notes: "Medium: import
+   <issue link> at medium.com/p/import" (the owner does that by hand).
+6. Set Last Run, Last Run Status, Last Run Notes (one or two lines) on the row.
 
 Keep it lean: don't read files or databases you don't need; one attempt per
 failing source, then move on.

@@ -16,7 +16,8 @@ are the promo/media account), and never post clips anywhere else.
    ENTERPRISE_SUPABASE_SERVICE_KEY): `instagram.mp4`, `tiktok.mp4`,
    `youtube.mp4` and `clip.json` (title, source, date, one-line context).
    Take the oldest folder. None: note "queue empty" in the row and stop.
-3. Check it: public-domain or official public record footage, source named
+3. Check it: public-domain or official public record footage (or a short
+   network excerpt, see step 4), source named
    on screen and in the caption, nothing edited to change meaning, no
    private person at the center. Fails: move it to `rejected/` with the
    reason and stop.
@@ -26,8 +27,10 @@ are the promo/media account), and never post clips anywhere else.
    community tags like #historytok #politicstok + #WadeCapitalClips). No AI
    disclaimer text. Title under 60 characters.
    Save as a **draft** instead (and say why) if it touches elections,
-   candidates or voting, is under 24 hours old, or makes a claim the source
-   doesn't show.
+   candidates or voting, is under 24 hours old, makes a claim the source
+   doesn't show, or uses a TV-network news excerpt (allowed here only at 10
+   seconds or less, with our commentary and the network credited; reject
+   longer ones).
 5. Public URLs: the bucket is public
    (`<url>/storage/v1/object/public/civic-clips/queue/<id>/<file>`). Post with
    `python3 studio/buffer_clips.py post clip.json` (fill `videos`,

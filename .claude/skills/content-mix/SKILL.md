@@ -128,7 +128,17 @@ Sovereign or Global Aggregate promos.
   House/Senate floor video, pre-1930 film), openly licensed with
   attribution, or a short excerpt used for commentary that adds our own
   context (fair use). Credit the source on screen. If you can't tell which,
-  don't use it.
+  don't use it. Find it with `studio/find_footage.py` (archive, NASA,
+  Commons). For press conferences and briefings, use the **government's own
+  recording** (White House, Pentagon, State Department, House/Senate floor),
+  which is public domain, not a network's broadcast of the same event.
+- **TV-network news excerpts (CNN, Fox, NBC…), clip accounts only** (owner,
+  2026-10-14): 10 seconds or less per excerpt, with our own commentary or
+  context around it, the network credited on screen, never the network's
+  whole segment, and always saved as a **draft** for the owner's OK. Never
+  on the promo accounts. It's a known copyright risk the owner accepted for
+  the clip accounts; if a platform flags one, stop using that network and
+  say so in the run notes.
 - Never edit a clip to change what someone said or meant; keep enough
   context that the point stands on its own. No AI-altered footage of real
   people, ever (`content-rules`).

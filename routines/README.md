@@ -30,7 +30,12 @@ settings), because scheduled runs aren't allowed to `git clone` code
 themselves. Builder + Leads also needs **Enterprise-leads** there, so it can
 push PRs. SEO Writer also needs **wade-capital-website**. Clip Studio needs the
 `BUFFER_CLIPS_API_KEY` variable (clip Buffer account → Settings → API) and
-`api.buffer.com` under the environment's allowed domains.
+`api.buffer.com` under the environment's allowed domains. Social Studio and
+Clip Studio search free footage (`studio/find_footage.py`): `PIXABAY_API_KEY`
+plus the allowed domains archive.org, images-api.nasa.gov,
+images-assets.nasa.gov, commons.wikimedia.org, upload.wikimedia.org,
+pixabay.com and cdn.pixabay.com. Social Studio also publishes the podcast
+(`studio/podcast.py`, needs sovereignnewsletter.substack.com).
 
 All routines use the same environment. Its Setup script box holds one line,
 `bash /home/user/enterprise-ops/studio/setup.sh || true` (so it never goes stale or blocks a run); its variables hold the keys (HF_KEY, ENTERPRISE_SUPABASE_URL,
