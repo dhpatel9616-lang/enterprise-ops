@@ -23,7 +23,7 @@ from upload_video import main as upload  # noqa: E402
 HERE = Path(__file__).parent
 SOURCE = "https://sovereignnewsletter.substack.com/feed"
 PREFIX = "podcast/sovereign"
-VOICE = "am_michael"  # Kokoro male voice (owner, 2026-10-14: "a male voice for the podcasts")
+VOICE = "am_onyx"  # Kokoro male voice; owner picked Onyx, 2026-10-14
 NS = {"content": "http://purl.org/rss/1.0/modules/content/", "itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd"}
 BLOCKS = {"p", "h1", "h2", "h3", "h4", "li", "blockquote", "pre"}
 
