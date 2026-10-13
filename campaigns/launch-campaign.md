@@ -1,133 +1,123 @@
-# Launch ad campaign: The Sovereign + The Global Aggregate (owner, 2026-10-06)
+# Story campaign: The Sovereign + The Global Aggregate (owner, 2026-10-13)
 
-Goal: build an audience from zero. No posts exist yet, so everything in the
-back catalogue is new to viewers. Five posts a week (Mon–Fri), alternating
-brands, each on Instagram Reels, TikTok and YouTube Shorts. Social Studio
-schedules one week at a time.
+Replaces the launch campaign. The owner's verdict on the first ads:
+slideshows of images with quotes are "wildly ineffective". **Every ad is now
+a short narrated story in real video**, not ad copy.
 
-Every ad still meets the content-mix quality bar: a real hook in 2 seconds,
-real material on screen, motion, one takeaway, one CTA.
+Where it posts: the **promo + media accounts only** (Buffer organization
+"My organization" `6ab6c71cddecb7a5c80b918f`; channels Instagram @wadecapitallc
+`6ab6cac8ea19ca0bdeea0fba`, TikTok @wadethesovereign `6ab6caf4ea19ca0bdeea114e`,
+YouTube @WadeCapital `6ab6d22fea19ca0bdeea4810`). Never a clip account, never
+another Buffer organization. Clips have their own accounts (`content-mix`).
 
-## The Sovereign (CTA: "Read The Sovereign" → sovereignnewsletter.substack.com)
+Five ads a week (Mon–Fri), alternating brands, each on Instagram + TikTok,
+plus YouTube Shorts when the Buffer limit allows. Social Studio schedules one
+week at a time.
 
-**Format (owner, 2026-10-06): every Sovereign ad is one of two things, never
-AI stock scenes with quotes:**
-- **(b) Excerpt reel (default):** `studio/excerpt_reel.py`. The newsletter's
-  own look (navy, logo, EB Garamond, like Substack's share cards): a 2-second
-  hook in big caps (the search phrase, a question), ONE verbatim excerpt
-  revealed word by word, then the issue title, subtitle and "Read the full
-  issue". Pick the punchiest sentence in the issue, not the first one.
-- **(a) A character speaking the words** (Robot or a labeled promo-cast actor
-  with the cloned/free voice) once the voice pipeline is set up.
+## What every ad is
 
-**Captions are never bland:** a hook line people would stop for (an emoji is
-fine), one or two vivid specific sentences from the issue (names, numbers,
-the real example), the CTA, a question that invites a take, and 5–6 hashtags:
-brand + topic tags + one community tag (#philosophytok, #gamertok,
-#lawstudent). TikTok title = the hook. No "(AI-generated)" label unless AI
-imagery is actually in it.
+A 25–45 second **story with a narrator**, in this shape:
 
-Rotate these ad types; never repeat the same issue two weeks running.
+1. **Hook (0–2 s):** a real, concrete moment or conflict, said out loud and
+   shown on screen. "A Virginia speed trap. Up to $2,500 and jail time."
+   Never a brand name or "Check out…" first.
+2. **Setup:** who/what/where in one or two lines.
+3. **Turn:** the surprise, the contradiction, the question. "By the letter of
+   the law, guilty. The judge dismissed it anyway."
+4. **Payoff:** the idea, in one sentence a viewer could repeat to a friend,
+   plus ONE verbatim line from the product (excerpt or real headline) on
+   screen.
+5. **CTA (last 3 s):** the product name, what you get, and where: "Read
+   'Legal Positivism' in The Sovereign. Link in bio."
 
-| Ad type | What it is | Material |
+**Production (real video, free first):**
+- **Voice:** Robot's voice (`studio/ai_voice.py`, Chatterbox clone), script
+  80–120 words.
+- **Picture:** Robot on screen talking (`studio/render_puppet.py`, tall
+  layout, burned-in captions), cut together with the real material:
+  excerpt cards (`studio/excerpt_reel.py` look), real headline cards from The
+  Global Aggregate's database, real app screens (PoolParty). Add 1–2 short
+  AI video shots (Higgsfield image-to-video, cheapest model, ≤ $1 per ad)
+  only where a scene needs a place or action ("a highway at night", "a
+  courtroom"). Cuts every 2–4 s; captions always on.
+- No slideshows of still images, no stock filler, no text-only reels.
+
+**Story series** (people follow series; use the series name on screen and as
+a hashtag):
+
+| Series | Brand | The story |
 |---|---|---|
-| **Issue spotlight** | Hook quote → 2–3 verbatim pull quotes → one-line argument → "Read the full piece" | Any published issue, oldest unpromoted first after the newest |
-| **Big idea in 30 seconds** | Explains the issue's central idea for beginners (e.g. Hobbes vs. Locke on the "state of nature", legal positivism) | Issue text; AI-labeled promo-cast scenes |
-| **The question** | Opens on a provocative question the issue answers ("Are video games the American boy's first addiction?"), then one quote | Issue subtitle and text |
-| **Manifesto** | What The Sovereign is: "Thought, critique, and community, with a dose of good-natured humor." Quotes from Issue 1 (Welcome) | Issue 1, Substack description |
+| **Philosophy in 30 Seconds** (#PhilosophyIn30) | The Sovereign | A real anecdote or thought experiment from an issue (the speed-trap ticket; "the power goes out forever: Hobbes or Locke?") → the idea → one excerpt → read the issue |
+| **The Sovereign Says** | The Sovereign | One provocative claim from an issue ("For many of us, our first real addiction was the video game") → Robot plays devil's advocate in two lines → excerpt → read it |
+| **One Story, Five Countries** (#OneStoryFiveCountries) | The Global Aggregate | A real cluster from today's database: the same event, headlines that disagree → "wait, which is true?" → how many outlets covered it → compare them yourself |
+| **Headline Duel** | The Global Aggregate | Two real headlines about one event side by side → Robot reads both → what each leaves out → the site shows all of them |
+| **Friendly Wagers** | PoolParty (after launch) | Labeled AI actors in a quick scene settling a bet → the real app screen that settles it. Waits for the owner's money message and App Store link |
 
-Issue notes (as of 2026-10-06):
-- Ready for automatic posting: 1 Welcome, 3 Legal Positivism, 5 Video Games,
-  6 Hobbes and Locke, 4 Penn State Fraternities (about the system, not
-  named students; check before posting).
-- Make, but save as Buffer drafts (rule 1): 2 House votes to end Iran war
-  (elections/politicians), 7 The Plagiarism Wars (names a public figure),
-  8 Strain Theory and the "Manosphere" (rests on a real case).
+**Sourcing truth:** every fact, quote and headline is real and word for
+word, from the issue or the database. Anecdotes come only from the issues
+themselves, told as the writer's story ("one Sovereign writer…"). Global
+Aggregate stories follow rule 1: war, crime, election and breaking clusters
+are made but saved as drafts. Prefer science, economy, sport, culture,
+space, health and business.
 
-## The Global Aggregate (CTA: "Use The Global Aggregate" → globalaggregate.org)
+Sovereign issue notes: ready for automatic posting: 1 Welcome, 3 Legal
+Positivism (the speed-trap ticket), 5 Video Games, 6 Hobbes and Locke, 4
+Penn State Fraternities (about the system, not named students). Drafts
+(rule 1): 2 House votes to end Iran war, 7 The Plagiarism Wars, 8 Strain
+Theory and the "Manosphere".
 
-Generic brand ads don't depend on any one news story, so they can always post
-automatically. **Every Global Aggregate ad needs real visuals under the
-words**: 2–3 AI-labeled scenes (people reading news on phones, a newsroom,
-a globe of headlines) or real headline cards from the database. A starfield
-or plain background with text is a text reel, and text reels never ship. Story ads use a real cluster and follow rule 1 (draft when
-required).
+## Captions (every post)
 
-| Ad type | What it is | Material |
+1. **Hook line** = the story's first beat, keyword first ("Legal positivism
+   explained with a speeding ticket 🚔"). Same phrase on screen in the first 2 s.
+2. **One or two story sentences** with the specific detail (names, numbers).
+3. **The product link, always the right one:**
+   The Sovereign → `sovereignnewsletter.substack.com`;
+   The Global Aggregate → `globalaggregate.org`;
+   PoolParty → its App Store link (after launch).
+   Write the plain address plus "link in bio" (Instagram and TikTok captions
+   aren't clickable; the bio's Linktree is).
+4. **A question** that invites a take.
+5. **8–12 hashtags:** brand + series + 3–4 niche + 2–3 topic + 1–2
+   community tags (#philosophytok, #historytok, #lawtok, #newstok). Rotate;
+   no #fyp/#viral.
+6. **No "(AI-generated)" or "(Imagery is AI…)" text in captions** (owner,
+   2026-10-13: the platforms add their own label and the caption note looks
+   ungenuine). When a post contains realistic AI imagery, set the platform's
+   AI flag instead (`isAiGenerated` in Buffer metadata; TikTok/YouTube the
+   same). Robot is a cartoon and needs no flag.
+7. **TikTok title / YouTube Shorts title:** the hook, under 60 characters.
+
+**Keyword and hashtag bank** (add story-specific tags):
+
+| Brand | Search phrases | Hashtags |
 |---|---|---|
-| **By the numbers** | "Today: N articles from 195 news feeds, side by side" (never "30 countries") | Live counts from the site's database (`articles`, distinct `source` / `country`, last 24 h) |
-| **How it works** | Search one event → see every country's headline → spot the framing | Branded walkthrough cards of the real features: trending stories, world map, filter by country, saved filters |
-| **Who it's for** | Students writing papers, debaters, anyone who wants to "check it yourself" | Brand cards + real counts |
-| **Same story, different world** | 2–3 real headlines about one event from different countries | A real cluster from `trending_clusters`; prefer science, economy, sport, culture, space, health, business. War/crime/election/breaking clusters are still allowed but saved as drafts (rule 1) |
-
-**Buffer's free plan holds 10 scheduled posts at once**, so 5 ads × Instagram
-+ TikTok fills it; YouTube Shorts get Robot's Short only until the plan is
-upgraded.
+| The Sovereign | philosophy explained, legal philosophy, political philosophy, critical thinking, civics for beginners, history of ideas | #TheSovereign #PhilosophyIn30 #philosophy #philosophytok #politicalphilosophy #criticalthinking #civics #lawtok #prelaw #history #substack #newsletter |
+| The Global Aggregate | world news explained, how countries report the news, media bias, news literacy, compare headlines | #TheGlobalAggregate #OneStoryFiveCountries #worldnews #newstok #medialiteracy #mediabias #newsliteracy #geopolitics #internationalrelations #journalism #students |
+| Robot | survival tips for beginners, cybersecurity for beginners, history explained | #RobotExplains #survival #preparedness #cybersecurity #historytok #learnontiktok |
 
 ## Weekly rhythm
 
-| Day | Brand | Default ad type |
+| Day | Brand | Default series |
 |---|---|---|
-| Mon | The Global Aggregate | By the numbers / How it works |
-| Tue | The Sovereign | Issue spotlight |
-| Wed | The Global Aggregate | Same story, different world (or Who it's for) |
-| Thu | The Sovereign | Big idea in 30 seconds / The question |
-| Fri | Alternate | Manifesto or How it works |
+| Mon | The Global Aggregate | One Story, Five Countries |
+| Tue | The Sovereign | Philosophy in 30 Seconds |
+| Wed | The Global Aggregate | Headline Duel |
+| Thu | The Sovereign | The Sovereign Says |
+| Fri | Alternate | Whichever series performed best last week |
 
-Robot's Short (from the YouTube episode) posts Sunday on top of these.
+Robot's Short (cut from the YouTube episode) posts Sunday on top of these.
+Timing (Eastern): TikTok 7–9 PM, Instagram 11 AM–1 PM or 7–9 PM, Shorts
+2–4 PM.
 
 ## Rules that still apply
-- Quotes and headlines word for word; real counts only.
-- AI-labeled when realistic AI people appear; ownership disclosure when a
-  Sovereign-branded post promotes The Global Aggregate.
-- Rule 1 means **draft, not skip**: if a post needs the owner's eye, make it
-  and save it as a Buffer draft with a one-line reason.
-- Higgsfield spend cap: $5/week.
+- Rule 1 means **draft, not skip**: make it and save it as a Buffer draft
+  with a one-line reason.
+- Ownership disclosure when a Sovereign-branded post promotes The Global
+  Aggregate (`monetization`).
+- Higgsfield spend cap: $5/week. Log every generation.
+- Buffer free plan: 10 scheduled posts per organization at once.
 
-## Reach: captions, keywords, hashtags (every post)
-
-Search now drives discovery on all three apps: TikTok and Instagram read the
-caption, the on-screen text and the spoken words; YouTube reads the title and
-description. So every post says what it's about in plain search words.
-
-**Every post has:**
-1. **A keyword-first first line** (it's the hook *and* the search phrase):
-   "Hobbes vs. Locke explained in 30 seconds", "How 30 countries reported the
-   same story". The same phrase appears as on-screen text in the first 2 s.
-2. **One or two sentences** of value, then the CTA.
-3. **A question** to drive comments ("Which side are you on?", "Which
-   headline surprised you?"), in the caption (Buffer's free plan can't post
-   a first comment).
-4. **Hashtags:** 3–5 per post (Instagram, TikTok), 3 in the YouTube Shorts
-   description. One brand tag + two niche tags + one or two topic tags. Rotate;
-   never paste the same block every time. Skip #fyp/#viral style tags (no
-   signal).
-5. **YouTube Shorts title:** under 60 characters, keyword first (the hook
-   phrase), no hashtags in the title.
-6. **Alt text** on any image post (accessibility, and it's indexed).
-
-**Keyword and hashtag bank** (pick per post; add issue- or story-specific tags):
-
-| Brand | Search phrases to use in captions/on-screen | Hashtags |
-|---|---|---|
-| The Sovereign | philosophy explained, political philosophy, critical thinking, civics for beginners, history of ideas, law and society, media criticism, education | brand: #TheSovereign · niche: #politicalphilosophy #criticalthinking #civics #historyofideas #prelaw #lawstudent · topic: #philosophy #politics #history #education #substack |
-| The Global Aggregate | world news explained, how countries report the news, media bias, news literacy, compare headlines, international news | brand: #TheGlobalAggregate · niche: #medialiteracy #newsliteracy #mediabias #internationalrelations #geopolitics · topic: #worldnews #news #globalnews #journalism #students |
-| Robot (Shorts) | survival tips for beginners, emergency preparedness, cybersecurity for beginners, history explained | brand: #RobotExplains · niche: #emergencypreparedness #cybersecuritytips #prepared #historyexplained · topic: #survival #cybersecurity #history |
-
-**Timing (US Eastern), one post per brand per day max:** TikTok 7–9 PM,
-Instagram 11 AM–1 PM or 7–9 PM, YouTube Shorts 2–4 PM. Spread the three
-platforms across those windows rather than posting all at once.
-
-**Learn and adjust (Strategist, weekly):** from Buffer metrics, name the top
-2 posts by reach and by comments, which hook phrase and ad type they used, and
-make next week lean that way. Retire hashtags that never appear on top posts.
-
-## Profiles (one-time, owner)
-Each profile's name and bio carry the main keyword, because profile text is
-searchable too:
-- Instagram @wadecapitallc and TikTok @wadethesovereign: name field
-  "The Sovereign · World News & Ideas"; bio "Philosophy, politics & world news
-  explained for beginners. Compare headlines from 195 news feeds ↓" with the link
-  to globalaggregate.org or a link page listing the Substack and the site.
-- YouTube channel description: first line "Robot explains survival,
-  cybersecurity, history and politics for beginners."
+**Learn and adjust (Strategist, weekly):** from Buffer metrics, the top 2
+posts by reach and by comments, their series and hook, and lean next week
+that way. Retire series and hashtags that never show up on top posts.

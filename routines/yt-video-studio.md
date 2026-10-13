@@ -26,7 +26,9 @@ exact "setup: ..." lines from that output (they name what failed), and stop.
    10:07 AM ET, then set the item to Published with the link.
 4. Cut the best 30–60 s into a 9:16 Short, get a public link
    (`studio/upload_video.py`), and schedule it in Buffer for Sunday on YouTube
-   Shorts, Instagram and TikTok (drafts if the Social switch is off).
+   Shorts, Instagram and TikTok (drafts if the Social switch is off). Only
+   the promo + media channels in Buffer organization `6ab6c71cddecb7a5c80b918f`
+   (IDs in `campaigns/launch-campaign.md`); never the clip accounts.
 5. Write next week's episode from the next brief (content-mix) and set it to
    Ready to Record.
 6. Set Last Run fields on both Autopost rows (one or two lines each).

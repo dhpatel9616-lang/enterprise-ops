@@ -30,6 +30,10 @@ See the `brand-voice` skill.
      any post that names real politicians, candidates, or private people,
      touches elections or breaking news, makes a claim you can't source, or
      fails `content-rules`.
+   - **"Autopost — Clips" Enabled:** Clip Studio posts clips to the clip
+     accounts only, through `studio/buffer_clips.py` (their own Buffer
+     account), as drafts when they touch elections/candidates/voting, are
+     under 24 hours old, or can't be sourced (owner, 2026-10-13).
    - Outreach emails send automatically within the sequencer's daily caps
      (Enterprise-leads repo).
    - **"Autopublish — Website guides (Wade Capital)" Enabled:** the SEO Writer
@@ -69,7 +73,7 @@ See the `brand-voice` skill.
 |---|---|
 | Notion, "The Enterprise — Command Center" | Content Ideas, Scripts, Build Queue, Raw Leads Inbox (+ "Outreach Approvals" view) |
 | Google Drive, "Voiceovers" folder | Owner's recorded voiceovers |
-| Buffer | Posts per rule 1 (video posts use a public URL from `studio/upload_video.py`) |
+| Buffer | Promo/media posts via the Buffer connector; clip posts only via `studio/buffer_clips.py` (separate Buffer account, `BUFFER_CLIPS_API_KEY`) |
 | Supabase `skakrtljfaeopfqigyww` | Enterprise Leads data (outreach); public `studio-videos` bucket for rendered videos |
 | GitHub `enterprise-leads` repo | Outreach sequencer (changes go through PRs) |
 | GitHub `wade-capital-website` repo | Wade Capital site (Netlify); weekly guides per rule 1, everything else through PRs |
@@ -81,13 +85,14 @@ See the `brand-voice` skill.
 - **Short-form promos** (9:16) for The Sovereign, The Global Aggregate, and
   PoolParty, built from real material from each product. Realistic AI
   people and situations appear only in promos. Political and historical
-  clipping ads go out as drafts.
+  clips go only to the clip accounts (Clip Studio, rule 1).
 - **Long-form** (16:9): Robot tutorials (cartoon) on grid-down survival,
   cybersecurity, history, and politics; and clipping montages.
-- **Two sets of social accounts (owner, 2026-10-12):** main accounts
-  (@wadecapitallc and friends) for long-form, promos and ad campaigns; a
-  separate @sovereignclips set, with its own Buffer account, for clips only.
-  Clips never go to the main accounts (`content-mix`).
+- **Two sets of social accounts (owner, 2026-10-12):** promo + media
+  (IG @wadecapitallc, TikTok @wadethesovereign, YouTube @WadeCapital) for
+  Robot's long-form, promos and ad campaigns; clips (IG @wadecapitalclips,
+  TikTok @wade.clips3, YouTube @WadeCapitalClips, own Buffer account) for
+  clips and clip montages only. Never mix them (`content-mix`).
 - Wade Capital services are sold by phone and email outreach only, never on
   social.
 

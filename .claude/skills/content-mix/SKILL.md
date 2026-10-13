@@ -32,14 +32,14 @@ something that can't be made honestly at all. War, crime, and hard news in
 general are not banned; they're drafts when rule 1 applies.
 
 **Two sets of accounts (owner, 2026-10-12). Never mix them.**
-- **Main accounts** (main Buffer account): Instagram @wadecapitallc, TikTok
-  @wadethesovereign, YouTube "Wade Capital". Long-form videos (Robot), promos
-  and ad campaigns for The Global Aggregate, PoolParty and The Sovereign.
-  **No clips here.**
-- **Clip accounts** (@sovereignclips, their own Buffer account, set up by the
-  owner): TikTok, Instagram and one more channel (see the campaign file).
-  Only political/historical clips. Posted from the clipping work, not from
-  these routines.
+- **Promo + media accounts** (main Buffer account): Instagram @wadecapitallc,
+  TikTok @wadethesovereign, YouTube @WadeCapital. Robot's long-form
+  tutorials, promos and ad campaigns for The Global Aggregate, PoolParty and
+  The Sovereign. **No clips here.**
+- **Clip accounts** (their own Buffer account): Instagram @wadecapitalclips,
+  TikTok @wade.clips3, YouTube @WadeCapitalClips (Shorts plus long-form clip
+  montages). Only political/historical clips, posted from the clipping
+  work, never from these routines.
 Each free Buffer account holds 10 scheduled posts, so schedule one week ahead at most.
 
 ## The quality bar (why the text reels were rejected)
@@ -127,9 +127,13 @@ Sovereign or Global Aggregate promos.
   people, ever (`content-rules`).
 - Nonpartisan (`brand-voice`): over a month, balance who is shown, and
   frame each clip around an idea, not a side.
-- Because they show real politicians, **clipping posts are always Buffer
-  drafts** for the owner to approve (CLAUDE.md rule 1), even with Autopost
-  on.
+- Clips post **only to the clip accounts**, through Clip Studio
+  (`routines/clip-studio.md`, `studio/buffer_clips.py`), automatically
+  when "Autopost — Clips" is on; drafts when they touch elections,
+  candidates or voting, are under 24 hours old, or can't be sourced
+  (owner, 2026-10-13). The clipping work drops finished clips in the
+  `civic-clips` bucket under `queue/<clip-id>/`; it never posts to Buffer
+  itself.
 
 ## Robot's long-form series (one episode a week)
 Owner-approved order (2026-10-03). Each is a page in Notion → Scripts.

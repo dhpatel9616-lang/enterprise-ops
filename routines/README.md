@@ -9,6 +9,7 @@ routine only takes a merged PR, never another paste.
 | Strategist | `strategist.md` | Sunday ~11:30 PM |
 | Social Studio | `social-studio.md` | Monday ~12:30 AM |
 | SEO Writer | `seo-writer.md` | Monday ~2:30 AM |
+| Clip Studio | `clip-studio.md` | Daily ~12:15 PM |
 | Builder + Leads | `builder-leads.md` | Wednesday ~1:30 AM |
 | To-Do Email | (self-contained prompt; Claude edits it directly) | Thursday ~8 AM |
 | YT Video Studio | `yt-video-studio.md` | Friday ~12:30 AM |
@@ -27,7 +28,9 @@ notification saying "enterprise-ops is not attached to this routine" and stop.
 Each routine needs **enterprise-ops** under its Repositories (routine
 settings), because scheduled runs aren't allowed to `git clone` code
 themselves. Builder + Leads also needs **Enterprise-leads** there, so it can
-push PRs. SEO Writer also needs **wade-capital-website**.
+push PRs. SEO Writer also needs **wade-capital-website**. Clip Studio needs the
+`BUFFER_CLIPS_API_KEY` variable (clip Buffer account → Settings → API) and
+`api.buffer.com` under the environment's allowed domains.
 
 All routines use the same environment. Its Setup script box holds one line,
 `bash /home/user/enterprise-ops/studio/setup.sh || true` (so it never goes stale or blocks a run); its variables hold the keys (HF_KEY, ENTERPRISE_SUPABASE_URL,
