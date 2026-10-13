@@ -84,10 +84,11 @@ See the `brand-voice` skill.
   clipping ads go out as drafts.
 - **Long-form** (16:9): Robot tutorials (cartoon) on grid-down survival,
   cybersecurity, history, and politics; and clipping montages.
-- **Two sets of social accounts (owner, 2026-10-12):** main accounts
-  (@wadecapitallc and friends) for long-form, promos and ad campaigns; a
-  separate @sovereignclips set, with its own Buffer account, for clips only.
-  Clips never go to the main accounts (`content-mix`).
+- **Two sets of social accounts (owner, 2026-10-12):** promo + media
+  (IG @wadecapitallc, TikTok @wadethesovereign, YouTube @WadeCapital) for
+  Robot's long-form, promos and ad campaigns; clips (IG @wadecapitalclips,
+  TikTok @wade.clips3, YouTube @WadeCapitalClips, own Buffer account) for
+  clips and clip montages only. Never mix them (`content-mix`).
 - Wade Capital services are sold by phone and email outreach only, never on
   social.
 

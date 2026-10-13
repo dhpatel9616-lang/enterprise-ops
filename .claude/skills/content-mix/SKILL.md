@@ -32,14 +32,14 @@ something that can't be made honestly at all. War, crime, and hard news in
 general are not banned; they're drafts when rule 1 applies.
 
 **Two sets of accounts (owner, 2026-10-12). Never mix them.**
-- **Main accounts** (main Buffer account): Instagram @wadecapitallc, TikTok
-  @wadethesovereign, YouTube "Wade Capital". Long-form videos (Robot), promos
-  and ad campaigns for The Global Aggregate, PoolParty and The Sovereign.
-  **No clips here.**
-- **Clip accounts** (@sovereignclips, their own Buffer account, set up by the
-  owner): TikTok, Instagram and one more channel (see the campaign file).
-  Only political/historical clips. Posted from the clipping work, not from
-  these routines.
+- **Promo + media accounts** (main Buffer account): Instagram @wadecapitallc,
+  TikTok @wadethesovereign, YouTube @WadeCapital. Robot's long-form
+  tutorials, promos and ad campaigns for The Global Aggregate, PoolParty and
+  The Sovereign. **No clips here.**
+- **Clip accounts** (their own Buffer account): Instagram @wadecapitalclips,
+  TikTok @wade.clips3, YouTube @WadeCapitalClips (Shorts plus long-form clip
+  montages). Only political/historical clips, posted from the clipping
+  work, never from these routines.
 Each free Buffer account holds 10 scheduled posts, so schedule one week ahead at most.
 
 ## The quality bar (why the text reels were rejected)
