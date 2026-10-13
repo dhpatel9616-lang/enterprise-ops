@@ -91,14 +91,14 @@ def main(spec_path, out):
         # Series label above the scene window, captions below it (pre-wrapped; textfile avoids escaping).
         if spec.get("series"):
             (tmp / "series.txt").write_text(spec["series"])
-            graph.append(f"[{last}]drawtext=fontfile={HERE / 'fonts/Oswald-Bold.ttf'}:textfile={tmp / 'series.txt'}:"
+            graph.append(f"[{last}]drawtext=expansion=none:fontfile={HERE / 'fonts/Oswald-Bold.ttf'}:textfile={tmp / 'series.txt'}:"
                          f"fontsize=46:fontcolor={MIST}:borderw=3:bordercolor=black:x=(w-text_w)/2:y=80[vs]")
             last = "vs"
         for i, c in enumerate(json.loads((base / spec["captions"]).read_text())):
-            for j, line in enumerate(textwrap.wrap(c["text"], 28)[:3]):
+            for j, line in enumerate(textwrap.wrap(c["text"], 28)[:4]):
                 f = tmp / f"cap{i}_{j}.txt"
                 f.write_text(line)
-                graph.append(f"[{last}]drawtext=fontfile={HERE / 'fonts/Oswald-Bold.ttf'}:textfile={f}:fontsize=72:fontcolor=white:"
+                graph.append(f"[{last}]drawtext=expansion=none:fontfile={HERE / 'fonts/Oswald-Bold.ttf'}:textfile={f}:fontsize=72:fontcolor=white:"
                              f"borderw=5:bordercolor=black:x=(w-text_w)/2:y={TOP_Y + TOP_H + 120 + j * 82}:enable='between(t,{c['start']:.2f},{c['end']:.2f})'[c{i}_{j}]")
                 last = f"c{i}_{j}"
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *inputs, "-filter_complex", ";".join(graph),
