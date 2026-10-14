@@ -23,6 +23,22 @@ row (Notion → Automation Control) to Error with the reason, and stop.
    the campaign's order: real material and `studio/find_footage.py` (real
    briefings and archive film, then Pixabay stock) before any Higgsfield
    shot. Never a slideshow or text-only reel.
+   **Quality gate (owner, 2026-10-14; an ad went out with the voice
+   stuttering "Azerbaijan's, Azerbaijan's" and captions drifting):**
+   - `lines.txt` = caption lines with true spellings; `script.txt` = the same
+     words for the voice, with hard names spelled the way they sound
+     ("Azer News" for AzerNews).
+   - After every `ai_voice.py` take, run
+     `python3 studio/vo_check.py vo.wav lines.txt captions.json`. It must
+     pass; it also times the captions to the spoken words (never use
+     `captions_from_pauses.py` for AI voices). Failed: record again (each take
+     differs), up to 3 takes; still failing: reword the line that trips it.
+   - In the story_reel spec, start scenes with `"at": <caption line>` (not
+     seconds), so pictures change with the voice.
+   - Before uploading, look at a frame at every scene change and at the end
+     (scene matches what's being said, captions readable, end card right).
+     An ad that hasn't passed all of this is never scheduled or drafted:
+     skip it and say why in the run notes.
    PoolParty only after content-mix says it has launched. Rule 1 means DRAFT,
    not skip. If a source truly can't be fetched, make a different series'
    story for that day instead of leaving it empty.

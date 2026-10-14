@@ -35,6 +35,9 @@ fi
 # Robot's AI voice (studio/ai_voice.py): Kokoro engine from PyPI, model files from GitHub.
 python3 -c "import kokoro_onnx, soundfile" 2>/dev/null || pip install -q --root-user-action=ignore kokoro-onnx soundfile \
   || pip install -q --root-user-action=ignore --break-system-packages kokoro-onnx soundfile
+# Speech-to-text for studio/vo_check.py (checks every voiceover against its script).
+python3 -c "import faster_whisper" 2>/dev/null || pip install -q --root-user-action=ignore faster-whisper \
+  || pip install -q --root-user-action=ignore --break-system-packages faster-whisper
 $SUDO mkdir -p /opt/kokoro && $SUDO chmod 777 /opt/kokoro
 for f in kokoro-v1.0.onnx voices-v1.0.bin; do
   [ -f "/opt/kokoro/$f" ] || { curl -fSL --retry 2 -o "/opt/kokoro/$f.part" "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/$f" && mv -f "/opt/kokoro/$f.part" "/opt/kokoro/$f"; }
@@ -45,5 +48,6 @@ missing=()
 ffmpeg -hide_banner -decoders 2>/dev/null | grep -c librsvg >/dev/null || missing+=("ffmpeg-with-svg")
 command -v rhubarb >/dev/null || missing+=(rhubarb)
 python3 -c "import kokoro_onnx, soundfile" 2>/dev/null || missing+=(kokoro)
+python3 -c "import faster_whisper" 2>/dev/null || missing+=(faster-whisper)
 if [ ${#missing[@]} -gt 0 ]; then echo "setup: MISSING ${missing[*]}" >&2; exit 0; fi
 echo "studio setup OK: $(ffmpeg -version | head -1 | cut -d' ' -f1-3), rhubarb $(rhubarb --version 2>&1 | grep -o "[0-9.]*[0-9]"), espeak-ng $(espeak-ng --version | cut -d' ' -f4)"

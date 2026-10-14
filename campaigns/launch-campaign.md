@@ -39,8 +39,17 @@ A 25–45 second **story with a narrator**, in this shape:
 4. **Payoff:** the idea, in one sentence a viewer could repeat to a friend,
    plus ONE verbatim line from the product (excerpt or real headline) on
    screen.
-5. **CTA (last 3 s):** the product name, what you get, and where: "Read
-   'Legal Positivism' in The Sovereign. Link in bio."
+5. **CTA (last 4 s, owner 2026-10-14: "read more, link in bio" is too weak):**
+   show the product itself and say what's free and specific.
+   - The Global Aggregate: end on the site's own homepage
+     (`studio/brand/ga-home.png` as an `"image"` scene) with the voice line
+     "All <N> headlines, side by side, free at globalaggregate dot org. Link
+     in bio." (N = the story's real outlet count). If that file is missing,
+     a card: big "globalaggregate.org", small "Every headline, side by side.
+     Free." 
+   - The Sovereign: the logo card with the issue title, and "Read
+     '<title>' free in The Sovereign. Link in bio."
+   - PoolParty: the real app screen that settles the bet.
 
 **Production (real video, free first):**
 - **Voice:** Robot's voice (`studio/ai_voice.py`, Chatterbox clone), script
