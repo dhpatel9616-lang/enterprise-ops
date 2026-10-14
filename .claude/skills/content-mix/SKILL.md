@@ -187,13 +187,16 @@ from history", and "map of everything you depend on" as too generic).
   from `content-rules`, revenue path + CTA per `monetization`.
 - One CTA per post, exactly as written above.
 
+## The Sovereign podcast
+Live on Spotify and Apple Podcasts (owner, 2026-10-14). "The Sovereign, Out
+Loud" audiograms and the "Also a podcast" caption line are on (campaign →
+podcast section). Feed:
+`https://skakrtljfaeopfqigyww.supabase.co/storage/v1/object/public/studio-videos/podcast/sovereign/feed.xml`.
+
 ## Open items (ask the owner; don't guess)
 - **PoolParty and money.** The app's real screens show dollar stakes ("$…
   total staked", "Mark as Paid", "% paid on time"). The campaign's line "No
   real money. Just bragging rights." would be false. Decide the true
   message before any PoolParty ad runs.
 - PoolParty App Store link (at launch).
-- **Podcast live on Spotify and Apple?** Not yet (2026-10-14). The feed is
-  `https://skakrtljfaeopfqigyww.supabase.co/storage/v1/object/public/studio-videos/podcast/sovereign/feed.xml`.
-  Until the owner confirms both listings, don't post "Out Loud" audiograms
-  or the "Also a podcast" caption line.
+

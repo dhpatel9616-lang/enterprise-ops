@@ -112,8 +112,7 @@ all free:
 3. **YouTube:** the owner adds the podcast feed to YouTube Studio once, and
    YouTube posts each episode on @WadeCapital by itself (no upload work).
 
-Lines 1 and 2 start only once the podcast is live on Spotify and Apple
-(content-mix → Open items says so); before that, keep the old Thursday slot.
+The podcast is live on Spotify and Apple (owner, 2026-10-14), so all three are on.
 
 ## Captions (every post)
 
