@@ -39,7 +39,9 @@ row (Notion → Automation Control) to Error with the reason, and stop.
 4. Draft instead of scheduling anything rule 1 says must be a draft (with the reason in the Buffer note).
 5. **Podcast:** `python3 studio/podcast.py` (voices any new Sovereign issue
    with the free male voice and updates the podcast feed; "no new issue" is
-   fine). **Medium:** for a new issue, add to the run notes: "Medium: import
+   fine). Run it **before** step 2's rendering when there's a new issue, so
+   Thursday can be "The Sovereign, Out Loud" (`studio/audiogram.py`, see the
+   campaign's podcast section). **Medium:** for a new issue, add to the run notes: "Medium: import
    <issue link> at medium.com/p/import" (the owner does that by hand).
 6. Set Last Run, Last Run Status, Last Run Notes (one or two lines) on the row.
 

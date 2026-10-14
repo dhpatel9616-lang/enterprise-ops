@@ -96,6 +96,25 @@ students), 5 Video Games, 2 House votes to end Iran war (draft), 7 The
 Plagiarism Wars (draft), 6 Hobbes and Locke, 3 Legal Positivism (filler
 only), 1 Welcome.
 
+## The podcast in promotion (owner, 2026-10-14)
+
+The Sovereign podcast (`studio/podcast.py`, voice Onyx) is promoted three ways,
+all free:
+1. **The Sovereign, Out Loud** (#TheSovereignPodcast): a ~30 s audiogram
+   (`studio/audiogram.py`) of the new episode's 4–6 strongest lines, word
+   for word, over a moving sound wave with big captions, ending on "Listen
+   free on Spotify & Apple Podcasts · link in bio". It takes Thursday's
+   Sovereign slot in a week with a new episode (the Buffer limit is 10
+   posts, and the five ads already use them). Pick the most provocative
+   lines, as with every ad. Same rule-1 draft rules as the issue itself.
+2. **Every Sovereign post's caption** adds one line: "🎧 Also a podcast:
+   search The Sovereign on Spotify or Apple Podcasts."
+3. **YouTube:** the owner adds the podcast feed to YouTube Studio once, and
+   YouTube posts each episode on @WadeCapital by itself (no upload work).
+
+Lines 1 and 2 start only once the podcast is live on Spotify and Apple
+(content-mix → Open items says so); before that, keep the old Thursday slot.
+
 ## Captions (every post)
 
 1. **Hook line** = the story's first beat, keyword first ("Legal positivism
@@ -133,7 +152,7 @@ only), 1 Welcome.
 | Mon | The Global Aggregate | One Story, Five Countries |
 | Tue | The Sovereign | The Sovereign Says |
 | Wed | The Global Aggregate | Headline Duel |
-| Thu | The Sovereign | Philosophy in 30 Seconds |
+| Thu | The Sovereign | Philosophy in 30 Seconds, or **The Sovereign, Out Loud** when a new episode came out that week |
 | Fri | Alternate | Whichever series performed best last week |
 
 Robot's Short (cut from the YouTube episode) posts Sunday on top of these.

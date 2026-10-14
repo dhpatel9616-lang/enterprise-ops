@@ -193,5 +193,7 @@ from history", and "map of everything you depend on" as too generic).
   real money. Just bragging rights." would be false. Decide the true
   message before any PoolParty ad runs.
 - PoolParty App Store link (at launch).
-- A home for the clipping work that routines can reach (GitHub repo or
-  shared Drive folder).
+- **Podcast live on Spotify and Apple?** Not yet (2026-10-14). The feed is
+  `https://skakrtljfaeopfqigyww.supabase.co/storage/v1/object/public/studio-videos/podcast/sovereign/feed.xml`.
+  Until the owner confirms both listings, don't post "Out Loud" audiograms
+  or the "Also a podcast" caption line.
