@@ -28,7 +28,7 @@ Never touch Supabase `tzebfwmrmzhkeoptwkzy` (PoolParty production).
 | Small business (email and phone) | no site, broken site, not mobile-friendly, or no social presence | **Automation tailored to the business**, always naming the menu: websites, file management, AI voice agents, social media. Lead with the one the evidence supports (free sample site, sample week of posts). | "Worth a 10-minute call this week?" |
 | Small business | site works but no SSL, outdated software, exposed login/admin pages, public data leaks | Wade Capital security/risk audit | "Can I send you a free 1-page security check-up for your site?" |
 | Restaurant / café (category `restaurant`, `cafe`) | any | **Starter menu** (`touch_sets.restaurant`): Google listing cleanup, simple site with online ordering, AI phone assistant, review texts, text club; plus the sample site and the phone-agent demo recording when they exist | "Worth a 10-minute call this week?" |
-| Law firm (category `legal`) | any | Legal AI: AI Governance Readiness Audit | "Open to a 15-minute call to see where AI could save your team hours, safely?" |
+| Law firm (category `legal`) | any | **After-hours intake voice agent** (answers every call, says it's an AI, takes details and matter type, flags urgent ones, emails a summary, never gives legal advice) and **deadline/docket tracking** (every court date and filing deadline the firm enters, reminders to the attorney and a backup; the firm confirms every date), with a **written AI use policy** (Rules 1.1, 1.6, 5.3) as the trust layer (owner, 2026-10-14; `touch_sets.governance_audit`) | "Worth a 15-minute call to see which would help {firm} most?" |
 
 One offer per email. When two fit, pick the one with the clearest evidence.
 
