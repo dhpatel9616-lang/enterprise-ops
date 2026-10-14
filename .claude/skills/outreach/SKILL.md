@@ -13,7 +13,10 @@ description: Personalized cold emails and AI phone calls for sourced leads (Ente
    the daily caps (CLAUDE.md rule 1) and copies each one to Notion
    (*Drafted Message*, *Offer*). Copy lives in the Supabase `settings` row
    `outreach`.
-3. `bland-calls.js` places AI phone calls to screened business landlines
+3. **Paused by the owner (2026-10-14: off-putting and not worth the money
+   yet; the AI Phone Calls, Phone Screening and Phone-Agent Demo workflows
+   are disabled). Don't report calls as missing or suggest a Bland key.**
+   When re-enabled: `bland-calls.js` places AI phone calls to screened business landlines
    (never cell phones) for leads with no working email or no reply after two
    emails. It says it's an AI in its first sentence.
 4. Sending stops when the lead replies or opts out (`check-replies.js`, hourly).
