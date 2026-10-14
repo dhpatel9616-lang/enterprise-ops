@@ -6,7 +6,7 @@ Spotify, Apple Podcasts and YouTube Music follow that one feed link.
   python3 studio/podcast.py [--max 3] [--dry-run]
 
 Each run voices the oldest issues not yet in the feed (at most --max), uploads
-the MP3s and replaces feed.xml. No new issue = nothing to do. --dry-run writes
+the MP3s and replaces feed.xml (also with no new issue, so show details stay current). --dry-run writes
 the episode scripts to ./podcast-dry-run/ and uploads nothing.
 Needs ENTERPRISE_SUPABASE_URL / ENTERPRISE_SUPABASE_SERVICE_KEY (as upload_video.py).
 """
@@ -24,6 +24,7 @@ HERE = Path(__file__).parent
 SOURCE = "https://sovereignnewsletter.substack.com/feed"
 PREFIX = "podcast/sovereign"
 VOICE = "am_onyx"  # Kokoro male voice; owner picked Onyx, 2026-10-14
+EMAIL = "wadecapitallc@gmail.com"  # public contact in the feed; Spotify sends its verification code here (owner, 2026-10-14)
 NS = {"content": "http://purl.org/rss/1.0/modules/content/", "itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd"}
 BLOCKS = {"p", "h1", "h2", "h3", "h4", "li", "blockquote", "pre"}
 
@@ -81,7 +82,7 @@ def source_items():
               "html": i.findtext("content:encoded", namespaces=NS) or ""} for i in ch.findall("item")]
     show = {"title": ch.findtext("title"), "summary": ch.findtext("description"), "link": ch.findtext("link"),
             "author": ch.findtext("itunes:author", namespaces=NS) or ch.findtext("copyright"),
-            "email": os.environ.get("PODCAST_OWNER_EMAIL") or ch.findtext("itunes:owner/itunes:email", namespaces=NS)}
+            "email": os.environ.get("PODCAST_OWNER_EMAIL") or EMAIL}
     return show, items[::-1]  # oldest first
 
 
@@ -146,7 +147,7 @@ def main():
     done = {e["guid"] for e in episodes}
     todo = [it for it in items if it["guid"] not in done][:a.max]
     if not todo:
-        return print("podcast: no new issue; feed unchanged.")
+        print("podcast: no new issue; refreshing the show details only.")
     tmp = Path(tempfile.mkdtemp())
     if get(f"{base}/cover.jpg") is None:
         cover(tmp / "cover.jpg")

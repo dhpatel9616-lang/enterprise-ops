@@ -1,54 +1,77 @@
-# The Global Aggregate: Google News readiness (Rocket prompt)
+# The Global Aggregate: story pages + Google News readiness (Rocket prompt)
 
 Google stopped taking Google News applications in 2024. Sites are picked up
-automatically when they look like a real, transparent news publication. This
-prompt gives globalaggregate.org what Google looks for. The owner pastes it
-into Rocket and publishes (owner, 2026-10-14).
+automatically when they look like a real, transparent news publication with
+**individual article pages**. As of 2026-10-14, globalaggregate.org has only
+the home feed and the sign-up page (the code in the `globalaggregate` repo:
+`src/app/page.tsx`, `robots.ts`, `sitemap.ts`), so there is nothing for
+Google News to list. This prompt adds one page per story cluster (the
+`cluster_id` the ingest already assigns), then the Google News pieces on top.
 
-Honest limit: Google News favors original work. Pages that only list other
-outlets' headlines rank poorly, so each story page needs our own short
-summary of how the coverage differs (the "compare" part is our original
-work).
+(The owner's first try on 2026-10-14 re-applied the older SEO-basics prompt;
+use this one.)
+
+Honest limits:
+- Google News favors original work. Each story page leads with our own
+  comparison of how countries covered it, so it isn't just a list of links.
+  Inclusion is still Google's call; the pages help normal Google search either way.
+- Articles are kept 7 days, so story pages expire with them; that's normal
+  for news.
+
+Bonus: our "One Story, Five Countries" ads can link to the exact story page.
 
 ## Paste this into Rocket
 
 ```
-Please make globalaggregate.org ready for Google News. Keep the current design; add these:
+Please add individual story pages to globalaggregate.org and make the site ready for Google
+News. Keep the current design and the home feed as they are.
 
-1. News sitemap: a page at /news-sitemap.xml that lists every story page published in the
-   last 48 hours, in Google's News sitemap format (news:publication name "The Global Aggregate",
-   language "en", news:publication_date in ISO 8601 with time zone, news:title). It updates
-   automatically whenever a story is added. Also keep a normal /sitemap.xml listing all
-   pages. Add both to /robots.txt as "Sitemap:" lines, and make sure robots.txt allows Googlebot.
+PART 1 - STORY PAGES
+1. New page at /story/[cluster_id]: one page per story cluster, using the existing `articles`
+   table (fields id, source, country, topic, title, url, published_at, description, cluster_id,
+   is_state_media). Render it on the server (so search engines see the full text without
+   JavaScript), refreshed at least every 15 minutes.
+2. Only clusters covered from at least 3 different countries get a page.
+3. Page layout:
+   - H1 headline: the headline of the earliest article in the cluster.
+   - Line under it: "Covered by N outlets in M countries" + first and latest published time.
+   - "How the coverage differs": a short automatic comparison in plain words, built from the
+     data (which countries covered it, which outlets, state-affiliated sources flagged with
+     the existing badge, and each country's headline side by side). Label it
+     "Compiled by The Global Aggregate".
+   - Then the headlines grouped by country: country name, outlet, headline, published time,
+     link to the original article (opens in a new tab).
+   - A "Compare more stories" link back to the home feed.
+4. In the home feed, make each clustered article's "also covered in" countries link to its
+   story page.
+5. If a cluster no longer exists (articles are deleted after 7 days), show "This story has
+   expired" with a link to the home feed, and return HTTP status 410.
 
-2. Every story page:
-   - A visible headline (one H1), a visible "Published" date and time, and an "Updated" time
-     when it changes.
-   - A visible byline: "By The Global Aggregate newsroom" linking to the About page.
-   - Our own 2-4 sentence summary at the top, in our words, saying what happened and how the
-     outlets' coverage differs. Then the outlet headlines, each linking to its source.
-   - Structured data (JSON-LD) of type NewsArticle: headline, description, datePublished,
-     dateModified, image (at least 1200px wide), author (Organization "The Global Aggregate",
-     url to the About page), publisher (Organization "The Global Aggregate" with logo),
-     mainEntityOfPage.
-   - A clean, permanent URL with the headline words in it (no IDs-only URLs, no query strings).
+PART 2 - GOOGLE NEWS READINESS
+6. News sitemap at /news-sitemap.xml: every story page published in the last 48 hours, in
+   Google's News sitemap format (news:publication name "The Global Aggregate", language "en",
+   news:publication_date in ISO 8601 with time zone, news:title). Add story pages to the
+   existing /sitemap.xml too. Add a second "Sitemap:" line for news-sitemap.xml in robots.ts.
+7. Every story page: one H1, visible "Published" and "Updated" times, byline
+   "By The Global Aggregate newsroom" linking to the About page, its own <title> and meta
+   description, and JSON-LD of type NewsArticle (headline, description, datePublished,
+   dateModified, author and publisher = Organization "The Global Aggregate" with logo and url,
+   mainEntityOfPage).
+8. Trust pages, linked in the footer of every page:
+   - /about: what we do (compare how different countries' outlets report the same story) and
+     a short "How we compile stories" section. Do not invent people's names, titles or
+     credentials; leave a clearly marked [OWNER TO FILL] note for anything unknown.
+   - /contact: a contact form or email address.
+   - /corrections: "If we get something wrong, tell us via the Contact page; we correct it and
+     note the change on the story page."
+   - /editorial-standards: we link every outlet we show, we never change a headline's words,
+     state-affiliated outlets are labeled, and our comparisons are labeled as ours.
+9. Search engine and link-preview crawlers (Googlebot, Google-InspectionTool, facebookexternalhit,
+   Twitterbot, and Buffer) must be able to load every page; make sure no bot-protection or
+   security checkpoint blocks them.
 
-3. Pages Google checks for trust, linked in the footer of every page:
-   - About: who we are, what we do (compare how different countries' outlets report the same
-     story), and how stories are put together. If an About page already exists, keep its text
-     and only add a short "How we compile stories" section. Do not invent people's names,
-     titles or credentials; if a field is unknown, leave a clearly marked [OWNER TO FILL] note.
-   - Contact: a contact form or email address.
-   - Corrections policy: "If we get something wrong, tell us via the Contact page; we correct
-     it and note the change at the bottom of the story."
-   - Editorial standards: we link every outlet we quote, we never change a headline's words,
-     and our summaries are labeled as ours.
-
-4. Speed and basics: story pages load fast on phones, every image has alt text, and every page
-   has its own <title> and meta description.
-
-When done, list the URLs of the news sitemap, the About, Contact, Corrections and Editorial
-standards pages.
+When done, list: one example story page URL, the news sitemap URL, and the About, Contact,
+Corrections and Editorial standards URLs.
 ```
 
 ## After Rocket publishes: owner steps (about 10 minutes, once)
@@ -59,4 +82,5 @@ standards pages.
    domain settings can do this).
 3. In Search Console, click **Sitemaps** on the left, type `news-sitemap.xml`, click
    **Submit**, then do the same for `sitemap.xml`.
-4. Nothing else to apply for. It can take a few weeks to start showing up in Google News.
+4. Paste Rocket's list of URLs to Claude so it can check the pages.
+5. Nothing else to apply for. It can take a few weeks to start showing up in Google News.
