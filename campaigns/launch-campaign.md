@@ -12,8 +12,9 @@ issue or cluster people are angriest or most divided about right now, (2) a
 claim from our own writing that half the audience will push back on, (3)
 only then the evergreen explainers. Provocative never means made up: the
 facts stay real and sourced, allegations are said as allegations
-("accused", "reports say"), and anything rule 1 covers is still made, then
-saved as a draft for the owner's OK (the owner can publish it with one click).
+("accused", "reports say"), and only the most sensitive posts (CLAUDE.md
+rule 1: alleged crimes or sexual violence, victims, private people,
+elections, unsourced claims) wait as drafts for the owner's OK.
 
 Where it posts: the **promo + media accounts only** (Buffer organization
 "My organization" `6ab6c71cddecb7a5c80b918f`; channels Instagram @wadecapitallc
@@ -58,7 +59,7 @@ A 25–45 second **story with a narrator**, in this shape:
      moment beats a recreation. Use the government's own recording, never a
      TV network's broadcast, on these accounts. Credit it on screen (the
      `credit` field in the story_reel spec). Never cut it to change meaning.
-     A post showing a real politician is a rule-1 draft;
+     A sourced post showing a real politician schedules normally;
   3. free stock scenes from Pixabay (`--source pixabay`) for generic places
      and moments ("a campus at night", "a phone feed at 2 a.m.");
   4. only then Higgsfield (Hailuo text-to-video, $0.28 per shot): PoolParty's
@@ -80,9 +81,10 @@ a hashtag):
 **Sourcing truth:** every fact, quote and headline is real and word for
 word, from the issue or the database. Anecdotes come only from the issues
 themselves, told as the writer's story ("one Sovereign writer…"). Global
-Aggregate stories follow rule 1: war, crime, election and breaking clusters
-are made but saved as drafts. Don't steer away from them: a draft the owner
-approves beats a bland post that auto-publishes. Make at least two of the
+Aggregate stories follow rule 1: war and breaking clusters schedule
+normally when sourced; election clusters and alleged crimes against
+identifiable people are drafts. Don't steer away from them: a draft the
+owner approves beats a bland post that auto-publishes. Make at least two of the
 five ads from the week's most charged material.
 
 Sovereign issue notes, most provocative first. **Lead story: 8 Strain
@@ -92,8 +94,8 @@ manosphere, 15% of young men with no close friends; a sample was made
 name the students or the victim. Then 9 Men and Gods ("kings, dictators and
 pundits"; auto-post if no living person is attacked), 4 Penn State
 Fraternities (brawls, hazing, a cocaine bust; about the system, not named
-students), 5 Video Games, 2 House votes to end Iran war (draft), 7 The
-Plagiarism Wars (draft), 6 Hobbes and Locke, 3 Legal Positivism (filler
+students), 5 Video Games, 2 House votes to end Iran war, 7 The
+Plagiarism Wars (draft only if it accuses a private person), 6 Hobbes and Locke, 3 Legal Positivism (filler
 only), 1 Welcome.
 
 ## The podcast in promotion (owner, 2026-10-14)
@@ -159,8 +161,13 @@ Timing (Eastern): TikTok 7–9 PM, Instagram 11 AM–1 PM or 7–9 PM, Shorts
 2–4 PM.
 
 ## Rules that still apply
-- Rule 1 means **draft, not skip**: make it and save it as a Buffer draft
-  with a one-line reason.
+- Rule 1 means **draft, not skip**, for the most sensitive posts only:
+  make it and save it as a Buffer draft with a one-line reason and its
+  planned time.
+- **Exact times, never Buffer's queue** (owner, 2026-10-14: approved drafts
+  all landed on one day). One ad per day, each at the timing above
+  (Instagram 12 PM, Shorts 3 PM, TikTok 7:30 PM Eastern), set with
+  `customScheduled` + `dueAt`.
 - Ownership disclosure when a Sovereign-branded post promotes The Global
   Aggregate (`monetization`).
 - Higgsfield spend cap: $2/week (owner, 2026-10-14). Log every generation.

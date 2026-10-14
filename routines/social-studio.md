@@ -29,8 +29,12 @@ row (Notion → Automation Control) to Error with the reason, and stop.
    Captions follow the campaign file: hook line, story detail, the product's
    link + "link in bio", a question, 8–12 rotating hashtags, no AI disclaimer
    text (set the platform AI flag only if realistic AI imagery is used).
-3. Public link with `python3 studio/upload_video.py`; schedule per the
-   campaign's timing.
+3. Public link with `python3 studio/upload_video.py`. Schedule each ad on
+   its own day at an **exact time** (`mode: customScheduled` + `dueAt`,
+   America/New_York): Instagram 12:00 PM, YouTube Shorts 3:00 PM, TikTok
+   7:30 PM. Never `addToQueue` (it piles posts onto the next open slots).
+   Before scheduling, list what's already scheduled and use the next free
+   days.
    **Higgsfield hard cap: $2.00 per run** (Social Studio runs once a week and
    is the only routine that uses Higgsfield; owner, 2026-10-14). That's at
    most **7 Hailuo shots** ($0.28 each). Before every Higgsfield call, add up
@@ -42,7 +46,13 @@ row (Notion → Automation Control) to Error with the reason, and stop.
    `6ab6caf4ea19ca0bdeea114e` (TikTok @wadethesovereign) and
    `6ab6d22fea19ca0bdeea4810` (YouTube @WadeCapital). Never post to any other
    organization or channel (the clip accounts), and never post clips here.
-4. Draft instead of scheduling anything rule 1 says must be a draft (with the reason in the Buffer note).
+4. Draft only the most sensitive posts (CLAUDE.md rule 1: alleged crimes or
+   sexual violence against identifiable people or a victim at the center, a
+   private person at the center, elections/candidates/voting, unsourced
+   claims, `content-rules` failures). Everything else schedules. A draft
+   still gets its planned day and time (`saveToDraft: true` with the same
+   `customScheduled` + `dueAt`), so approving it keeps it on its own day.
+   Put the reason in the Buffer note.
 5. **Podcast:** `python3 studio/podcast.py` (voices any new Sovereign issue
    with the free male voice and updates the podcast feed; "no new issue" is
    fine). Run it **before** step 2's rendering when there's a new issue, so
@@ -54,9 +64,11 @@ row (Notion → Automation Control) to Error with the reason, and stop.
    if this run saved any Buffer drafts, send ONE short email with the Gmail
    connector to the connected account's own address (email yourself: the
    sender on any `in:sent` message). Subject: "Social Studio: N drafts to
-   approve". Body, plain text, under 120 words: one line per draft (channel,
-   day, the hook line, the one-line rule-1 reason), then "Approve in Buffer:
-   https://publish.buffer.com → Drafts" and the run's Higgsfield total. No
+   approve". Body, plain text, under 140 words: one line per draft (channel,
+   planned day and time, the hook line, the one-line rule-1 reason), then
+   "Approve in Buffer: https://publish.buffer.com → Drafts → open the draft →
+   Schedule Post (it keeps its planned time; don't use Add to Queue)" and the
+   run's Higgsfield total. No
    drafts: send nothing. Never email anyone else.
 
 Keep it lean: don't read files or databases you don't need; one attempt per
