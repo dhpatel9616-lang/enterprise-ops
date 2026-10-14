@@ -26,10 +26,15 @@ See the `brand-voice` skill.
    - **"Autopost — YouTube long-form" Enabled:** upload with
      `studio/youtube_upload.py`. Disabled: leave the video in Drive
      "Ready to Publish".
-   - Even when enabled, save as a **draft** (and say why in the run notes)
-     any post that names real politicians, candidates, or private people,
-     touches elections or breaking news, makes a claim you can't source, or
-     fails `content-rules`.
+   - Even when enabled, save as a **draft** only the most sensitive posts
+     (owner, 2026-10-14: "only the most provocative posts go to drafts"):
+     one that alleges a crime or sexual violence against identifiable
+     people or centers a victim, centers a private person, touches
+     elections/candidates/voting, makes a claim you can't source, or fails
+     `content-rules`. Sourced news that names politicians or public figures,
+     war, and breaking news (with a source) schedule normally. Every draft
+     gets a reason in the run notes, an email to the owner, and its planned
+     time, and every scheduled post an exact time (never Buffer's queue).
    - **"Autopost — Clips" Enabled:** Clip Studio posts clips to the clip
      accounts only, through `studio/buffer_clips.py` (their own Buffer
      account), as drafts when they touch elections/candidates/voting, are

@@ -25,11 +25,12 @@ Mon–Fri alternating The Sovereign and The Global Aggregate, each on Instagram
 Reels, TikTok and YouTube Shorts, plus Robot's Short on Sunday. PoolParty
 joins after launch; clipping ads when a source exists.
 
-**Rule 1 means draft, not skip.** A post that names politicians or private
-people, touches elections or breaking news, or makes an unsourced claim is
-still made, then saved as a Buffer draft with a one-line reason. Only skip
-something that can't be made honestly at all. War, crime, and hard news in
-general are not banned; they're drafts when rule 1 applies.
+**Rule 1 means draft, not skip, and only for the most sensitive posts**
+(owner, 2026-10-14). Draft a post only if it alleges a crime or sexual violence against identifiable people, or centers a victim; centers a private (non-public) person; touches elections, candidates or voting; makes a claim you can't source; or fails `content-rules`. It is still made,
+then saved as a Buffer draft with a one-line reason, and the owner gets an
+email. Everything else schedules normally, including sourced news that names
+politicians or public figures, war, and breaking news. Only skip something
+that can't be made honestly at all.
 
 **Two sets of accounts (owner, 2026-10-12). Never mix them.**
 - **Promo + media accounts** (main Buffer account): Instagram @wadecapitallc,
@@ -73,8 +74,8 @@ or stock filler.
   (`https://sovereignnewsletter.substack.com/feed`) before repeating one.
 - Skip an issue only if it can't be promoted honestly (it rests on a private
   person, or on images we have no right to use). An issue that turns on a
-  real public figure is still made, but saved as a Buffer draft
-  (CLAUDE.md rule 1). Log which issue you used and why others were skipped.
+  real public figure schedules normally when it's sourced (draft only per
+  CLAUDE.md rule 1). Log which issue you used and why others were skipped.
 - Visuals: the issue's own images when they load (`substackcdn.com`); most
   issues only carry the newsletter logo, so the default is 2–3 realistic
   `promo-cast` scenes from `higgsfield-api` that illustrate the issue's idea
@@ -101,7 +102,8 @@ Sovereign or Global Aggregate promos.
   then `articles?select=title,source,country,url,published_at&cluster_id=eq.<id>`.
 - Story ads: pick a cluster from the last 48 hours with 3+ countries, preferring
   science, economy, sport, culture, space, health, business. Rule 1 clusters
-  (elections, breaking news, named private people) are made as drafts.
+  (elections, alleged crimes against identifiable people, private people)
+  are made as drafts.
 - Generic brand ads (By the numbers, How it works, Who it's for) need no
   story and can always post; see `campaigns/launch-campaign.md`.
 - Beats: two or three real headlines from different countries (outlet +
