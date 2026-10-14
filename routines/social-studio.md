@@ -30,7 +30,13 @@ row (Notion → Automation Control) to Error with the reason, and stop.
    link + "link in bio", a question, 8–12 rotating hashtags, no AI disclaimer
    text (set the platform AI flag only if realistic AI imagery is used).
 3. Public link with `python3 studio/upload_video.py`; schedule per the
-   campaign's timing. Higgsfield spend cap: $2/week, logged.
+   campaign's timing.
+   **Higgsfield hard cap: $2.00 per run** (Social Studio runs once a week and
+   is the only routine that uses Higgsfield; owner, 2026-10-14). That's at
+   most **7 Hailuo shots** ($0.28 each). Before every Higgsfield call, add up
+   this run's spend; if the next call would pass $2.00, don't make it: use
+   free footage or a card instead. Put the run's total in the run notes and
+   the cost log.
    **Buffer guard:** only Buffer organization `6ab6c71cddecb7a5c80b918f` and
    only its channels `6ab6cac8ea19ca0bdeea0fba` (Instagram @wadecapitallc),
    `6ab6caf4ea19ca0bdeea114e` (TikTok @wadethesovereign) and
@@ -44,6 +50,14 @@ row (Notion → Automation Control) to Error with the reason, and stop.
    campaign's podcast section). **Medium:** for a new issue, add to the run notes: "Medium: import
    <issue link> at medium.com/p/import" (the owner does that by hand).
 6. Set Last Run, Last Run Status, Last Run Notes (one or two lines) on the row.
+7. **Drafts alert (owner, 2026-10-14; push notifications don't reach them):**
+   if this run saved any Buffer drafts, send ONE short email with the Gmail
+   connector to the connected account's own address (email yourself: the
+   sender on any `in:sent` message). Subject: "Social Studio: N drafts to
+   approve". Body, plain text, under 120 words: one line per draft (channel,
+   day, the hook line, the one-line rule-1 reason), then "Approve in Buffer:
+   https://publish.buffer.com → Drafts" and the run's Higgsfield total. No
+   drafts: send nothing. Never email anyone else.
 
 Keep it lean: don't read files or databases you don't need; one attempt per
 failing source, then move on.
