@@ -155,21 +155,24 @@ Sovereign or Global Aggregate promos.
   itself.
 
 ## Robot's long-form series (two episodes a week, owner 2026-10-15)
-Owner-approved order (2026-10-03; 4–7 reworked and 8–10 added 2026-10-15:
-the old 4–7 were "too broad or bland"; each episode is one specific, dramatic
-real event). Each is a page in Notion → Scripts. Ep. 1 is a full script; the
-rest are briefs titled "(brief)" with no Status.
+Each episode is ONE specific, dramatic real event with a hook title. Mix the
+lanes so no two in a row share one: survival guide, history, current events,
+cybersecurity, and "strange but true" (declassified oddities, told curious
+and dry: what the document says vs what the internet says; never credulous,
+never accusing real people of things the record doesn't show). Off the
+table: MKUltra ("too mainstream", owner 2026-10-15). Each is a page in
+Notion → Scripts; Ep. 1 is a full script, the rest are "(brief)".
 
-1. How Civilization Ends in 72 Hours (pilot)
-2. One Password Shut Down the East Coast's Gas
-3. Every Empire Thinks It's the Exception
-4. The 17-Year-Old Who Hacked Twitter
-5. The Ship That Broke the World (Ever Given, 2021)
-6. The Fake Tweet That Erased $136 Billion in 3 Minutes
-7. The Hack That Stopped America's Prescriptions (Change Healthcare, 2024)
-8. One Software Update Grounded the World's Flights (CrowdStrike, 2024)
-9. The Cables Under the Ocean
-10. Your Phone Is a Tracking Device
+1. How Civilization Ends in 72 Hours (survival; pilot)
+2. One Leaked Password Emptied the East Coast's Gas Stations (cyber)
+3. Every Empire Thought It Was Different. Here's How They All Fell. (history)
+4. A 17-Year-Old Hijacked Obama's Twitter With One Phone Call (cyber)
+5. One Stuck Ship Held 12% of the World Hostage (current events, supply chains)
+6. The Army's Declassified Guide to Leaving Your Body (strange but true: the Gateway Process and the Monroe Institute)
+7. She Fell 2 Miles From the Sky and Walked Out of the Amazon (survival guide)
+8. One Update Turned the World's Screens Blue (cyber, CrowdStrike 2024)
+9. Someone Keeps Cutting the Internet's Cables (current events)
+10. Your Weather App Knows Where You Sleep (privacy)
 
 **Writing next week's script** (YT Video Studio step 5): take the lowest-
 numbered "(brief)" page, verify every fact against its sources (drop or
