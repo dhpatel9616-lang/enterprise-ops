@@ -1,4 +1,4 @@
-# YT Video Studio (Fridays ~12:30 AM ET)
+# YT Video Studio (Tuesdays and Fridays ~12:30 AM ET; two episodes a week, owner 2026-10-15)
 
 Read CLAUDE.md, then ONLY these skills: content-mix,
 voiceover-workflow, video-assembly, character-bible, brand-voice,
@@ -22,15 +22,20 @@ exact "setup: ..." lines from that output (they name what failed), and stop.
    disclosure.
 3. Save video, thumbnail and metadata to Drive "Ready to Publish"; set the
    item to Ready to Publish. If "Autopost — YouTube long-form" is Enabled,
-   upload with `python3 studio/youtube_upload.py` set to go public Saturday
-   10:07 AM ET, then set the item to Published with the link.
+   upload with `python3 studio/youtube_upload.py` set to go public at 10:07 AM
+   ET the next day (Tuesday run → Wednesday, Friday run → Saturday), then set
+   the item to Published with the link.
 4. Cut the best 30–60 s into a 9:16 Short, get a public link
-   (`studio/upload_video.py`), and schedule it in Buffer for Sunday on YouTube
-   Shorts, Instagram and TikTok (drafts if the Social switch is off). Only
+   (`studio/upload_video.py`), and schedule it in Buffer at an exact time
+   (never the queue): Tuesday run → Thursday 9:00 PM ET, Friday run → Sunday
+   9:00 PM ET, on YouTube Shorts, Instagram and TikTok (drafts if the Social
+   switch is off). Only
    the promo + media channels in Buffer organization `6ab6c71cddecb7a5c80b918f`
    (IDs in `campaigns/launch-campaign.md`); never the clip accounts.
-5. Write next week's episode from the next brief (content-mix) and set it to
-   Ready to Record.
+5. Write the next episode from the next brief (content-mix) and set it to
+   Ready to Record, so the next run (three or four days away) has a script.
+   Voice every episode through the quality gate in `routines/social-studio.md`
+   (`studio/vo_check.py` must pass; its captions are the ones to burn in).
 6. Set Last Run fields on both Autopost rows (one or two lines each).
 
 Keep it lean: render in parallel chunks, don't re-render to check, and don't
