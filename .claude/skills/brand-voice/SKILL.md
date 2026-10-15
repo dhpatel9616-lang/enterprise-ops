@@ -32,8 +32,9 @@ not yet confirmed by the owner.
   morganstuphealth for their spin (educational, urgent, with attention to
   health and learning); for the owner's own voice, see below.
 
-### The owner's voice (draft, 2026-10-15; owner marking up 3 sample scripts)
-Every script, caption and Robot line should sound like the owner: thoughtful
+### The owner's voice (owner, 2026-10-15)
+Every script, caption and Robot line, short-form AND long-form, should
+sound like the owner: thoughtful
 and reflective about the human condition, with a dose of humor. Drawn from
 the owner's essays (Impromptus, Mind Body Spirit, Abstractions v Organons,
 Gold vs Silver, Identical Twins) and the Sovereign issues. Influences, for
@@ -83,6 +84,34 @@ self-deprecating, family and everyday life).
 - Shape for a 30-45 second piece: small scene → the turn → the big idea in
   plain words → one dry line → the reflective beat → the product reference
   and CTA.
+- **Long-form (8-15 min Robot episodes) uses the same voice, stretched:**
+  the cold open is the small scene; each chapter gets its own turn and one
+  dry line (not a joke a sentence); plant a detail early and call it back
+  near the end; the big idea is said plainly at least once; the episode
+  lands on the reflective beat ("what this says about us"), then the
+  practical takeaway and the CTA.
+
+**Approved examples** (owner liked these two samples, 2026-10-15):
+
+> *The Global Aggregate, "Same story, five headlines":* One event. Five
+> countries. Let's see what happened. [Country A]: "[headline]". [Country
+> B]: "[headline]". [Country C] decided it didn't happen at all, which is a
+> bold editorial choice. Nobody here is technically lying. They're choosing
+> which half of the truth to put above the fold. Newspapers have done this
+> since there were newspapers. The difference now is that you can catch them
+> in the act. Read all of them, then decide for yourself. That's the whole
+> trick. All the headlines, side by side, free at globalaggregate dot org.
+
+> *PoolParty, "The most famous bet in history":* In the 1600s, a French
+> mathematician named Blaise Pascal made the biggest bet ever written down.
+> Believe in God, he said, and if you're wrong, you've lost a little. Don't
+> believe, and if you're wrong, you've lost everything. Philosophers have
+> argued about it for three hundred years. Nobody has ever paid out. Most of
+> our bets are smaller. Pineapple on pizza. Whether your friend actually
+> finishes that marathon. Maybe that's the point. We bet because we want to
+> be proven right, by someone who has to admit it. PoolParty: friendly
+> wagers with friends. No money. Just bragging rights, and someone else
+> doing the dishes.
 
 ### Words (proposed; owner to confirm or edit)
 - **Use:** "check it yourself", "primary source", "readiness", "prepared,

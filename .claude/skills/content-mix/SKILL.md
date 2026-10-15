@@ -180,7 +180,8 @@ soften anything you can't confirm), and add a `## Spoken script` section in
 Robot's voice: ~1,400–1,600 words (~10 min), a cold-open hook from a real
 moment, chapters, one practical takeaway, and the CTA. Add a `## Storyboard`
 and a `## Sources` section, remove "(brief)" from the title, and set it to
-Ready to Record. Match Ep. 1's structure and tone, plus the campaign's
+Ready to Record. Match Ep. 1's structure, written in the owner's voice
+(`brand-voice` → "The owner's voice", long-form notes), plus the campaign's
 tone rules (dry, sharp, never at victims). After Ep. 8, propose the next
 four in the Strategy Memo for the owner to pick (one specific real event
 each); don't start
