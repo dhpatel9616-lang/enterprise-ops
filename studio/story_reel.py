@@ -12,6 +12,13 @@ spec.json (paths relative to the spec file):
            {"start": 11, "end": 13.7, "card": {"big": "GUILTY.", "small": "by the letter of the law", "accent": "#E5484D"}},
            {"start": 38.9, "end": 44, "card": {"big": "Legal Positivism", "small": "The Sovereign · link in bio", "logo": true}}]}
 
+Tie scenes to the voice instead of seconds (owner, 2026-10-14: images drifted
+from the voiceover): give "at": N (the caption line, from 0, where the scene
+starts) and leave out start/end; each scene runs until the next one starts.
+Captions must come from studio/vo_check.py (timed to the spoken words).
+  {"at": 0, "video": "airport.mp4"}, {"at": 3, "card": {...}}, {"at": 9, "image": "ga-home.png"}
+"image" = a still (for example the product's own page) shown full-window.
+
 puppet = Robot rendered WITHOUT captions (`render_puppet.py --layout tall`); only the head is used.
 Videos are slowed (or looped) to fill their slot; cards are rendered once.
 """
@@ -55,6 +62,13 @@ def main(spec_path, out):
     base = Path(spec_path).parent
     spec = json.loads(Path(spec_path).read_text())
     total = dur(base / spec["audio"])
+    caps = json.loads((base / spec["captions"]).read_text())
+    top = spec["top"]
+    for seg in top:  # "at": caption line -> start time of that spoken line
+        if "at" in seg:
+            seg["start"] = caps[seg["at"]]["start"]
+    for seg, nxt in zip(top, top[1:] + [None]):
+        seg.setdefault("end", nxt["start"] if nxt else total)
     tmp = Path(tempfile.mkdtemp())
     try:
         # Scenes and cards are composed into one window first, then laid over a blurred, dimmed copy of
@@ -62,7 +76,7 @@ def main(spec_path, out):
         inputs = ["-f", "lavfi", "-i", f"color=c={BG}:s={W}x{TOP_H}:r={FPS}:d={total:.2f}",
                   "-i", str(base / spec["puppet"]), "-i", str(base / spec["audio"])]
         graph, last, n = [], "0:v", 3
-        for i, seg in enumerate(spec["top"]):
+        for i, seg in enumerate(top):
             a, b = seg["start"], min(seg["end"], total)
             if "video" in seg:
                 src = base / seg["video"]
@@ -70,6 +84,10 @@ def main(spec_path, out):
                 inputs += ["-stream_loop", "-1", "-i", str(src)]
                 graph.append(f"[{n}:v]setpts={stretch:.3f}*(PTS-STARTPTS),scale={W}:{TOP_H}:force_original_aspect_ratio=increase,"
                              f"crop={W}:{TOP_H},trim=duration={b - a:.2f},setpts=PTS-STARTPTS+{a:.2f}/TB[s{i}]")
+            elif "image" in seg:
+                inputs += ["-loop", "1", "-t", f"{b:.2f}", "-i", str(base / seg["image"])]
+                # Fill the width and keep the TOP of the image (a page screenshot's title area).
+                graph.append(f"[{n}:v]scale={W}:{TOP_H}:force_original_aspect_ratio=increase,crop={W}:{TOP_H}:(iw-{W})/2:0,format=rgba[s{i}]")
             else:
                 png = tmp / f"card{i}.png"
                 card_png(seg["card"], png)
@@ -100,7 +118,7 @@ def main(spec_path, out):
             graph.append(f"[{last}]drawtext=expansion=none:fontfile={HERE / 'fonts/Oswald-Bold.ttf'}:textfile={tmp / 'series.txt'}:"
                          f"fontsize=46:fontcolor={MIST}:borderw=3:bordercolor=black:x=(w-text_w)/2:y=80[vs]")
             last = "vs"
-        for i, c in enumerate(json.loads((base / spec["captions"]).read_text())):
+        for i, c in enumerate(caps):
             for j, line in enumerate(textwrap.wrap(c["text"], 28)[:4]):
                 f = tmp / f"cap{i}_{j}.txt"
                 f.write_text(line)
