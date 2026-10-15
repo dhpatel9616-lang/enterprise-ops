@@ -17,6 +17,9 @@ row (Notion → Automation Control) to Error with the reason, and stop.
    narrated story in real video (hook → setup → turn → payoff → CTA),
    **provocative first** (the campaign's order: the most charged real story
    leads; rule 1 makes it a draft, never a reason to pick a blander one).
+   Write them as engaging, informative pieces worth watching on their own
+   that reference the product in one natural line plus the CTA, not pitches
+   (owner, 2026-10-15), in the owner's voice (`brand-voice`).
    Robot's voice (`studio/ai_voice.py`), the puppet rendered without captions
    (`studio/render_puppet.py --layout tall`), then `studio/story_reel.py`:
    scenes and cards full-frame, Robot only a small corner bubble. Footage in

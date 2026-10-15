@@ -125,6 +125,12 @@ all free:
 The podcast is live on Spotify and Apple (owner, 2026-10-14), so all three are on.
 
 ## Tone (owner, 2026-10-15)
+- **Write in the owner's voice** (`brand-voice` → "The owner's voice"):
+  thoughtful about the human condition, with a dose of humor; a small
+  scene, the big idea in plain words, one dry line, a sincere landing.
+- **Not every post is an ad.** Most are informative pieces worth watching
+  on their own that reference the product they came from in one natural
+  line plus the closing CTA (owner, 2026-10-15).
 - **Sharpness depends on the story:** properly dry and cutting about
   headlines, media, power and politics; gentle around tragedies. The joke
   is always on the coverage or the system, never on victims; a story with

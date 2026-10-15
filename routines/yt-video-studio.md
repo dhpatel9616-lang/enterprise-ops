@@ -34,6 +34,7 @@ exact "setup: ..." lines from that output (they name what failed), and stop.
    (IDs in `campaigns/launch-campaign.md`); never the clip accounts.
 5. Write the next episode from the next brief (content-mix) and set it to
    Ready to Record, so the next run (three or four days away) has a script.
+   Write it in the owner's voice (`brand-voice` → "The owner's voice").
    Voice every episode through the quality gate in `routines/social-studio.md`
    (`studio/vo_check.py` must pass; its captions are the ones to burn in).
 6. Set Last Run fields on both Autopost rows (one or two lines each).

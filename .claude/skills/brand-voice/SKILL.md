@@ -30,8 +30,88 @@ not yet confirmed by the owner.
 - **For beginners, never "for kids".**
 - **Tone references** (for feel only; never copy): jakeswiz and
   morganstuphealth for their spin (educational, urgent, with attention to
-  health and learning); Christopher Hitchens for erudite, confident,
-  cutting wit.
+  health and learning); for the owner's own voice, see below.
+
+### The owner's voice (owner, 2026-10-15)
+Every script, caption and Robot line, short-form AND long-form, should
+sound like the owner: thoughtful
+and reflective about the human condition, with a dose of humor. Drawn from
+the owner's essays (Impromptus, Mind Body Spirit, Abstractions v Organons,
+Gold vs Silver, Identical Twins) and the Sovereign issues. Influences, for
+feel only (never copy a bit or a catchphrase): **Christopher Hitchens and
+William F. Buckley** (confident vocabulary, cutting precision, formal
+courtesy), **Tina Fey and SNL** (Weekend Update rhythm: tight setup,
+punchline, move on, call it back later), **Nimesh Patel** (observational,
+self-deprecating, family and everyday life).
+
+**Signature moves**
+- **Small scene, then the big idea.** Start somewhere ordinary and specific
+  (prom pictures, a canceled test, a pitch for scented sneaker balls), then
+  zoom out to Descartes, Weber, Hobbes or the Ramayana, then back to now.
+- **Mock-heroic for small things, plain words for big ones.** Treat a
+  trivial choice like a state dossier ("Gold currently has 128 times the
+  market share of poor Silver"); say serious things simply.
+- **The erudite setup, the plain punchline.** Lift with the big reference,
+  then drop it ("While it is fun to believe the king of monkeys grew to the
+  size of a skyscraper, there are no similarly blessed monkeys in the
+  modern world").
+- **Self-implicating first person.** The joke includes us ("my sin is in
+  spectating"; "I wondered if I'd have won if I had just told people to wash
+  their feet"). We make ads and say so.
+- **Asides and footnote jokes** in parentheses or a quick beat ("boujee,
+  short for bourgeois, which it has always been hip to be a part of").
+- **Bent idioms and formal courtesy:** "the cat was hurled violently from
+  the bag"; "Mr. Putin", the way a broadsheet writes it.
+- **A sincere landing.** End on a human question or a hopeful note, not a
+  dunk. The humor gets people in; the reflection is why they stay.
+
+**Dos and don'ts**
+- Punch up (power, institutions, coverage, hype, ourselves), never down. No
+  jokes at victims, and no jokes about anyone's race, religion or identity
+  except our own, self-deprecating.
+- Take the wit of Hitchens and Buckley, not their sides: the house stays
+  nonpartisan.
+- One big word or name per ad, made plain right away (our audience is new to
+  the topic).
+- Clean language in posts and captions (the essays swear; the ads don't).
+- Use the owner's style, never the owner's private life: no family members,
+  classmates, partners or hometown people in content.
+- **Content first, ad second** (owner, 2026-10-15). Most posts are
+  engaging, informative pieces worth watching on their own; they work as
+  ads only because they naturally reference the product they came from
+  (the Sovereign issue, the Global Aggregate comparison). Keep the product
+  mention to one natural line plus the closing CTA, not a pitch.
+- Shape for a 30-45 second piece: small scene → the turn → the big idea in
+  plain words → one dry line → the reflective beat → the product reference
+  and CTA.
+- **Long-form (8-15 min Robot episodes) uses the same voice, stretched:**
+  the cold open is the small scene; each chapter gets its own turn and one
+  dry line (not a joke a sentence); plant a detail early and call it back
+  near the end; the big idea is said plainly at least once; the episode
+  lands on the reflective beat ("what this says about us"), then the
+  practical takeaway and the CTA.
+
+**Approved examples** (owner liked these two samples, 2026-10-15):
+
+> *The Global Aggregate, "Same story, five headlines":* One event. Five
+> countries. Let's see what happened. [Country A]: "[headline]". [Country
+> B]: "[headline]". [Country C] decided it didn't happen at all, which is a
+> bold editorial choice. Nobody here is technically lying. They're choosing
+> which half of the truth to put above the fold. Newspapers have done this
+> since there were newspapers. The difference now is that you can catch them
+> in the act. Read all of them, then decide for yourself. That's the whole
+> trick. All the headlines, side by side, free at globalaggregate dot org.
+
+> *PoolParty, "The most famous bet in history":* In the 1600s, a French
+> mathematician named Blaise Pascal made the biggest bet ever written down.
+> Believe in God, he said, and if you're wrong, you've lost a little. Don't
+> believe, and if you're wrong, you've lost everything. Philosophers have
+> argued about it for three hundred years. Nobody has ever paid out. Most of
+> our bets are smaller. Pineapple on pizza. Whether your friend actually
+> finishes that marathon. Maybe that's the point. We bet because we want to
+> be proven right, by someone who has to admit it. PoolParty: friendly
+> wagers with friends. No money. Just bragging rights, and someone else
+> doing the dishes.
 
 ### Words (proposed; owner to confirm or edit)
 - **Use:** "check it yourself", "primary source", "readiness", "prepared,
