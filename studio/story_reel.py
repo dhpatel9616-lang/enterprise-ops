@@ -16,7 +16,7 @@ Tie scenes to the voice instead of seconds (owner, 2026-10-14: images drifted
 from the voiceover): give "at": N (the caption line, from 0, where the scene
 starts) and leave out start/end; each scene runs until the next one starts.
 Captions must come from studio/vo_check.py (timed to the spoken words).
-  {"at": 0, "video": "airport.mp4"}, {"at": 3, "card": {...}}, {"at": 9, "image": "ga-home.png"}
+  {"at": 0, "video": "airport.mp4"}, {"at": 3, "card": {...}}, {"at": 9, "image": "../brand/ga-endcard.png"}
 "image" = a still (for example the product's own page) shown full-window.
 
 puppet = Robot rendered WITHOUT captions (`render_puppet.py --layout tall`); only the head is used.

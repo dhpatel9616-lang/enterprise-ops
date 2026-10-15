@@ -41,12 +41,11 @@ A 25–45 second **story with a narrator**, in this shape:
    screen.
 5. **CTA (last 4 s, owner 2026-10-14: "read more, link in bio" is too weak):**
    show the product itself and say what's free and specific.
-   - The Global Aggregate: end on the site's own homepage
-     (`studio/brand/ga-home.png` as an `"image"` scene) with the voice line
-     "All <N> headlines, side by side, free at globalaggregate dot org. Link
-     in bio." (N = the story's real outlet count). If that file is missing,
-     a card: big "globalaggregate.org", small "Every headline, side by side.
-     Free." 
+   - The Global Aggregate: end on the GA end card (`studio/brand/ga-endcard.png`,
+     made from the site's own share card, as an `"image"` scene) with the
+     voice line "All <N> headlines, side by side, free at globalaggregate dot
+     org. Link in bio." (N = the story's real outlet count). Never claim a
+     country count (owner, 2026-10-06); the end card has none.
    - The Sovereign: the logo card with the issue title, and "Read
      '<title>' free in The Sovereign. Link in bio."
    - PoolParty: the real app screen that settles the bet.
@@ -124,6 +123,20 @@ all free:
    YouTube posts each episode on @WadeCapital by itself (no upload work).
 
 The podcast is live on Spotify and Apple (owner, 2026-10-14), so all three are on.
+
+## Tone (owner, 2026-10-15)
+- **Sharpness depends on the story:** properly dry and cutting about
+  headlines, media, power and politics; gentle around tragedies. The joke
+  is always on the coverage or the system, never on victims; a story with
+  deaths gets at most one dry line about how it was covered.
+- **Robot's war-veteran backstory** is seasoning, not the meal: at most one
+  aside in about one ad in five ("I've survived a war. The comments section
+  is harder."). The product and the story stay the focus.
+- **Backstory openers and young people's world** (the group chat, the For
+  You page, class, the uncle forwarding headlines) beat abstract hooks.
+- **Recurring bits:** "Robot Reads the Comments" starts once our posts get
+  real comments (answer real pushback, quote it word for word, no usernames
+  unless public figures). More bits only once the owner picks them.
 
 ## Captions (every post)
 
