@@ -30,8 +30,53 @@ not yet confirmed by the owner.
 - **For beginners, never "for kids".**
 - **Tone references** (for feel only; never copy): jakeswiz and
   morganstuphealth for their spin (educational, urgent, with attention to
-  health and learning); Christopher Hitchens for erudite, confident,
-  cutting wit.
+  health and learning); for the owner's own voice, see below.
+
+### The owner's voice (draft, 2026-10-15; owner marking up 3 sample scripts)
+Every script, caption and Robot line should sound like the owner: thoughtful
+and reflective about the human condition, with a dose of humor. Drawn from
+the owner's essays (Impromptus, Mind Body Spirit, Abstractions v Organons,
+Gold vs Silver, Identical Twins) and the Sovereign issues. Influences, for
+feel only (never copy a bit or a catchphrase): **Christopher Hitchens and
+William F. Buckley** (confident vocabulary, cutting precision, formal
+courtesy), **Tina Fey and SNL** (Weekend Update rhythm: tight setup,
+punchline, move on, call it back later), **Nimesh Patel** (observational,
+self-deprecating, family and everyday life).
+
+**Signature moves**
+- **Small scene, then the big idea.** Start somewhere ordinary and specific
+  (prom pictures, a canceled test, a pitch for scented sneaker balls), then
+  zoom out to Descartes, Weber, Hobbes or the Ramayana, then back to now.
+- **Mock-heroic for small things, plain words for big ones.** Treat a
+  trivial choice like a state dossier ("Gold currently has 128 times the
+  market share of poor Silver"); say serious things simply.
+- **The erudite setup, the plain punchline.** Lift with the big reference,
+  then drop it ("While it is fun to believe the king of monkeys grew to the
+  size of a skyscraper, there are no similarly blessed monkeys in the
+  modern world").
+- **Self-implicating first person.** The joke includes us ("my sin is in
+  spectating"; "I wondered if I'd have won if I had just told people to wash
+  their feet"). We make ads and say so.
+- **Asides and footnote jokes** in parentheses or a quick beat ("boujee,
+  short for bourgeois, which it has always been hip to be a part of").
+- **Bent idioms and formal courtesy:** "the cat was hurled violently from
+  the bag"; "Mr. Putin", the way a broadsheet writes it.
+- **A sincere landing.** End on a human question or a hopeful note, not a
+  dunk. The humor gets people in; the reflection is why they stay.
+
+**Dos and don'ts**
+- Punch up (power, institutions, coverage, hype, ourselves), never down. No
+  jokes at victims, and no jokes about anyone's race, religion or identity
+  except our own, self-deprecating.
+- Take the wit of Hitchens and Buckley, not their sides: the house stays
+  nonpartisan.
+- One big word or name per ad, made plain right away (our audience is new to
+  the topic).
+- Clean language in posts and captions (the essays swear; the ads don't).
+- Use the owner's style, never the owner's private life: no family members,
+  classmates, partners or hometown people in content.
+- Shape for a 30-45 second ad: small scene → the turn → the big idea in
+  plain words → one dry line → the reflective beat → the CTA.
 
 ### Words (proposed; owner to confirm or edit)
 - **Use:** "check it yourself", "primary source", "readiness", "prepared,
