@@ -75,8 +75,14 @@ self-deprecating, family and everyday life).
 - Clean language in posts and captions (the essays swear; the ads don't).
 - Use the owner's style, never the owner's private life: no family members,
   classmates, partners or hometown people in content.
-- Shape for a 30-45 second ad: small scene → the turn → the big idea in
-  plain words → one dry line → the reflective beat → the CTA.
+- **Content first, ad second** (owner, 2026-10-15). Most posts are
+  engaging, informative pieces worth watching on their own; they work as
+  ads only because they naturally reference the product they came from
+  (the Sovereign issue, the Global Aggregate comparison). Keep the product
+  mention to one natural line plus the closing CTA, not a pitch.
+- Shape for a 30-45 second piece: small scene → the turn → the big idea in
+  plain words → one dry line → the reflective beat → the product reference
+  and CTA.
 
 ### Words (proposed; owner to confirm or edit)
 - **Use:** "check it yourself", "primary source", "readiness", "prepared,
