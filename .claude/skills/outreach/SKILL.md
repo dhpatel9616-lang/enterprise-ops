@@ -28,10 +28,10 @@ Never touch Supabase `tzebfwmrmzhkeoptwkzy` (PoolParty production).
 
 | Lead | Signal | Offer | CTA |
 |---|---|---|---|
-| Small business (email and phone) | no site, broken site, not mobile-friendly, or no social presence | **Automation tailored to the business**, always naming the menu: websites, file management, AI voice agents, social media. Lead with the one the evidence supports (free sample site, sample week of posts). | "Worth a 10-minute call this week?" |
+| Small business (email and phone) | no site, broken site, not mobile-friendly, or no social presence | **Problem first** (owner, 2026-10-16; `outreach-v6-urgency.sql`): open with the two costs, after-hours calls going to voicemail and not being found on Google (the verified website issue), then the fix (AI phone agent + a website built to be found, or social that posts itself), plus the free sample site or week of posts. | `{booking_line}`: a 15-minute booking link, or "reply with a window and I'll send an invite" |
 | Small business | site works but no SSL, outdated software, exposed login/admin pages, public data leaks | Wade Capital security/risk audit | "Can I send you a free 1-page security check-up for your site?" |
 | Restaurant / café (category `restaurant`, `cafe`) | any | **Starter menu** (`touch_sets.restaurant`): Google listing cleanup, simple site with online ordering, AI phone assistant, review texts, text club; plus the sample site and the phone-agent demo recording when they exist | "Worth a 10-minute call this week?" |
-| Law firm (category `legal`) | any | **After-hours intake voice agent** (answers every call, says it's an AI, takes details and matter type, flags urgent ones, emails a summary, never gives legal advice) and **deadline/docket tracking** (every court date and filing deadline the firm enters, reminders to the attorney and a backup; the firm confirms every date), with a **written AI use policy** (Rules 1.1, 1.6, 5.3) as the trust layer (owner, 2026-10-14; `touch_sets.governance_audit`) | "Worth a 15-minute call to see which would help {firm} most?" |
+| Law firm (category `legal`) | any | **After-hours intake voice agent** (answers every call, says it's an AI, takes details and matter type, flags urgent ones, emails a summary, never gives legal advice) and **deadline/docket tracking** (every court date and filing deadline the firm enters, reminders to the attorney and a backup; the firm confirms every date), with a **written AI use policy** (Rules 1.1, 1.6, 5.3) as the trust layer (owner, 2026-10-14; `touch_sets.governance_audit`) | `{booking_line}` (15-minute booking link or invite) |
 
 One offer per email. When two fit, pick the one with the clearest evidence.
 
@@ -47,7 +47,8 @@ One offer per email. When two fit, pick the one with the clearest evidence.
 ## Every draft must have
 ```
 Offer: <website studio | security audit | social | legal AI>
-CTA: <one question the lead can answer yes to>
+CTA: <one concrete next step: the booking link, or a reply with a time>
+Urgency comes from the real cost of waiting (tonight's missed calls), never from invented deadlines or "only 3 spots left".
 ```
 - Plain, short (under ~120 words), from a real person, honest subject line
   (no "Re:" on a first email, no fake urgency).
