@@ -7,7 +7,7 @@ promo needs realistic people). Run studio scripts from the repo root.
 
 Tools: the environment's Setup script installs them. Check with
 `command -v ffmpeg rhubarb`; only if one is missing run
-`bash studio/setup.sh`. Still missing: set the "Autopost — Social"
+`bash studio/setup.sh` (allow it 10 minutes; the voice tools are ~800 MB). Still missing: set the "Autopost — Social"
 row (Notion → Automation Control) to Error with the reason, and stop.
 
 1. Read the "Autopost — Social" row. Enabled = schedule in Buffer with
