@@ -6,7 +6,7 @@ content-rules, monetization, platform-formats. Run studio scripts from
 the repo root.
 
 Tools: check `command -v ffmpeg rhubarb` and `python3 -c "import kokoro_onnx"`;
-only if something is missing run `bash studio/setup.sh` and read its output.
+only if something is missing run `bash studio/setup.sh` (allow it 10 minutes; the voice tools are ~800 MB) and read its output.
 Still missing: set the "Autopost — YouTube long-form" row to Error with the
 exact "setup: ..." lines from that output (they name what failed), and stop.
 

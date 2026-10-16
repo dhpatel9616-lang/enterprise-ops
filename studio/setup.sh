@@ -33,11 +33,21 @@ if ! command -v rhubarb >/dev/null; then
 fi
 
 # Robot's AI voice (studio/ai_voice.py): Kokoro engine from PyPI, model files from GitHub.
-python3 -c "import kokoro_onnx, soundfile" 2>/dev/null || pip install -q --root-user-action=ignore kokoro-onnx soundfile \
-  || pip install -q --root-user-action=ignore --break-system-packages kokoro-onnx soundfile
 # Speech-to-text for studio/vo_check.py (checks every voiceover against its script).
-python3 -c "import faster_whisper" 2>/dev/null || pip install -q --root-user-action=ignore faster-whisper \
-  || pip install -q --root-user-action=ignore --break-system-packages faster-whisper
+# `python3 -m pip` so packages land where python3 looks; pip's own error is kept
+# in $PIPLOG and its last lines are printed with the MISSING report (a routine
+# run on 2026-10-16 got MISSING kokoro faster-whisper with no reason shown).
+PIPLOG=/tmp/studio-setup-pip.log; : > "$PIPLOG"
+pipi() {  # pipi <import names> -- <packages>
+  local mods=$1; shift
+  python3 -c "import $mods" 2>/dev/null && return
+  for extra in "" "--break-system-packages" "--user --break-system-packages"; do
+    python3 -m pip install -q --root-user-action=ignore --retries 5 --timeout 60 $extra "$@" >>"$PIPLOG" 2>&1 \
+      && python3 -c "import $mods" 2>>"$PIPLOG" && return
+  done
+}
+pipi "kokoro_onnx, soundfile" kokoro-onnx soundfile
+pipi faster_whisper faster-whisper
 $SUDO mkdir -p /opt/kokoro && $SUDO chmod 777 /opt/kokoro
 for f in kokoro-v1.0.onnx voices-v1.0.bin; do
   [ -f "/opt/kokoro/$f" ] || { curl -fSL --retry 2 -o "/opt/kokoro/$f.part" "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/$f" && mv -f "/opt/kokoro/$f.part" "/opt/kokoro/$f"; }
@@ -49,5 +59,10 @@ ffmpeg -hide_banner -decoders 2>/dev/null | grep -c librsvg >/dev/null || missin
 command -v rhubarb >/dev/null || missing+=(rhubarb)
 python3 -c "import kokoro_onnx, soundfile" 2>/dev/null || missing+=(kokoro)
 python3 -c "import faster_whisper" 2>/dev/null || missing+=(faster-whisper)
-if [ ${#missing[@]} -gt 0 ]; then echo "setup: MISSING ${missing[*]}" >&2; exit 0; fi
+if [ ${#missing[@]} -gt 0 ]; then
+  echo "setup: MISSING ${missing[*]}" >&2
+  [ -s "$PIPLOG" ] && grep -v '^\s*$' "$PIPLOG" | tail -4 | sed 's/^/setup: pip: /' >&2
+  df -h /tmp | tail -1 | awk '{print "setup: disk free " $4}' >&2
+  exit 0
+fi
 echo "studio setup OK: $(ffmpeg -version | head -1 | cut -d' ' -f1-3), rhubarb $(rhubarb --version 2>&1 | grep -o "[0-9.]*[0-9]"), espeak-ng $(espeak-ng --version | cut -d' ' -f4)"
