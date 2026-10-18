@@ -28,7 +28,10 @@ week at a time.
 
 ## What every ad is
 
-A 25–45 second **story with a narrator**, in this shape:
+A **20–30 second** story with a narrator (35 s at most; owner, 2026-10-18:
+first week's reels ran ~35 s and stalled at about 100 views, the platforms'
+cold-start floor, so they need to be watched to the end more often), in this
+shape:
 
 1. **Hook (0–2 s):** the most charged real detail, said out loud and shown
    on screen. "Seven Cornell students accused of rape. A university accused
@@ -39,6 +42,10 @@ A 25–45 second **story with a narrator**, in this shape:
 4. **Payoff:** the idea, in one sentence a viewer could repeat to a friend,
    plus ONE verbatim line from the product (excerpt or real headline) on
    screen.
+   Then Robot **asks one either/or question out loud** ("Which headline
+   would you have believed?"), the same one that ends the caption. A
+   question people can answer in one word gets comments; comments feed
+   "Robot Reads the Comments".
 5. **CTA (last 4 s, owner 2026-10-14: "read more, link in bio" is too weak):**
    show the product itself and say what's free and specific.
    - The Global Aggregate: end on the GA end card (`studio/brand/ga-endcard.png`,
@@ -183,6 +190,17 @@ The podcast is live on Spotify and Apple (owner, 2026-10-14), so all three are o
 | Wed | The Global Aggregate | Headline Duel |
 | Thu | The Sovereign | Philosophy in 30 Seconds, or **The Sovereign, Out Loud** when a new episode came out that week |
 | Fri | Alternate | Whichever series performed best last week |
+
+**What week 1 showed (Oct 14–18, Buffer numbers):** the Global Aggregate
+"two headlines" stories did best (Houthi: 122 Instagram views; diesel: 87
+Shorts, 94 TikTok). Sovereign posts that opened on an abstract question did
+worst ("Who do you worship?": 19 Instagram, 0 Shorts). TikTok gives every
+post ~100 views; nothing has broken out yet and no post has a comment. So:
+- **Sovereign posts open on a concrete, current scene or headline**, then
+  the issue's idea (the owner's voice: small scene first). Never open on an
+  abstract question.
+- Friday goes to the best series by **views per platform from last week**
+  (Social Studio step 0), not by guess.
 
 Robot's Short (cut from the YouTube episode) posts Sunday on top of these.
 Timing (Eastern): TikTok 7–9 PM, Instagram 11 AM–1 PM or 7–9 PM, Shorts

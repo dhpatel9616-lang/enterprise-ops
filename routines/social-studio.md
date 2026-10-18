@@ -10,6 +10,10 @@ Tools: the environment's Setup script installs them. Check with
 `bash studio/setup.sh` (allow it 10 minutes; the voice tools are ~800 MB). Still missing: set the "Autopost — Social"
 row (Notion → Automation Control) to Error with the reason, and stop.
 
+0. **Last week's numbers:** `list_posts` (organization below,
+   `includeMetrics: true`, the last 7 days, status sent). In the run notes,
+   one line per post (series, platform, views, comments) and one line on
+   what to repeat. Friday's slot goes to the series with the most views.
 1. Read the "Autopost — Social" row. Enabled = schedule in Buffer with
    automatic publishing; unchecked = Buffer drafts only.
 2. Make this week's five ads from `campaigns/launch-campaign.md` (Mon–Fri,
