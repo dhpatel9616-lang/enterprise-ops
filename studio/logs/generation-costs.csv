@@ -3,3 +3,8 @@ date,script,brand,model,what,seconds_or_images,cost_usd,kept
 2026-10-06,ga-launch-ads,Global Aggregate,soul/v2/standard 1080p,4 scene images,4,0.016,yes
 2026-10-13,story1-speed-trap,The Sovereign,minimax/hailuo-2.3/standard/text-to-video 768p,2 six-second scenes (highway speed trap; courtroom),2,0.56,yes
 2026-10-13,story2-cornell-manosphere,The Sovereign,minimax/hailuo-2.3/standard/text-to-video 768p,3 six-second scenes (campus vigil; two phone feeds; young man scrolling at night),3,0.84,yes
+2026-10-13,ga-story1-saudi-airport,Global Aggregate,minimax/hailuo-2.3/standard/text-to-video 768p,2 six-second scenes,2,0.56,yes
+2026-10-13,sov-story-cornell-strain,The Sovereign,minimax/hailuo-2.3/standard/text-to-video 768p,2 six-second scenes,2,0.56,yes
+2026-10-13,ga-story3-diesel-duel,Global Aggregate,minimax/hailuo-2.3/standard/text-to-video 768p,2 six-second scenes,2,0.56,yes
+2026-10-13,sov-story4-men-and-gods,The Sovereign,minimax/hailuo-2.3/standard/text-to-video 768p,2 six-second scenes,2,0.56,yes
+2026-10-13,sov-story5-penn-state-fraternities,The Sovereign,minimax/hailuo-2.3/standard/text-to-video 768p,2 six-second scenes,2,0.56,yes
