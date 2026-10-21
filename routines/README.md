@@ -10,7 +10,7 @@ routine only takes a merged PR, never another paste.
 | Social Studio | `social-studio.md` | Monday ~12:30 AM |
 | SEO Writer | `seo-writer.md` | Monday ~2:30 AM |
 | Clip Studio | `clip-studio.md` | Daily ~12:15 PM |
-| Builder + Leads | `builder-leads.md` | Wednesday ~1:30 AM |
+| Builder + Leads (includes Podcast Guest Research, `podcast-guests.md`) | `builder-leads.md` | Wednesday ~1:30 AM |
 | To-Do Email | (self-contained prompt; Claude edits it directly) | Thursday ~8 AM |
 | YT Video Studio | `yt-video-studio.md` | Friday ~12:30 AM |
 

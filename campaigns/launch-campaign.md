@@ -202,6 +202,21 @@ post ~100 views; nothing has broken out yet and no post has a comment. So:
 - Friday goes to the best series by **views per platform from last week**
   (Social Studio step 0), not by guess.
 
+**Week 2 (Oct 19–21): the first breakout.** "The House voted to end the war
+in Iran. It probably changes nothing" got **875 views and 9 likes on YouTube
+Shorts** (the same video: 88 on TikTok, 10 on Instagram). YouTube Shorts is
+now our best platform (about 95 views a post vs 37 on Instagram), and the
+first real comment arrived there. So:
+- **New default shape, "What it actually changes":** a big political or
+  world headline from the last 48 hours, then the plain-words answer to
+  "does this change anything?" (the vote, the rule, the deal), sourced. Use
+  it for at least two of the five ads a week (Global Aggregate or
+  Sovereign, whichever has the story).
+- Reels still ran 30–34 s after the 20–30 s rule: Social Studio now checks
+  the length before scheduling.
+- Instagram is weakest: keep posting there (it's where the bio link and the
+  Linktree are), but judge ideas by YouTube Shorts and TikTok numbers.
+
 Robot's Short (cut from the YouTube episode) posts Sunday on top of these.
 Timing (Eastern): TikTok 7–9 PM, Instagram 11 AM–1 PM or 7–9 PM, Shorts
 2–4 PM.

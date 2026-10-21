@@ -42,6 +42,10 @@ row (Notion → Automation Control) to Error with the reason, and stop.
      differs), up to 3 takes; still failing: reword the line that trips it.
    - In the story_reel spec, start scenes with `"at": <caption line>` (not
      seconds), so pictures change with the voice.
+   - **Length check:** `ffprobe -v error -show_entries format=duration -of csv=p=0 <file>`
+     must be 30 s or less for an ad (owner, 2026-10-18; week 2's ads still
+     ran 30–34 s). Longer: cut a line from the script and re-voice, don't
+     speed it up.
    - Before uploading, look at a frame at every scene change and at the end
      (scene matches what's being said, captions readable, end card right).
      An ad that hasn't passed all of this is never scheduled or drafted:
