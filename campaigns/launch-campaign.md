@@ -183,13 +183,28 @@ The podcast is live on Spotify and Apple (owner, 2026-10-14), so all three are o
 
 ## Weekly rhythm
 
-| Day | Brand | Default series |
+**Round 3 (owner, 2026-10-27): more aggressive, refined and entertaining.**
+Robot and the AI voice stay; the owner's own podcast segment joins later.
+
+| Day | Brand | Series |
 |---|---|---|
-| Mon | The Global Aggregate | One Story, Five Countries |
-| Tue | The Sovereign | The Sovereign Says |
-| Wed | The Global Aggregate | Headline Duel |
-| Thu | The Sovereign | Philosophy in 30 Seconds, or **The Sovereign, Out Loud** when a new episode came out that week |
-| Fri | Alternate | Whichever series performed best last week |
+| Mon | The Global Aggregate | **What it actually changes**: the biggest headline of the weekend, compared across countries, then "does this change anything?" |
+| Tue | The Sovereign | **From this week's Sovereign**: the issue's most provocative real line on screen, the story behind it, one roast, then "Read it free in The Sovereign" (the Sovereign-readers post of the week) |
+| Wed | The Global Aggregate | **Headline Duel**: two countries, two headlines, one roast of whoever spun harder |
+| Thu | The Sovereign | **Philosophy vs. the News**: a current headline judged by one thinker ("Hobbes would have loved this week's shutdown"), the idea in plain words, the issue as CTA; or **The Sovereign, Out Loud** in a new-episode week |
+| Fri | Both | **Robot's Weekend Update**: three of the week's headlines, one setup-and-punchline joke each, Weekend Update rhythm, the last joke on ourselves; ends "Read The Sovereign, compare it all at globalaggregate dot org" |
+
+**Every ad, from round 3:**
+- **At least one real joke** (a setup and a punchline, `brand-voice` → the
+  owner's voice), aimed at power, the coverage or the hype, never at
+  victims. Facts stay sourced; jokes are clearly jokes; never invent a quote.
+- **Roast every side.** In the run notes, list who each ad roasted; across
+  the week no single party, country or outlet takes all the hits.
+- **Open on the punchline or the most absurd verified detail**, at most 8
+  words on screen in the first second.
+- **End on the either/or question plus "Robot reads the best answer next
+  week."** The next Weekend Update quotes the best real comment (public
+  handle only if it's a public figure; otherwise "one of you said").
 
 **What week 1 showed (Oct 14–18, Buffer numbers):** the Global Aggregate
 "two headlines" stories did best (Houthi: 122 Instagram views; diesel: 87
@@ -199,8 +214,8 @@ post ~100 views; nothing has broken out yet and no post has a comment. So:
 - **Sovereign posts open on a concrete, current scene or headline**, then
   the issue's idea (the owner's voice: small scene first). Never open on an
   abstract question.
-- Friday goes to the best series by **views per platform from last week**
-  (Social Studio step 0), not by guess.
+- Social Studio step 0 still reads last week's views per platform; from
+  round 3 it decides which series gets a second slot, not Friday.
 
 **Week 2 (Oct 19–21): the first breakout.** "The House voted to end the war
 in Iran. It probably changes nothing" got **875 views and 9 likes on YouTube

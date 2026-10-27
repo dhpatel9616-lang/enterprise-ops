@@ -71,6 +71,10 @@ self-deprecating, family and everyday life).
   except our own, self-deprecating.
 - Take the wit of Hitchens and Buckley, not their sides: the house stays
   nonpartisan.
+- **Roast everyone harder** (owner, 2026-10-27): SNL and Hitchens-level jokes
+  at politicians, media, billionaires and hype on all sides. Sharper jokes,
+  same nonpartisan house: the target is behavior and spin, never a group
+  of people, and never victims.
 - One big word or name per ad, made plain right away (our audience is new to
   the topic).
 - Clean language in posts and captions (the essays swear; the ads don't).
