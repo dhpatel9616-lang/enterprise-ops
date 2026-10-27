@@ -19,7 +19,13 @@ exact "setup: ..." lines from that output (they name what failed), and stop.
 2. Build the video: Robot (`studio/render_puppet.py --character robot-host
    --layout wide`), storyboard visuals, burned-in captions, chapters, a
    thumbnail, title, description with sources, the CTA, and the AI-voice
-   disclosure.
+   disclosure. The description's **first two lines are clickable links**
+   (the only clickable links we get; Shorts and Instagram captions aren't):
+   `https://sovereignnewsletter.substack.com/?utm_source=youtube&utm_medium=video&utm_campaign=ep<N>`
+   and `https://globalaggregate.org/?utm_source=youtube&utm_medium=video&utm_campaign=ep<N>`,
+   so Substack's and the site's traffic stats show what each episode sends.
+   The Short cut in step 4 must be **45 s or less** (`ffprobe`; Ep. 2's ran
+   59 s).
 3. Save video, thumbnail and metadata to Drive "Ready to Publish"; set the
    item to Ready to Publish. If "Autopost — YouTube long-form" is Enabled,
    upload with `python3 studio/youtube_upload.py` set to go public at 10:07 AM
