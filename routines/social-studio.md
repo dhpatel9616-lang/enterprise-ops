@@ -17,8 +17,11 @@ row (Notion → Automation Control) to Error with the reason, and stop.
 1. Read the "Autopost — Social" row. Enabled = schedule in Buffer with
    automatic publishing; unchecked = Buffer drafts only.
 2. Make this week's five ads from `campaigns/launch-campaign.md` (Mon–Fri,
-   its rhythm table and story series), following content-mix. Every ad is a
-   narrated story in real video (hook → setup → turn → payoff → CTA),
+   its rhythm table and story series), following content-mix and, above
+   all, the campaign's **Round 4** rules (owner, 2026-11-04: funny and
+   relatable, never preachy or AI-looking; its five formats, at least two
+   different ones a week; Instagram every day). Story ads are narrated
+   (hook → setup → turn → payoff → CTA);
    **provocative first** (the campaign's order: the most charged real story
    leads; rule 1 makes it a draft, never a reason to pick a blander one).
    Write them as engaging, informative pieces worth watching on their own
@@ -28,8 +31,12 @@ row (Notion → Automation Control) to Error with the reason, and stop.
    (`studio/render_puppet.py --layout tall`), then `studio/story_reel.py`:
    scenes and cards full-frame, Robot only a small corner bubble. Footage in
    the campaign's order: real material and `studio/find_footage.py` (real
-   briefings and archive film, then Pixabay stock) before any Higgsfield
-   shot. Never a slideshow or text-only reel.
+   briefings and archive film, then Pixabay stock). POV memes and Real
+   quote posts are text over real footage or a screenshot
+   (`studio/text_reel.py`), no narration needed. Higgsfield only for
+   PoolParty promos; never realistic AI imagery on these accounts. Before
+   scheduling, reread each script for Round 4's banned sermon words and
+   cut them.
    **Quality gate (owner, 2026-10-14; an ad went out with the voice
    stuttering "Azerbaijan's, Azerbaijan's" and captions drifting):**
    - `lines.txt` = caption lines with true spellings; `script.txt` = the same
@@ -42,6 +49,10 @@ row (Notion → Automation Control) to Error with the reason, and stop.
      differs), up to 3 takes; still failing: reword the line that trips it.
    - In the story_reel spec, start scenes with `"at": <caption line>` (not
      seconds), so pictures change with the voice.
+   - **Length check:** `ffprobe -v error -show_entries format=duration -of csv=p=0 <file>`
+     must be 30 s or less for an ad (owner, 2026-10-18; week 2's ads still
+     ran 30–34 s). Longer: cut a line from the script and re-voice, don't
+     speed it up.
    - Before uploading, look at a frame at every scene change and at the end
      (scene matches what's being said, captions readable, end card right).
      An ad that hasn't passed all of this is never scheduled or drafted:
@@ -49,9 +60,9 @@ row (Notion → Automation Control) to Error with the reason, and stop.
    PoolParty only after content-mix says it has launched. Rule 1 means DRAFT,
    not skip. If a source truly can't be fetched, make a different series'
    story for that day instead of leaving it empty.
-   Captions follow the campaign file: hook line, story detail, the product's
-   link + "link in bio", a question, 8–12 rotating hashtags, no AI disclaimer
-   text (set the platform AI flag only if realistic AI imagery is used).
+   Captions follow Round 4: one punchy line, the product's link + "link in
+   bio", a fun one-word question, 3–5 hashtags, no AI disclaimer text (set
+   the platform AI flag only if realistic AI imagery is used).
 3. Public link with `python3 studio/upload_video.py`. Schedule each ad on
    its own day at an **exact time** (`mode: customScheduled` + `dueAt`,
    America/New_York): Instagram 12:00 PM, YouTube Shorts 3:00 PM, TikTok

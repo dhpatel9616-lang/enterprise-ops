@@ -28,6 +28,8 @@ week at a time.
 
 ## What every ad is
 
+(Round 4 below, owner 2026-11-04, overrides the tone, formats and captions here.)
+
 A **20–30 second** story with a narrator (35 s at most; owner, 2026-10-18:
 first week's reels ran ~35 s and stalled at about 100 views, the platforms'
 cold-start floor, so they need to be watched to the end more often), in this
@@ -124,8 +126,8 @@ all free:
    Sovereign slot in a week with a new episode (the Buffer limit is 10
    posts, and the five ads already use them). Pick the most provocative
    lines, as with every ad. Same rule-1 draft rules as the issue itself.
-2. **Every Sovereign post's caption** adds one line: "🎧 Also a podcast:
-   search The Sovereign on Spotify or Apple Podcasts."
+2. **One Sovereign post a week** (round 4; it used to be every post) adds:
+   "🎧 Also a podcast: search The Sovereign on Spotify or Apple Podcasts."
 3. **YouTube:** the owner adds the podcast feed to YouTube Studio once, and
    YouTube posts each episode on @WadeCapital by itself (no upload work).
 
@@ -152,6 +154,8 @@ The podcast is live on Spotify and Apple (owner, 2026-10-14), so all three are o
   unless public figures). More bits only once the owner picks them.
 
 ## Captions (every post)
+
+(Round 4 shortens these: one punchy line, the link, a fun question, 3–5 hashtags.)
 
 1. **Hook line** = the story's first beat, keyword first ("Legal positivism
    explained with a speeding ticket 🚔"). Same phrase on screen in the first 2 s.
@@ -183,13 +187,51 @@ The podcast is live on Spotify and Apple (owner, 2026-10-14), so all three are o
 
 ## Weekly rhythm
 
-| Day | Brand | Default series |
+**Round 4 (owner, 2026-11-04): funny and relatable, not AI-looking or preachy.**
+The owner's verdict on rounds 1–3: "too AI-generated, sanctimonious and not
+relatable." The numbers agree: the hits were human and specific (a real
+burnout quote, 1,098 Shorts views; a guy putting his Xbox away "for good",
+925; one stuck ship, 464), and the sermons flopped. This replaces round 3.
+
+**What every post is now**
+1. **Starts in the viewer's life, not ours.** The 2 a.m. scroll, the group
+   chat, rent, the "one more game", your uncle's Facebook, the job you
+   hate, the professor who reads the slides. The news or the idea arrives
+   second, as the twist.
+2. **Funny first, insight as a wink.** A setup and a punchline in the first
+   5 seconds; the idea is the last joke, never a lesson. Roast every side,
+   never victims (`brand-voice`).
+3. **No sermon words, ever:** "The Sovereign says", "a Sovereign writer
+   says", "reminds us", "we must", "the real question is", "in a world
+   where", "now more than ever", "it's time to", profound closing questions
+   ("Which rules you more, a story or a feed?"). The question at the end is
+   a fun one people answer in one word ("Be honest: how many times have you
+   uninstalled TikTok?").
+4. **Looks like a person made it on a phone, not an AI.** Real footage, real
+   headline screenshots, plain big-text memes and cartoon Robot only. **No
+   Higgsfield or realistic AI imagery on social** (it reads as AI slop).
+   No slow push-in on stock photos as the main visual.
+5. **Captions: one punchy line, the link, 3–5 hashtags.** The podcast line
+   once a week, not on every post. No "for beginners" hashtags. No "Robot's
+   voice is AI-generated" in captions (the platform's AI flag covers it;
+   long-form descriptions keep their disclosure).
+
+**The formats** (pick per story; at least two different ones a week):
+
+| Format | What it is | Length |
 |---|---|---|
-| Mon | The Global Aggregate | One Story, Five Countries |
-| Tue | The Sovereign | The Sovereign Says |
-| Wed | The Global Aggregate | Headline Duel |
-| Thu | The Sovereign | Philosophy in 30 Seconds, or **The Sovereign, Out Loud** when a new episode came out that week |
-| Fri | Alternate | Whichever series performed best last week |
+| **POV meme** | Big white text over real footage, no narration: "POV: you said you'd sleep at 11 and it's 2:47 and you're reading about the Suez Canal". Punchline card, then the link. | 7–12 s |
+| **Robot reacts** | A real headline screenshot full-screen; Robot in the corner delivers one deadpan line, then a second, better one. A comedian, not a teacher. | 15–20 s |
+| **Headline Duel** | Two countries' real headlines side by side, one joke about who spun harder; Global Aggregate as the punchline ("we compare 195 feeds so you don't have to"). | 15–25 s |
+| **Real quote** (the 1,098-view shape) | One real hardship or confession quote from a Sovereign issue or a sourced news story, one number, the source on screen; quiet, no joke needed. | 15–25 s |
+| **Robot's Weekend Update** (Fridays) | Three headlines, one joke each, last joke on ourselves. | 25–30 s |
+
+**This week (strategy memo, rec. 2):** three more posts in the Real quote
+shape, published to YouTube Shorts first (it's where it hit), then TikTok
+and Instagram the next day.
+
+**Instagram stays on the schedule** every day (it stopped after Nov 2). It's
+where the bio link is.
 
 **What week 1 showed (Oct 14–18, Buffer numbers):** the Global Aggregate
 "two headlines" stories did best (Houthi: 122 Instagram views; diesel: 87
@@ -199,8 +241,23 @@ post ~100 views; nothing has broken out yet and no post has a comment. So:
 - **Sovereign posts open on a concrete, current scene or headline**, then
   the issue's idea (the owner's voice: small scene first). Never open on an
   abstract question.
-- Friday goes to the best series by **views per platform from last week**
-  (Social Studio step 0), not by guess.
+- Social Studio step 0 still reads last week's views per platform; from
+  round 3 it decides which series gets a second slot, not Friday.
+
+**Week 2 (Oct 19–21): the first breakout.** "The House voted to end the war
+in Iran. It probably changes nothing" got **875 views and 9 likes on YouTube
+Shorts** (the same video: 88 on TikTok, 10 on Instagram). YouTube Shorts is
+now our best platform (about 95 views a post vs 37 on Instagram), and the
+first real comment arrived there. So:
+- **New default shape, "What it actually changes":** a big political or
+  world headline from the last 48 hours, then the plain-words answer to
+  "does this change anything?" (the vote, the rule, the deal), sourced. Use
+  it for at least two of the five ads a week (Global Aggregate or
+  Sovereign, whichever has the story).
+- Reels still ran 30–34 s after the 20–30 s rule: Social Studio now checks
+  the length before scheduling.
+- Instagram is weakest: keep posting there (it's where the bio link and the
+  Linktree are), but judge ideas by YouTube Shorts and TikTok numbers.
 
 Robot's Short (cut from the YouTube episode) posts Sunday on top of these.
 Timing (Eastern): TikTok 7–9 PM, Instagram 11 AM–1 PM or 7–9 PM, Shorts

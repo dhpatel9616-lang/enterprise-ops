@@ -1,7 +1,7 @@
 # Builder + Leads (Wednesdays ~1:30 AM ET)
 
 Read CLAUDE.md (it includes the ponytail coding rules), then
-ONLY these skills: build-standards, outreach.
+ONLY these skills: build-standards, outreach (and brand-voice for step 3).
 
 1. BUILD: in Notion → Build Queue, take the Queued item with the highest
    Priority (oldest first on ties). If none, skip to step 2. Set it to In
@@ -15,6 +15,7 @@ ONLY these skills: build-standards, outreach.
    count for the last 7 days: leads added, first emails, follow-ups, bounces,
    replies, AI calls and outcomes, call spend vs. budget. Check the repo's
    GitHub Actions for failed runs.
-3. Write 5–8 lines into this week's Strategy Memo (Notion → Weekly Log):
+3. PODCAST GUESTS: follow `routines/podcast-guests.md` (owner, 2026-10-21).
+4. Write 5–8 lines into this week's Strategy Memo (Notion → Weekly Log):
    build result, outreach numbers, anything broken, owner actions (click by
    click). Never include the mailing address.
