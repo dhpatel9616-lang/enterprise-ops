@@ -32,7 +32,7 @@ are the promo/media account), and never post clips anywhere else.
    - Title and caption follow the campaign's Round 4 voice: funny or
      surprising first, never preachy ("In 1951 the government's plan for a
      nuclear blast was: get under your desk").
-   - Upload it (`python3 studio/upload_video.py clip.mp4 clips/<date>-<slug>.mp4`)
+   - Upload it (`python3 studio/upload_video.py clip.mp4`; it prints the public link)
      and use that one link for all three platforms in step 5; write a
      `clip.json` the same way.
 3. Check it: public-domain or official public record footage (or a short
