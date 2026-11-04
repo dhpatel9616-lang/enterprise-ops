@@ -15,7 +15,26 @@ are the promo/media account), and never post clips anywhere else.
    bucket under `queue/<clip-id>/` (ENTERPRISE_SUPABASE_URL /
    ENTERPRISE_SUPABASE_SERVICE_KEY): `instagram.mp4`, `tiktok.mp4`,
    `youtube.mp4` and `clip.json` (title, source, date, one-line context).
-   Take the oldest folder. None: note "queue empty" in the row and stop.
+   Take the oldest folder. **None: make today's clip yourself** (owner,
+   2026-11-04: nothing was filling the queue, so no clip had posted since
+   Oct 14):
+   - Pick one real, surprising or funny moment from public-domain or US
+     government footage: Cold War civil-defense films, newsreels, NASA,
+     presidential addresses and press briefings, congressional hearings
+     (search with `python3 studio/find_footage.py find "<words>" --source
+     archive` or `--source nasa`). Rotate topics; nothing posted in the last
+     30 days (check `posted/`). No TV-network footage when making your own.
+   - Find the 20–45 seconds worth watching (transcribe a few minutes with
+     faster-whisper if it's talking), then
+     `python3 studio/find_footage.py get URL seg.mp4 --start S --len N` and
+     `python3 studio/clip_reel.py seg.mp4 clip.mp4 --title "<hook>" --credit "<source>"`.
+     Look at three frames before posting.
+   - Title and caption follow the campaign's Round 4 voice: funny or
+     surprising first, never preachy ("In 1951 the government's plan for a
+     nuclear blast was: get under your desk").
+   - Upload it (`python3 studio/upload_video.py clip.mp4 clips/<date>-<slug>.mp4`)
+     and use that one link for all three platforms in step 5; write a
+     `clip.json` the same way.
 3. Check it: public-domain or official public record footage (or a short
    network excerpt, see step 4), source named
    on screen and in the caption, nothing edited to change meaning, no

@@ -18,7 +18,8 @@ exact "setup: ..." lines from that output (they name what failed), and stop.
    use it.
 2. Build the video: Robot (`studio/render_puppet.py --character robot-host
    --layout wide`), storyboard visuals, burned-in captions, chapters, a
-   thumbnail, title, description with sources, the CTA, and the AI-voice
+   thumbnail (3–5 big words of the hook title, Robot's face, high contrast), a
+   search-first title (content-mix → Packaging), description with sources, the CTA, and the AI-voice
    disclosure. The description's **first two lines are clickable links**
    (the only clickable links we get; Shorts and Instagram captions aren't):
    `https://sovereignnewsletter.substack.com/?utm_source=youtube&utm_medium=video&utm_campaign=ep<N>`
