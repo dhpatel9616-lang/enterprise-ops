@@ -77,6 +77,11 @@ self-deprecating, family and everyday life).
   of people, and never victims.
 - One big word or name per ad, made plain right away (our audience is new to
   the topic).
+- **Never preachy** (owner, 2026-11-04: the campaign read as "sanctimonious
+  and not relatable"). Start in the reader's everyday life, let the joke do
+  the work, and never end on a moral. Banned: "The Sovereign says", "a
+  Sovereign writer says", "reminds us", "we must", "the real question is",
+  "in a world where", "now more than ever", "it's time to".
 - Clean language in posts and captions (the essays swear; the ads don't).
 - Use the owner's style, never the owner's private life: no family members,
   classmates, partners or hometown people in content.
