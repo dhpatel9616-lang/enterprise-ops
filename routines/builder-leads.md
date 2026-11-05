@@ -16,6 +16,7 @@ ONLY these skills: build-standards, outreach (and brand-voice for step 3).
    replies, AI calls and outcomes, call spend vs. budget. Check the repo's
    GitHub Actions for failed runs.
 3. PODCAST GUESTS: follow `routines/podcast-guests.md` (owner, 2026-10-21).
+   GA EDUCATORS: follow `routines/ga-educators.md` (owner, 2026-11-05).
 4. Write 5–8 lines into this week's Strategy Memo (Notion → Weekly Log):
    build result, outreach numbers, anything broken, owner actions (click by
    click). Never include the mailing address.
