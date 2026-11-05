@@ -23,9 +23,10 @@ PROMO_CHANNELS = {"6ab6cac8ea19ca0bdeea0fba", "6ab6caf4ea19ca0bdeea114e", "6ab6d
 
 
 def gql(query, variables=None):
-    key = os.environ.get("BUFFER_CLIPS_API_KEY")
+    var = os.environ.get("BUFFER_KEY_VAR", "BUFFER_CLIPS_API_KEY")  # PoolParty's own Buffer: BUFFER_POOLPARTY_API_KEY
+    key = os.environ.get(var)
     if not key:
-        sys.exit("buffer_clips: set BUFFER_CLIPS_API_KEY (clip Buffer account → Settings → API).")
+        sys.exit(f"buffer_clips: set {var} (that Buffer account → Settings → API).")
     req = urllib.request.Request(API, data=json.dumps({"query": query, "variables": variables or {}}).encode(),
                                  headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
     out = json.load(urllib.request.urlopen(req, timeout=60))

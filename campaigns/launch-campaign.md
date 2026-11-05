@@ -193,6 +193,23 @@ relatable." The numbers agree: the hits were human and specific (a real
 burnout quote, 1,098 Shorts views; a guy putting his Xbox away "for good",
 925; one stuck ship, 464), and the sermons flopped. This replaces round 3.
 
+**Every ad has four beats** (owner, 2026-11-05; TikTok viewers left after
+**4.3 seconds** on average across 28 posts, and nobody shared one):
+1. **Hook, first 1.5 seconds:** text on screen from the very first frame and
+   motion in the first second. No logo, no "so", no slow zoom.
+2. **Story:** one specific, funny situation an 18–25-year-old has lived.
+3. **Tie back to the product, by name:** the story lands on The Sovereign,
+   The Global Aggregate or PoolParty, said out loud and on screen
+   ("…which is why we built The Global Aggregate").
+4. **Humor all the way through,** for 18–25: group chats, roommates,
+   professors, first jobs, situationships, being broke.
+
+**Links on every ad:** the product's address on screen in the last 2
+seconds and in the caption, plus "link in bio". TikTok and Instagram
+captions can't be clicked, so the bio link is where clicks happen: the
+Linktree lists The Sovereign, The Global Aggregate and (on its own accounts)
+the PoolParty waitlist.
+
 **What every post is now**
 1. **Starts in the viewer's life, not ours.** The 2 a.m. scroll, the group
    chat, rent, the "one more game", your uncle's Facebook, the job you
@@ -279,3 +296,29 @@ Timing (Eastern): TikTok 7–9 PM, Instagram 11 AM–1 PM or 7–9 PM, Shorts
 **Learn and adjust (Strategist, weekly):** from Buffer metrics, the top 2
 posts by reach and by comments, their series and hook, and lean next week
 that way. Retire series and hashtags that never show up on top posts.
+
+## PoolParty hype (owner, 2026-11-05)
+
+PoolParty gets **its own Instagram and TikTok**, in their own Buffer
+account, so its ads never mix with The Sovereign's. Until launch, every ad
+builds the waitlist: **wadecapital.netlify.app/poolparty.html**.
+
+- **Three posts a week** (Mon, Wed, Fri), made by Social Studio alongside
+  the main five, posted through `studio/buffer_clips.py` with
+  `BUFFER_KEY_VAR=BUFFER_POOLPARTY_API_KEY`. No key yet: skip PoolParty and
+  say so in the run notes.
+- **The four beats, PoolParty-flavored.** Hook: a bet people actually make
+  ("Bet you can't go a week without checking his story"). Story: how it
+  plays out. Tie-back: "Settle it on PoolParty." Humor for 18–25.
+- **Formats:** POV memes over real footage ("POV: you bet your roommate he'd
+  text her back. It's been 3 days. He has to do your laundry"), "Rate this
+  bet" (one real-sounding bet, viewers vote in the comments), and Bet
+  Receipts (the loser paying up). No realistic AI people (round 4), and no
+  fake app screens: real screen recordings from the owner, or none.
+- **Rules that never bend** (`brand-voice` → PoolParty): no money, prices or
+  Venmo, ever; stakes are favors and bragging rights. The audience includes
+  18–20-year-olds, so no alcohol at all. Avoid "gamble", "casino" and
+  "odds" in captions: the apps restrict gambling content, and PoolParty
+  isn't gambling.
+- **Caption:** the hook, "Join the waitlist: wadecapital.netlify.app/poolparty.html
+  (link in bio)", "No real money. Just bragging rights.", 3–5 hashtags.

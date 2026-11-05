@@ -173,6 +173,15 @@ Notion → Scripts; Ep. 1 is a full script, the rest are "(brief)".
 8. One Update Turned the World's Screens Blue (cyber, CrowdStrike 2024)
 9. Someone Keeps Cutting the Internet's Cables (current events)
 10. Your Weather App Knows Where You Sleep (privacy)
+11. Australia Lost a War to Birds (history: the 1932 Emu War; owner picked 2026-11-04)
+12. Hackers Robbed a Casino Through Its Fish Tank (cyber)
+13. Texas Froze and the Grid Had Minutes to Spare (survival / current events: Winter Storm Uri, 2021)
+
+**Packaging (owner, 2026-11-04; the first 6 episodes got about 3 views in
+total while their Shorts got hundreds):** the YouTube **title is what people
+type into search** ("The Great Emu War of 1932, Explained (Robot, Ep. 11)"),
+and the hook title goes on the thumbnail in 3–5 big words. Each brief
+carries both.
 
 **Writing next week's script** (YT Video Studio step 5): take the lowest-
 numbered "(brief)" page, verify every fact against its sources (drop or

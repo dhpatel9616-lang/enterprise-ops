@@ -63,6 +63,11 @@ row (Notion → Automation Control) to Error with the reason, and stop.
    Captions follow Round 4: one punchy line, the product's link + "link in
    bio", a fun one-word question, 3–5 hashtags, no AI disclaimer text (set
    the platform AI flag only if realistic AI imagery is used).
+2b. **PoolParty hype** (campaign file → PoolParty hype): three posts for
+   Mon, Wed and Fri on PoolParty's own accounts, via
+   `BUFFER_KEY_VAR=BUFFER_POOLPARTY_API_KEY python3 studio/buffer_clips.py`.
+   Skip (and say so in the run notes) while that key isn't set. Never post
+   PoolParty to the Sovereign accounts or the clip accounts.
 3. Public link with `python3 studio/upload_video.py`. Schedule each ad on
    its own day at an **exact time** (`mode: customScheduled` + `dueAt`,
    America/New_York): Instagram 12:00 PM, YouTube Shorts 3:00 PM, TikTok
