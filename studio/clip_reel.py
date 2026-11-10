@@ -44,7 +44,10 @@ def main(src, out, title, credit):
                                                          f"borderw=4:bordercolor=black:x=(w-text_w)/2:y={y}{extra}")
         graph = [f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},boxblur=30:5,eq=brightness=-0.25[bg]",
                  f"[0:v]scale={W}:-2[fg]", "[bg][fg]overlay=(W-w)/2:(H-h)/2[v0]"]
-        filters = [dt(txt(f"t{i}.txt", line), 72, 170 + i * 88) for i, line in enumerate(textwrap.wrap(title, 24)[:3])]
+        lines = textwrap.wrap(title, 26)
+        if len(lines) > 4:  # never cut a title mid-sentence; say so and keep the start readable
+            raise SystemExit(f"clip_reel: title is too long for the screen ({len(lines)} lines); keep it under ~100 characters.")
+        filters = [dt(txt(f"t{i}.txt", line), 66, 150 + i * 80) for i, line in enumerate(lines)]
         filters.append(dt(txt("credit.txt", f"Source: {credit}"), 34, H - 230, "#D9DDE6"))
         filters.append(dt(txt("handle.txt", HANDLE), 40, H - 170, "#AEB9D3"))
         for i, (a, b, line) in enumerate(caption_lines(src)):

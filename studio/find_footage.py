@@ -18,8 +18,10 @@ Sources, cheapest legal first:
 Network hosts: archive.org (+ its *.archive.org file servers), images-api.nasa.gov, images-assets.nasa.gov,
 commons.wikimedia.org, upload.wikimedia.org, pixabay.com, cdn.pixabay.com.
 """
-import argparse, json, os, re, subprocess, sys, urllib.parse, urllib.request
+import argparse, json, os, re, subprocess, sys, tempfile, urllib.parse, urllib.request
+from pathlib import Path
 
+MAX_DOWNLOAD = 400 << 20  # bytes
 UA = {"User-Agent": "Mozilla/5.0 (WadeCapital footage finder)"}
 OK_COMMONS = re.compile(r"^(public domain|pd|cc0|cc[ -]by(-sa)?( \d\.\d)?)", re.I)  # no NC/ND: we cut and publish
 
@@ -90,8 +92,27 @@ def get(url, out, start, length, keep_audio=False):
     """Download only the part we use (ffmpeg seeks over HTTP), re-encoded to a plain MP4. Story ads drop the
     source's sound (Robot narrates); clips keep it (--keep-audio: a speech clip needs its speech)."""
     src = resolve(url)
-    cmd = ["ffmpeg", "-y", "-loglevel", "error", *(["-user_agent", UA["User-Agent"]] if src.startswith("http") else []), "-ss", str(start), "-i", src]
-    subprocess.run(cmd + (["-t", str(length)] if length else []) + (["-c:a", "aac"] if keep_audio else ["-an"]) + ["-c:v", "libx264", "-crf", "20", "-pix_fmt", "yuv420p", out], check=True)
+    tmp = None
+    if src.startswith("http"):
+        # ffmpeg can't reach the web from the sandbox (no DNS; it ignores the proxy), so fetch the
+        # file with urllib, which uses the proxy, cut it locally, and delete it.
+        # ponytail: whole-file download; capped at MAX_DOWNLOAD, fine for archive/NASA/Pixabay clips.
+        fd, tmp = tempfile.mkstemp(suffix=Path(urllib.parse.urlparse(src).path).suffix or ".mp4")
+        with os.fdopen(fd, "wb") as f, urllib.request.urlopen(urllib.request.Request(src, headers=UA), timeout=120) as r:
+            size = 0
+            while chunk := r.read(1 << 20):
+                size += len(chunk)
+                if size > MAX_DOWNLOAD:
+                    os.remove(tmp)
+                    sys.exit(f"find_footage: {src} is over {MAX_DOWNLOAD >> 20} MB; pick a smaller file or source.")
+                f.write(chunk)
+        src = tmp
+    try:
+        cmd = ["ffmpeg", "-y", "-loglevel", "error", "-ss", str(start), "-i", src]
+        subprocess.run(cmd + (["-t", str(length)] if length else []) + (["-c:a", "aac"] if keep_audio else ["-an"]) + ["-c:v", "libx264", "-crf", "20", "-pix_fmt", "yuv420p", out], check=True)
+    finally:
+        if tmp:
+            os.remove(tmp)
     print(out)
 
 

@@ -36,7 +36,8 @@ are the promo/media account), and never post clips anywhere else.
    - Upload it (`python3 studio/upload_video.py clip.mp4`; it prints the public link)
      and use that one link for all three platforms in step 5; write a
      `clip.json` the same way, plus `source_url`, `start`, `len` and `credit`
-     (the Sunday montage re-cuts each clip from these).
+     (the Sunday montage re-cuts each clip from these). After posting, save it:
+     `python3 studio/upload_video.py clip.json posted/<date>-<slug>/clip.json --bucket civic-clips`.
 3. Check it: public-domain or official public record footage (or a short
    network excerpt, see step 4), source named
    on screen and in the caption, nothing edited to change meaning, no
