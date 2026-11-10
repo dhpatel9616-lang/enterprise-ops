@@ -63,6 +63,9 @@ row (Notion → Automation Control) to Error with the reason, and stop.
    Captions follow Round 4: one punchy line, the product's link + "link in
    bio", a fun one-word question, 3–5 hashtags, no AI disclaimer text (set
    the platform AI flag only if realistic AI imagery is used).
+2a. **Daily POV memes** (campaign file, Round 4): five more 7–12 s posts,
+   one per weekday, TikTok 12:30 PM and YouTube Shorts 1:00 PM ET
+   (`studio/text_reel.py`, real footage or screenshots, no voice).
 2b. **PoolParty hype** (campaign file → PoolParty hype): three posts for
    Mon, Wed and Fri on PoolParty's own accounts, via
    `BUFFER_KEY_VAR=BUFFER_POOLPARTY_API_KEY python3 studio/buffer_clips.py`.

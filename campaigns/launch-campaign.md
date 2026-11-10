@@ -247,6 +247,13 @@ the PoolParty waitlist.
 shape, published to YouTube Shorts first (it's where it hit), then TikTok
 and Instagram the next day.
 
+**A second daily post on TikTok and YouTube Shorts** (owner, 2026-11-10:
+engagement is the main goal). Weeks of ~30-second ads averaged 2–7 seconds
+watched, so each weekday also gets one **7–12 second POV meme** (big text
+over real footage, no voice, one punchline, the product named on the last
+card): TikTok at 12:30 PM and Shorts at 1:00 PM ET. Short and finished
+beats long and abandoned. Five a week, made in the same Social Studio run.
+
 **Instagram stays on the schedule** every day (it stopped after Nov 2). It's
 where the bio link is.
 
