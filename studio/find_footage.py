@@ -86,11 +86,12 @@ def resolve(url):
     return url
 
 
-def get(url, out, start, length):
-    """Download only the part we use (ffmpeg seeks over HTTP), re-encoded to a plain MP4 without its own audio."""
+def get(url, out, start, length, keep_audio=False):
+    """Download only the part we use (ffmpeg seeks over HTTP), re-encoded to a plain MP4. Story ads drop the
+    source's sound (Robot narrates); clips keep it (--keep-audio: a speech clip needs its speech)."""
     src = resolve(url)
     cmd = ["ffmpeg", "-y", "-loglevel", "error", *(["-user_agent", UA["User-Agent"]] if src.startswith("http") else []), "-ss", str(start), "-i", src]
-    subprocess.run(cmd + (["-t", str(length)] if length else []) + ["-an", "-c:v", "libx264", "-crf", "20", "-pix_fmt", "yuv420p", out], check=True)
+    subprocess.run(cmd + (["-t", str(length)] if length else []) + (["-c:a", "aac"] if keep_audio else ["-an"]) + ["-c:v", "libx264", "-crf", "20", "-pix_fmt", "yuv420p", out], check=True)
     print(out)
 
 
@@ -101,9 +102,10 @@ if __name__ == "__main__":
     f.add_argument("term"), f.add_argument("--source", default="all"), f.add_argument("-n", type=int, default=5)
     g = sub.add_parser("get")
     g.add_argument("url"), g.add_argument("out"), g.add_argument("--start", type=float, default=0), g.add_argument("--len", type=float, default=8)
+    g.add_argument("--keep-audio", action="store_true")
     a = a.parse_args()
     if a.cmd == "get":
-        get(a.url, a.out, a.start, a.len)
+        get(a.url, a.out, a.start, a.len, a.keep_audio)
     else:
         for name in (["archive", "nasa", "commons", "pixabay"] if a.source == "all" else [a.source]):
             try:

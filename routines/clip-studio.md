@@ -26,7 +26,8 @@ are the promo/media account), and never post clips anywhere else.
      30 days (check `posted/`). No TV-network footage when making your own.
    - Find the 20–45 seconds worth watching (transcribe a few minutes with
      faster-whisper if it's talking), then
-     `python3 studio/find_footage.py get URL seg.mp4 --start S --len N` and
+     `python3 studio/find_footage.py get URL seg.mp4 --start S --len N --keep-audio` (keep the
+     speech) and
      `python3 studio/clip_reel.py seg.mp4 clip.mp4 --title "<hook>" --credit "<source>"`.
      Look at three frames before posting.
    - Title and caption follow the campaign's Round 4 voice: funny or
@@ -34,7 +35,8 @@ are the promo/media account), and never post clips anywhere else.
      nuclear blast was: get under your desk").
    - Upload it (`python3 studio/upload_video.py clip.mp4`; it prints the public link)
      and use that one link for all three platforms in step 5; write a
-     `clip.json` the same way.
+     `clip.json` the same way, plus `source_url`, `start`, `len` and `credit`
+     (the Sunday montage re-cuts each clip from these).
 3. Check it: public-domain or official public record footage (or a short
    network excerpt, see step 4), source named
    on screen and in the caption, nothing edited to change meaning, no
@@ -57,3 +59,20 @@ are the promo/media account), and never post clips anywhere else.
    evening reach). Then move the folder to `posted/`.
 6. Update the row: Last Run, Status, and Notes (the title, or why it was a
    draft/rejected).
+
+## Sundays: the week's montage (long-form on YouTube @WadeCapitalClips)
+
+Owner, 2026-11-10: clipping runs long-form on YouTube too. After the day's
+clip, on Sundays only:
+1. Take this week's clips from `posted/` (their `clip.json`: `source_url`,
+   `start`, `len`, `title`, `credit`); at least 3, at most 10. Fewer than 3:
+   skip and say so.
+2. Write `montage.json` (`{"title": ..., "clips": [{"url", "start", "len",
+   "title", "credit"}]}`) with a funny-first, search-friendly title (Round 4
+   voice), e.g. "The Government Told Kids to Hide Under Desks, and 6 More
+   Moments From the Archive". Then `python3 studio/clip_montage.py
+   montage.json montage.mp4` and look at three frames.
+3. Upload it (`python3 studio/upload_video.py montage.mp4`) and post it to
+   **YouTube only** with `python3 studio/buffer_clips.py post` (`videos` has
+   just `youtube`; description lists each clip with its source; same draft
+   rules as step 4).
