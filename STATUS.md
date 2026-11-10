@@ -119,9 +119,16 @@ full context. **Read this after CLAUDE.md, before doing anything.** Update it
   (PR 8, merged) but NOT live: every `/story/*` page returns 500 (duplicate
   `[slug]` route), canonicals/sitemaps point at the non-www domain that
   redirects, homepage is client-rendered, sitemap had 5 URLs, news sitemap
-  had escaped tags (Search Console: 112 errors). Fix = paste
-  `rocket-seo-fix-prompt` into Rocket (owner is locked out of Rocket and
-  emailed support). GA PRD Phase C (country/topic pages, daily archive) is
+  had escaped tags (Search Console: 112 errors). Fix = a Rocket prompt
+  giving Rocket the exact changes from `globalaggregate` main (PR 8): delete
+  `src/app/story/[slug]`; `story/[cluster_id]/page.tsx` (redirect old article
+  ids, `notFound()` for expired); all URLs to `https://www.globalaggregate.org`;
+  new `src/lib/clusters.ts`; `sitemap.ts`, `news-sitemap.xml/route.ts`,
+  `page.tsx`, `NewsFeedClient.tsx` (storyLinks prop) copied verbatim; then
+  have Rocket confirm a story page returns 200 and both sitemaps are valid.
+  (PR 9 removed Vercel analytics; skip it.) The owner had this prompt as a
+  file but is locked out of Rocket and emailed support; regenerate it from
+  main when they're back in. GA PRD Phase C (country/topic pages, daily archive) is
   next once Rocket works. Bing Webmaster Tools set up.
 - **Wade Capital site:** "30 countries" claim removed (PR 5). Owner setting
   up a free Google Business Profile (service-area business, address hidden).
