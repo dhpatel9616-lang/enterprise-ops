@@ -8,6 +8,10 @@ Wade Capital is the umbrella. Under it: The Sovereign (media), PoolParty
 (app), The Global Aggregate (news platform), and Wade Capital's services.
 See the `brand-voice` skill.
 
+**Current state:** read `STATUS.md` (where everything stands, decisions already
+made, open owner items) before starting any task, and update it when the
+picture changes.
+
 ## Who does what
 
 - **Claude:** writes scripts, storyboards, captions, outreach, code, and
