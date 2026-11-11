@@ -23,7 +23,7 @@ def caption_lines(video, words_per_line=5):
         from faster_whisper import WhisperModel
     except ImportError:
         return []
-    segs, _ = WhisperModel("base.en", device="cpu", compute_type="int8").transcribe(str(video), word_timestamps=True)
+    segs, _ = WhisperModel("small.en", device="cpu", compute_type="int8").transcribe(str(video), word_timestamps=True)
     words = [w for s in segs for w in (s.words or [])]
     lines = []
     for i in range(0, len(words), words_per_line):
@@ -54,7 +54,7 @@ def main(src, out, title, credit):
             filters.append(dt(txt(f"c{i}.txt", line), 64, 1420, extra=f":enable='gte(t,{a:.2f})*lt(t,{b:.2f})'"))
         graph.append("[v0]" + ",".join(filters) + "[v]")
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(src), "-filter_complex", ";".join(graph),
-                        "-map", "[v]", "-map", "0:a?", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "20",
+                        "-map", "[v]", "-map", "0:a?", "-c:v", "libx264", "-r", "30", "-pix_fmt", "yuv420p", "-crf", "20",  # IG Reels refuse < 23 fps (old film is often 15)
                         "-c:a", "aac", "-movflags", "+faststart", str(out)], check=True)
     finally:
         shutil.rmtree(tmp)

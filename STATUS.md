@@ -104,8 +104,10 @@ full context. **Read this after CLAUDE.md, before doing anything.** Update it
   to its episode (Studio → Related video).
 - **Clips:** fixed 2026-11-10 (wrong key, archive.org blocked, ffmpeg couldn't
   download, titles cut). First real clip (Duck and Cover 1951) scheduled
-  Nov 10 6:15 PM ET on clip YouTube + IG; its record saved. Daily clips from
-  Nov 11; Sunday long-form montage (`studio/clip_montage.py`) from Nov 15.
+  Nov 10 6:15 PM ET on clip YouTube + IG; its record saved. Nov 11: Apollo 15
+  hammer-and-feather drop (NASA 1971) scheduled 5:15 PM ET on YouTube + IG;
+  `clip_reel.py` now outputs 30 fps (IG refused 15 fps film) and captions with
+  whisper `small.en` (`base.en` misquoted the astronaut). Daily clips continue; Sunday long-form montage (`studio/clip_montage.py`) from Nov 15.
 - **Outreach (Enterprise-leads):** ~680+ businesses emailed historically, 1
   real reply ever (Boal Mansion museum, Sep 29). Live settings (v10, run
   2026-11-05): first emails only to `legal` + `medical`, 15/day, law firms
