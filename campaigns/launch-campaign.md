@@ -14,7 +14,7 @@ only then the evergreen explainers. Provocative never means made up: the
 facts stay real and sourced, allegations are said as allegations
 ("accused", "reports say"), and only the most sensitive posts (CLAUDE.md
 rule 1: alleged crimes or sexual violence, victims, private people,
-elections, unsourced claims) wait as drafts for the owner's OK.
+anything misleading about voting, unsourced claims) wait as drafts for the owner's OK.
 
 Where it posts: the **promo + media accounts only** (Buffer organization
 "My organization" `6ab6c71cddecb7a5c80b918f`; channels Instagram @wadecapitallc
@@ -99,8 +99,8 @@ a hashtag):
 word, from the issue or the database. Anecdotes come only from the issues
 themselves, told as the owner's own story, in the first person ("I…"): the owner
 is the writer of The Sovereign. Global
-Aggregate stories follow rule 1: war and breaking clusters schedule
-normally when sourced; election clusters and alleged crimes against
+Aggregate stories follow rule 1: war, election and breaking clusters
+schedule normally when sourced; alleged crimes against
 identifiable people are drafts. Don't steer away from them: a draft the
 owner approves beats a bland post that auto-publishes. Make at least two of the
 five ads from the week's most charged material.

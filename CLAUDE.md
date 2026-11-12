@@ -33,10 +33,11 @@ picture changes.
    - Even when enabled, save as a **draft** only the most sensitive posts
      (owner, 2026-10-14: "only the most provocative posts go to drafts"):
      one that alleges a crime or sexual violence against identifiable
-     people or centers a victim, centers a private person, touches
-     elections/candidates/voting, makes a claim you can't source, or fails
-     `content-rules`. Sourced news that names politicians or public figures,
-     war, and breaking news (with a source) schedule normally. Every draft
+     people or centers a victim, centers a private person, could mislead
+     people about how, when or where to vote, makes a claim you can't
+     source, or fails `content-rules`. Sourced news and opinion about
+     politicians, candidates and elections (owner, 2026-11-12), public
+     figures, war, and breaking news (with a source) schedule normally. Every draft
      gets a reason in the run notes, an email to the owner, and its planned
      time, and every scheduled post an exact time (never Buffer's queue).
    - **"Autopost — Clips" Enabled:** Clip Studio posts clips to the clip

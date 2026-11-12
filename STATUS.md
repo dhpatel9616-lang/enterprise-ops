@@ -26,8 +26,8 @@ full context. **Read this after CLAUDE.md, before doing anything.** Update it
   the owner records one voiceover a week for the Sovereign essay (Friday).
 - **Clips (2026-11-12):** "no context" cuts allowed (never put words in
   mouths or reverse meaning); clips about politicians/elections/candidates
-  schedule normally (CLAUDE.md rule 1). Promo-account election rule
-  unchanged.
+  schedule normally (CLAUDE.md rule 1). Same for promo accounts
+  (2026-11-12): only misleading-about-voting stays a draft.
 - **Social voice:** Round 4 in `campaigns/launch-campaign.md`: funny,
   relatable to 18–25, never preachy ("sanctimonious" was the complaint), no
   realistic AI imagery on social, owner's voice (`brand-voice`), roast every
