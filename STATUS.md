@@ -161,6 +161,9 @@ full context. **Read this after CLAUDE.md, before doing anything.** Update it
 - **Cold calls:** on hold (owner busy). Call lists exist in past runs only.
 
 ## 5. Open items for the owner
+0. Record the first Sovereign essay ("George Washington Warned Us About
+   Two Parties", Notion → Scripts, filename `2026-11-20-washington-two-parties`)
+   by Thursday Nov 19 so the Friday Nov 20 run publishes it.
 1. Connect TikTok @wade.clips3 in the clip Buffer account.
 2. Rocket: regain access, then paste the SEO fix prompt; resubmit sitemaps.
 3. Google Business Profile (free) for Wade Capital.
