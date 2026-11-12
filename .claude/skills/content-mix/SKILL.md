@@ -35,6 +35,11 @@ Models to learn from (study the format, never copy their videos):
   Survival 1 Year", Parts 1–3: 2.3M, 1.1M, 0.8M). Our model for Robot.
 - **History of Elections**: history tied to a name in today's news ("Stephen
   Miller & How Fascism Hides Its Evil with Humor").
+- **WarFronts** (1.47M subs): this week's biggest world story explained
+  within days, 15–20 min, nearly daily; question or bold-claim titles ("Could
+  China Turn on Xi?", "This Is What the Democrats' Landslide Means for the
+  World"), 500K–1.7M views each. Lesson: speed and timeliness; when a big
+  story breaks, the essay can be about it.
 - **"no context american politics"** (2.4M views): our model for clip
   montages (see Clipping).
 
@@ -56,7 +61,9 @@ Sovereign issues **or a tangential topic** (owner, 2026-11-12: it doesn't
 have to come from an issue): a real person, company, event or question in
 today's world, explained through a philosopher or a moment in history.
 Every essay needs **real research** (primary sources first: speeches,
-letters, laws, studies, polls; every claim checkable in `## Sources`) and an
+letters, laws, studies, polls; every claim checkable in `## Sources`), plenty of jokes, written to sound
+spoken and off-the-cuff (contractions, asides, "okay, so"), never read-aloud
+prose, and an
 **engaging topic**: something people already argue about, with a story at
 its center. Visuals are real
 archive footage, documents, maps and headlines (`studio/find_footage.py`),
