@@ -97,7 +97,8 @@ a hashtag):
 
 **Sourcing truth:** every fact, quote and headline is real and word for
 word, from the issue or the database. Anecdotes come only from the issues
-themselves, told as the writer's story ("one Sovereign writer…"). Global
+themselves, told as the owner's own story, in the first person ("I…"): the owner
+is the writer of The Sovereign. Global
 Aggregate stories follow rule 1: war and breaking clusters schedule
 normally when sourced; election clusters and alleged crimes against
 identifiable people are drafts. Don't steer away from them: a draft the
@@ -216,8 +217,8 @@ the PoolParty waitlist.
    hate, the professor who reads the slides. The news or the idea arrives
    second, as the twist.
 2. **Funny first, insight as a wink.** A setup and a punchline in the first
-   5 seconds; the idea is the last joke, never a lesson. Roast every side,
-   never victims (`brand-voice`).
+   5 seconds; the idea is the last joke, never a lesson. Roast both parties and
+   anyone with power, never victims (`brand-voice`).
 3. **No sermon words, ever:** "The Sovereign says", "a Sovereign writer
    says", "reminds us", "we must", "the real question is", "in a world
    where", "now more than ever", "it's time to", profound closing questions

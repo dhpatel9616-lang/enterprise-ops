@@ -1,4 +1,4 @@
-# Where everything stands (handoff, 2026-11-10)
+# Where everything stands (handoff, 2026-11-10; updated 2026-11-12)
 
 Written at the end of a long working session so a fresh session starts with
 full context. **Read this after CLAUDE.md, before doing anything.** Update it
@@ -15,6 +15,19 @@ full context. **Read this after CLAUDE.md, before doing anything.** Update it
   Wade Capital services via outreach. Revenue is still $0.
 
 ## 2. Decisions already made (don't relitigate)
+- **Niche and brand (2026-11-12):** philosophy and history that explain
+  today. Models: Epoch Philosophy (essays), Galactic Highway (Robot as
+  survival *scenarios* in series), History of Elections, "no context
+  american politics" (clip montages); details in `content-mix`. Fewer,
+  bigger videos; titles name someone real and make a claim.
+- **Stance (2026-11-12):** against two-party politics, leaning left, good
+  morals, good humor, nothing too controversial (`brand-voice`).
+- **Voices (2026-11-12):** AI voice for Shorts, ads, Robot, lighter videos;
+  the owner records one voiceover a week for the Sovereign essay (Friday).
+- **Clips (2026-11-12):** "no context" cuts allowed (never put words in
+  mouths or reverse meaning); clips about politicians/elections/candidates
+  schedule normally (CLAUDE.md rule 1). Promo-account election rule
+  unchanged.
 - **Social voice:** Round 4 in `campaigns/launch-campaign.md`: funny,
   relatable to 18–25, never preachy ("sanctimonious" was the complaint), no
   realistic AI imagery on social, owner's voice (`brand-voice`), roast every
@@ -42,7 +55,7 @@ full context. **Read this after CLAUDE.md, before doing anything.** Update it
   (`studio/`), campaign rules (`campaigns/`), skills (`.claude/skills/`).
   Routines are owner-created in claude.ai (created via http_api): Claude
   **cannot edit or fire them**; it changes behavior by editing the `.md`
-  files they read. Schedules (cron, UTC unless noted):
+  files they read. Schedules (cron, UTC unless noted; YT Video Studio = Robot Tue, Sovereign essay Fri):
   Strategist Mon 03:30 · Social Studio Mon 04:30 · Builder + Leads Wed 05:30
   (includes podcast-guest and GA-educator research) · YT Video Studio Tue+Fri
   04:30 (owner may add Mon) · Clip Studio daily 12:15 ET · SEO Writer Sun
@@ -89,7 +102,11 @@ full context. **Read this after CLAUDE.md, before doing anything.** Update it
 - **PoolParty production Supabase `tzebfwmrmzhkeoptwkzy`: never touch.**
 
 ## 4. Current state by area (numbers as of 2026-11-10)
-- **Social (promo):** ~60–120 views a post, 0 comments in two weeks;
+- **Social (promo), Oct 29–Nov 12:** 38 posts, ~3,800 views, 14 likes,
+  1 comment, 0 shares. All hits were YouTube Shorts (burnout 1,099, Xbox
+  934, Suez 464); "two headlines" posts and episode-announcement posts
+  flop; TikTok never above ~125.
+- (older note) ~60–120 views a post, 0 comments in two weeks;
   average watch 2–7 s on ~30 s ads. Best ever: burnout quote audiogram 1,099
   Shorts views, Iran-vote Short 949, Xbox story 934. Round 4 formats started
   with the Nov 9 Social Studio run; a second daily 7–12 s POV meme (TikTok

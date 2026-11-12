@@ -1,4 +1,10 @@
-# YT Video Studio (Tuesdays and Fridays ~12:30 AM ET; two episodes a week, owner 2026-10-15)
+# YT Video Studio (Tuesdays and Fridays ~12:30 AM ET)
+
+Owner, 2026-11-12: **Tuesday = Robot's episode** (AI voice). **Friday = the
+Sovereign essay** in the owner's own recorded voice (content-mix → The
+Sovereign essay); if the owner's recording isn't in Drive by Friday's run,
+publish nothing long-form that day (say so in Last Run) and keep the essay for
+next Friday. Fewer, better videos.
 
 Read CLAUDE.md, then ONLY these skills: content-mix,
 voiceover-workflow, video-assembly, character-bible, brand-voice,
@@ -11,12 +17,16 @@ Still missing: set the "Autopost — YouTube long-form" row to Error with the
 exact "setup: ..." lines from that output (they name what failed), and stop.
 
 1. In Notion → Scripts, take the oldest item with Status Recorded (use the
-   owner's file from Drive "Voiceovers"); if none, the oldest Ready to Record
+   owner's file from Drive "Voiceovers"); if none and it's Friday, stop
+   long-form here and go to step 5; if none on Tuesday,
+   skip "Sovereign essay:" items (owner's voice only) and take the oldest Ready to Record
    item whose Platforms include "YouTube long-form", voiced with
    `python3 studio/ai_voice.py` (voiceover-workflow). If neither exists, write
    the next Robot episode first (content-mix → Robot's long-form series) and
    use it.
-2. Build the video: Robot (`studio/render_puppet.py --character robot-host
+2. Build the video. A Sovereign essay: real archive footage, documents and
+   headlines (`studio/find_footage.py`) with text cards, no Robot, the
+   owner's voice (no AI-voice disclosure needed). Otherwise: Robot (`studio/render_puppet.py --character robot-host
    --layout wide`), storyboard visuals, burned-in captions, chapters, a
    thumbnail (3–5 big words of the hook title, Robot's face, high contrast), a
    search-first title (content-mix → Packaging), description with sources, the CTA, and the AI-voice
@@ -39,8 +49,10 @@ exact "setup: ..." lines from that output (they name what failed), and stop.
    switch is off). Only
    the promo + media channels in Buffer organization `6ab6c71cddecb7a5c80b918f`
    (IDs in `campaigns/launch-campaign.md`); never the clip accounts.
-5. Write the next episode from the next brief (content-mix) and set it to
-   Ready to Record, so the next run (three or four days away) has a script.
+5. Write the next script and set it to Ready to Record: on Tuesday, next
+   week's Robot episode (content-mix); on Friday, next week's Sovereign
+   essay (content-mix → The Sovereign essay), so the owner
+   has a week to record it.
    Write it in the owner's voice (`brand-voice` → "The owner's voice").
    Voice every episode through the quality gate in `routines/social-studio.md`
    (`studio/vo_check.py` must pass; its captions are the ones to burn in).

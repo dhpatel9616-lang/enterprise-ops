@@ -23,9 +23,13 @@ not yet confirmed by the owner.
 ## House voice (all brands)
 - **Sharp, witty, caring, informative.** Make the point fast, make it land,
   and make it clear we're on the reader's side.
-- **Fully nonpartisan.** No topic is off-limits, but no side is taken: show
-  the strongest version of each position, go after ideas (not groups of
-  people), and point to primary sources.
+- **Against two-party politics, leaning left** (owner, 2026-11-12). The
+  Sovereign is against the two-party system and doesn't cheer for either
+  party; its values lean left (workers over bosses, fairness, against
+  concentrated power and money in politics) and it errs on the side of good
+  morals. Nothing too controversial: no partisan insults, no attacks on
+  groups of people, and the strongest version of the other view gets a fair
+  hearing. Go after ideas and behavior, and point to primary sources.
 - **No sign-off** needed.
 - **For beginners, never "for kids".**
 - **Tone references** (for feel only; never copy): jakeswiz and
@@ -69,11 +73,11 @@ self-deprecating, family and everyday life).
 - Punch up (power, institutions, coverage, hype, ourselves), never down. No
   jokes at victims, and no jokes about anyone's race, religion or identity
   except our own, self-deprecating.
-- Take the wit of Hitchens and Buckley, not their sides: the house stays
-  nonpartisan.
+- Take the wit of Hitchens and Buckley, not their sides: the house stance
+  is above (anti-two-party, left-leaning, good morals).
 - **Roast everyone harder** (owner, 2026-10-27): SNL and Hitchens-level jokes
-  at politicians, media, billionaires and hype on all sides. Sharper jokes,
-  same nonpartisan house: the target is behavior and spin, never a group
+  at politicians, media, billionaires and hype in both parties. Sharper
+  jokes, same good-faith house: the target is behavior and spin, never a group
   of people, and never victims.
 - One big word or name per ad, made plain right away (our audience is new to
   the topic).
