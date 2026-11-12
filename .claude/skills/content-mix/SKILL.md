@@ -12,12 +12,55 @@ and email only; see the Enterprise-leads repo).
 | Lane | Format | Who's on screen | Where |
 |---|---|---|---|
 | **Short-form promos** for The Sovereign, The Global Aggregate, PoolParty | 9:16, 15–45 s | Real material from the product, plus realistic `promo-cast` actors and situations when a scene needs people | IG Reels, TikTok, YouTube Shorts |
-| **Clipping ads** (political and historical moments) | 9:16, 15–45 s | Real archival or public footage | Same, always as **drafts** (see below) |
+| **Clipping ads** (political and historical moments) | 9:16, 15–45 s | Real archival or public footage | Clip accounts only (see below) |
 | **Robot tutorials**: grid-down survival, cybersecurity, history, politics | 16:9, 8–15 min, mostly animated | Robot (cartoon, `character-bible`) | YouTube long-form |
 | **Clipping montages** | 16:9, long-form | Real footage from the clipping repo, with our narration and context | YouTube long-form |
 
 Realistic AI people and situations are **for promotion only**, never in
 long-form content (`character-bible`).
+
+## Our niche and brand (owner, 2026-11-12)
+**Philosophy and history that explain what's happening today.** Not random
+topics: every video, ad and clip should make a viewer think "this is the
+channel that explains why today makes sense." Stance: `brand-voice`
+(against two-party politics, leaning left, good morals, good humor).
+
+Models to learn from (study the format, never copy their videos):
+- **Epoch Philosophy** (208K subs): one powerful person, company or idea
+  today, explained through philosophy or history, 20–30 min, archive
+  footage and documents. Hits: "Technofeudalism" (510K), "Byung-Chul Han:
+  The Burnout Society" (264K). Our burnout quote was our best post ever too.
+- **Galactic Highway** (97K subs from 35 videos): an animated character in a
+  survival *scenario* told as a story, run as a numbered series ("Bunker
+  Survival 1 Year", Parts 1–3: 2.3M, 1.1M, 0.8M). Our model for Robot.
+- **History of Elections**: history tied to a name in today's news ("Stephen
+  Miller & How Fascism Hides Its Evil with Humor").
+- **"no context american politics"** (2.4M views): our model for clip
+  montages (see Clipping).
+
+What that means for every long-form video:
+- **Fewer, bigger, better.** One great video beats many rushed ones.
+- **Titles name someone or something real and make a claim** ("How the CIA
+  Manufactured a Heroin Crisis"), never a lesson ("How to Read a Document
+  in 3 Steps"). Search words still go in the title.
+- **Series:** when a video does well, make Part 2.
+
+**Voices (owner, 2026-11-12):** the AI voice for Shorts, ads, Robot and
+lighter videos; the **owner records one voiceover a week** for our best
+video, the Sovereign essay (below).
+
+## The Sovereign essay (weekly flagship, owner's voice)
+Epoch Philosophy-style video essay for YouTube @WadeCapital, 15–25 min
+(~2,500–3,500 words), one a week. Built from one of the owner's own
+Sovereign issues: a real person, company or event in today's news,
+explained through a philosopher or a moment in history. Visuals are real
+archive footage, documents, maps and headlines (`studio/find_footage.py`),
+with text cards; no Robot, no realistic AI imagery. Cold open from a real
+moment, chapters, sources on screen and in the description, CTA to The
+Sovereign. Written to Notion → Scripts as Ready to Record, titled "Sovereign
+essay: <title>", so the owner records it (`voiceover-workflow`); never
+voice one with the AI voice. A 30–45 s Short is
+cut from it like Robot's.
 
 ## Weekly short-form slate
 The launch campaign (`campaigns/launch-campaign.md`) sets the week: five ads
@@ -123,10 +166,8 @@ Sovereign or Global Aggregate promos.
   owner the App Store link and the honest money message (see Open items).
 
 ## Clipping ads and montages
-- Clipping work currently lives outside this setup (a "clipping" folder on
-  the owner's computer, worked on in a separate Claude Code chat; no repo
-  yet). Until it has a repo or shared folder we can reach, there are no
-  clipping posts. Footage must be one of: public domain (US federal government works such as official
+- Clip Studio makes the clips itself (`routines/clip-studio.md`). Footage
+  must be one of: public domain (US federal government works such as official
   House/Senate floor video, pre-1930 film), openly licensed with
   attribution, or a short excerpt used for commentary that adds our own
   context (fair use). Credit the source on screen. If you can't tell which,
@@ -141,20 +182,28 @@ Sovereign or Global Aggregate promos.
   on the promo accounts. It's a known copyright risk the owner accepted for
   the clip accounts; if a platform flags one, stop using that network and
   say so in the run notes.
-- Never edit a clip to change what someone said or meant; keep enough
-  context that the point stands on its own. No AI-altered footage of real
-  people, ever (`content-rules`).
-- Nonpartisan (`brand-voice`): over a month, balance who is shown, and
-  frame each clip around an idea, not a side.
+- **"No context" cuts are fine** (owner, 2026-11-12): pull the funniest,
+  most awkward or most telling real moment out of a long speech or hearing
+  and let it play, no narration needed. The line: what you show really
+  happened as shown. Never splice words into a sentence the person didn't
+  say, never reverse a meaning (cutting "I don't" off "I don't support
+  this"), never AI-alter footage of real people (`content-rules`).
+- Good faith and good humor, no bias to either party: over a month, both
+  parties and anyone with power get their turn.
 - Clips post **only to the clip accounts**, through Clip Studio
   (`routines/clip-studio.md`, `studio/buffer_clips.py`), automatically
-  when "Autopost — Clips" is on; drafts when they touch elections,
-  candidates or voting, are under 24 hours old, or can't be sourced
-  (owner, 2026-10-13). The clipping work drops finished clips in the
+  when "Autopost — Clips" is on; drafts only per CLAUDE.md rule 1 (owner,
+  2026-11-12: clips about politicians, elections and candidates now
+  schedule normally). The clipping work drops finished clips in the
   `civic-clips` bucket under `queue/<clip-id>/`; it never posts to Buffer
   itself.
 
-## Robot's long-form series (two episodes a week, owner 2026-10-15)
+## Robot's long-form series (one episode a week from 2026-11-12; was two)
+**New format (owner, 2026-11-12):** Galactic Highway-style *scenarios*, told
+as a story with Robot in it ("Robot: 1 Year Without Power, Part 1"), not
+lessons. Briefs 9–13 below still run, rewritten as stories; new ones are
+scenarios or "the real story of" a historical event that explains today,
+and a hit gets a Part 2.
 Each episode is ONE specific, dramatic real event with a hook title. Mix the
 lanes so no two in a row share one: survival guide, history, current events,
 cybersecurity, and "strange but true" (declassified oddities, told curious

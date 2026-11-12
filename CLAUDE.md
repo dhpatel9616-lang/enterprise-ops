@@ -41,9 +41,11 @@ picture changes.
      time, and every scheduled post an exact time (never Buffer's queue).
    - **"Autopost — Clips" Enabled:** Clip Studio posts clips to the clip
      accounts only, through `studio/buffer_clips.py` (their own Buffer
-     account), as drafts when they touch elections/candidates/voting, are
-     under 24 hours old, can't be sourced, or use a TV-network news excerpt
-     (owner, 2026-10-13 / 10-14).
+     account). Clips about politicians, elections and candidates schedule
+     normally (owner, 2026-11-12); drafts only when they allege a crime or
+     sexual violence against identifiable people, center a private person,
+     can't be sourced, could mislead people about how, when or where to
+     vote, or use a TV-network news excerpt.
    - Outreach emails send automatically within the sequencer's daily caps
      (Enterprise-leads repo).
    - **"Autopublish — Website guides (Wade Capital)" Enabled:** the SEO Writer
