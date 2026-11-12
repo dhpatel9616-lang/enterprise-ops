@@ -26,8 +26,8 @@ full context. **Read this after CLAUDE.md, before doing anything.** Update it
   the owner records one voiceover a week for the Sovereign essay (Friday).
 - **Clips (2026-11-12):** "no context" cuts allowed (never put words in
   mouths or reverse meaning); clips about politicians/elections/candidates
-  schedule normally (CLAUDE.md rule 1). Promo-account election rule
-  unchanged.
+  schedule normally (CLAUDE.md rule 1). Same for promo accounts
+  (2026-11-12): only misleading-about-voting stays a draft.
 - **Social voice:** Round 4 in `campaigns/launch-campaign.md`: funny,
   relatable to 18–25, never preachy ("sanctimonious" was the complaint), no
   realistic AI imagery on social, owner's voice (`brand-voice`), roast every
@@ -161,6 +161,11 @@ full context. **Read this after CLAUDE.md, before doing anything.** Update it
 - **Cold calls:** on hold (owner busy). Call lists exist in past runs only.
 
 ## 5. Open items for the owner
+0. Record the first Sovereign essay ("George Washington Warned Us About
+   Two Parties", Notion → Scripts, filename `2026-11-13-washington-two-parties`;
+   rewritten 2026-11-12 to be conversational, owner ad-libs freely). Owner
+   plans to record Nov 13; the next YT Video Studio run after it lands
+   assembles it.
 1. Connect TikTok @wade.clips3 in the clip Buffer account.
 2. Rocket: regain access, then paste the SEO fix prompt; resubmit sitemaps.
 3. Google Business Profile (free) for Wade Capital.

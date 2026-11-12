@@ -26,7 +26,11 @@ exact "setup: ..." lines from that output (they name what failed), and stop.
    use it.
 2. Build the video. A Sovereign essay: real archive footage, documents and
    headlines (`studio/find_footage.py`) with text cards, no Robot, the
-   owner's voice (no AI-voice disclosure needed). Otherwise: Robot (`studio/render_puppet.py --character robot-host
+   owner's voice (no AI-voice disclosure needed). The owner ad-libs, so
+   captions follow what was said, not the script: transcribe the recording
+   with faster-whisper, split it into short caption lines, and run
+   `studio/vo_check.py` with those lines; check names and numbers against
+   the script's Sources. Otherwise: Robot (`studio/render_puppet.py --character robot-host
    --layout wide`), storyboard visuals, burned-in captions, chapters, a
    thumbnail (3–5 big words of the hook title, Robot's face, high contrast), a
    search-first title (content-mix → Packaging), description with sources, the CTA, and the AI-voice

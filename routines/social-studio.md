@@ -90,7 +90,8 @@ row (Notion → Automation Control) to Error with the reason, and stop.
    organization or channel (the clip accounts), and never post clips here.
 4. Draft only the most sensitive posts (CLAUDE.md rule 1: alleged crimes or
    sexual violence against identifiable people or a victim at the center, a
-   private person at the center, elections/candidates/voting, unsourced
+   private person at the center, anything that could mislead about how,
+   when or where to vote, unsourced
    claims, `content-rules` failures). Everything else schedules. A draft
    still gets its planned day and time (`saveToDraft: true` with the same
    `customScheduled` + `dueAt`), so approving it keeps it on its own day.

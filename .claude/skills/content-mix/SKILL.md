@@ -35,6 +35,11 @@ Models to learn from (study the format, never copy their videos):
   Survival 1 Year", Parts 1–3: 2.3M, 1.1M, 0.8M). Our model for Robot.
 - **History of Elections**: history tied to a name in today's news ("Stephen
   Miller & How Fascism Hides Its Evil with Humor").
+- **WarFronts** (1.47M subs): this week's biggest world story explained
+  within days, 15–20 min, nearly daily; question or bold-claim titles ("Could
+  China Turn on Xi?", "This Is What the Democrats' Landslide Means for the
+  World"), 500K–1.7M views each. Lesson: speed and timeliness; when a big
+  story breaks, the essay can be about it.
 - **"no context american politics"** (2.4M views): our model for clip
   montages (see Clipping).
 
@@ -52,8 +57,15 @@ video, the Sovereign essay (below).
 ## The Sovereign essay (weekly flagship, owner's voice)
 Epoch Philosophy-style video essay for YouTube @WadeCapital, 15–25 min
 (~2,500–3,500 words), one a week. Built from one of the owner's own
-Sovereign issues: a real person, company or event in today's news,
-explained through a philosopher or a moment in history. Visuals are real
+Sovereign issues **or a tangential topic** (owner, 2026-11-12: it doesn't
+have to come from an issue): a real person, company, event or question in
+today's world, explained through a philosopher or a moment in history.
+Every essay needs **real research** (primary sources first: speeches,
+letters, laws, studies, polls; every claim checkable in `## Sources`), plenty of jokes, written to sound
+spoken and off-the-cuff (contractions, asides, "okay, so"), never read-aloud
+prose, and an
+**engaging topic**: something people already argue about, with a story at
+its center. Visuals are real
 archive footage, documents, maps and headlines (`studio/find_footage.py`),
 with text cards; no Robot, no realistic AI imagery. Cold open from a real
 moment, chapters, sources on screen and in the description, CTA to The
@@ -69,10 +81,10 @@ Reels, TikTok and YouTube Shorts, plus Robot's Short on Sunday. PoolParty
 joins after launch; clipping ads when a source exists.
 
 **Rule 1 means draft, not skip, and only for the most sensitive posts**
-(owner, 2026-10-14). Draft a post only if it alleges a crime or sexual violence against identifiable people, or centers a victim; centers a private (non-public) person; touches elections, candidates or voting; makes a claim you can't source; or fails `content-rules`. It is still made,
+(owner, 2026-10-14). Draft a post only if it alleges a crime or sexual violence against identifiable people, or centers a victim; centers a private (non-public) person; could mislead people about how, when or where to vote; makes a claim you can't source; or fails `content-rules`. It is still made,
 then saved as a Buffer draft with a one-line reason, and the owner gets an
-email. Everything else schedules normally, including sourced news that names
-politicians or public figures, war, and breaking news. Only skip something
+email. Everything else schedules normally, including sourced news and opinion
+about politicians, candidates and elections (owner, 2026-11-12), war, and breaking news. Only skip something
 that can't be made honestly at all.
 
 **Two sets of accounts (owner, 2026-10-12). Never mix them.**
@@ -145,7 +157,7 @@ Sovereign or Global Aggregate promos.
   then `articles?select=title,source,country,url,published_at&cluster_id=eq.<id>`.
 - Story ads: pick a cluster from the last 48 hours with 3+ countries, preferring
   science, economy, sport, culture, space, health, business. Rule 1 clusters
-  (elections, alleged crimes against identifiable people, private people)
+  (alleged crimes against identifiable people, private people)
   are made as drafts.
 - Generic brand ads (By the numbers, How it works, Who it's for) need no
   story and can always post; see `campaigns/launch-campaign.md`.
