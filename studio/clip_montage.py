@@ -65,7 +65,9 @@ def main(spec_path, out):
         parts.append(card(tmp, "outro", "Follow for a new clip every day", HANDLE, 4))
         (tmp / "list.txt").write_text("".join(f"file '{p}'\n" for p in parts))
         run("ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(tmp / "list.txt"),
-            "-c:v", "libx264", "-pix_fmt", "yuv420p", "-c:a", "aac", "-movflags", "+faststart", str(out))
+            # ponytail: capped bitrate keeps 10 clips (~8 min) under the Supabase upload limit (~50 MB); archive footage is SD anyway
+            "-c:v", "libx264", "-crf", "28", "-maxrate", "800k", "-bufsize", "1600k", "-pix_fmt", "yuv420p",
+            "-c:a", "aac", "-b:a", "96k", "-movflags", "+faststart", str(out))
     finally:
         shutil.rmtree(tmp)
 

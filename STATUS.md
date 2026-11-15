@@ -167,6 +167,10 @@ full context. **Read this after CLAUDE.md, before doing anything.** Update it
    plans to record Nov 13; the next YT Video Studio run after it lands
    assembles it.
 1. Connect TikTok @wade.clips3 in the clip Buffer account.
+1b. Sunday clip montage can't post itself: Buffer only takes Shorts, and the
+   YouTube uploader is signed in to @WadeCapital. Owner uploads it to
+   @WadeCapitalClips by hand (link in Automation Control notes), or adds a
+   second YouTube sign-in for the clip channel (2026-11-15).
 2. Rocket: regain access, then paste the SEO fix prompt; resubmit sitemaps.
 3. Google Business Profile (free) for Wade Capital.
 4. PoolParty accounts + Buffer key + handles.
