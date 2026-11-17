@@ -194,6 +194,10 @@ Sovereign or Global Aggregate promos.
   on the promo accounts. It's a known copyright risk the owner accepted for
   the clip accounts; if a platform flags one, stop using that network and
   say so in the run notes.
+- **Archive recordings with photos** (owner, 2026-11-17): real recorded
+  phone calls, speeches and radio (presidential library tapes, old radio)
+  played over still photos of the people and the event, with captions.
+  2–3 a week on the clip accounts (`routines/clip-studio.md`).
 - **"No context" cuts are fine** (owner, 2026-11-12): pull the funniest,
   most awkward or most telling real moment out of a long speech or hearing
   and let it play, no narration needed. The line: what you show really

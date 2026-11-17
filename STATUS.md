@@ -24,6 +24,9 @@ full context. **Read this after CLAUDE.md, before doing anything.** Update it
   morals, good humor, nothing too controversial (`brand-voice`).
 - **Voices (2026-11-12):** AI voice for Shorts, ads, Robot, lighter videos;
   the owner records one voiceover a week for the Sovereign essay (Friday).
+- **Clips: archive recordings with photos (2026-11-17):** 2–3 a week, old
+  phone calls/speeches over photos (`clip_reel.py --photos`, `find_footage
+  --source archive-audio / photos`).
 - **Clips (2026-11-12):** "no context" cuts allowed (never put words in
   mouths or reverse meaning); clips about politicians/elections/candidates
   schedule normally (CLAUDE.md rule 1). Same for promo accounts
@@ -166,6 +169,8 @@ full context. **Read this after CLAUDE.md, before doing anything.** Update it
    rewritten 2026-11-12 to be conversational, owner ad-libs freely). Owner
    plans to record Nov 13; the next YT Video Studio run after it lands
    assembles it.
+   Essay 2 ("The Gilded Age Is Back", `2026-11-24-gilded-age`) also Ready to
+   Record (written 2026-11-17). As of Nov 17 essay 1 was not yet recorded.
 1. Connect TikTok @wade.clips3 in the clip Buffer account.
 2. Rocket: regain access, then paste the SEO fix prompt; resubmit sitemaps.
 3. Google Business Profile (free) for Wade Capital.
