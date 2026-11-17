@@ -7,6 +7,10 @@ captioned (faster-whisper, when installed), and the source is credited.
   python3 studio/clip_reel.py segment.mp4 out.mp4 --title "Duck and Cover (1951)" --credit "Federal Civil Defense Administration · Internet Archive"
 
 Get the segment first: python3 studio/find_footage.py get URL segment.mp4 --start S --len 20-45
+
+Archive audio with photos (old phone calls, speeches; owner, 2026-11-17): pass the audio as the
+segment plus its photos in order; each photo gets an equal share of the time with a slow push-in.
+  python3 studio/clip_reel.py call.m4a out.mp4 --photos reagan.jpg thatcher.jpg --title "..." --credit "..."
 """
 import argparse, json, shutil, subprocess, tempfile, textwrap
 from pathlib import Path
@@ -21,9 +25,10 @@ def caption_lines(video, words_per_line=5):
     """[(start, end, text)] from the clip's own audio; [] if faster-whisper isn't installed or nothing is said."""
     try:
         from faster_whisper import WhisperModel
+        from vo_check import audio16k
     except ImportError:
         return []
-    segs, _ = WhisperModel("small.en", device="cpu", compute_type="int8").transcribe(str(video), word_timestamps=True)
+    segs, _ = WhisperModel("small.en", device="cpu", compute_type="int8").transcribe(audio16k(video), word_timestamps=True)
     words = [w for s in segs for w in (s.words or [])]
     lines = []
     for i in range(0, len(words), words_per_line):
@@ -34,9 +39,29 @@ def caption_lines(video, words_per_line=5):
     return lines
 
 
-def main(src, out, title, credit):
+def slideshow(audio, pics, out, tmp):
+    """Photos (in order, equal time each, slow push-in) over the audio, as one segment."""
+    secs = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(audio)],
+                                capture_output=True, text=True, check=True).stdout)
+    frames = int(secs / len(pics) * 30) + 1
+    parts = []
+    for i, p in enumerate(pics):
+        parts.append(tmp / f"p{i}.mp4")
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(p), "-vf",
+                        "scale=1080:1080:force_original_aspect_ratio=decrease,pad=1080:1080:(ow-iw)/2:(oh-ih)/2,"
+                        f"zoompan=z='min(zoom+0.0005,1.12)':d={frames}:x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':s=1080x1080:fps=30",
+                        "-pix_fmt", "yuv420p", str(parts[-1])], check=True)
+    (tmp / "pics.txt").write_text("".join(f"file '{p}'\n" for p in parts))
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(tmp / "pics.txt"), "-i", str(audio),
+                    "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-c:a", "aac", "-shortest", str(out)], check=True)
+    return out
+
+
+def main(src, out, title, credit, pics=()):
     tmp = Path(tempfile.mkdtemp())
     try:
+        if pics:
+            src = slideshow(src, pics, tmp / "seg.mp4", tmp)
         def txt(name, s):
             (tmp / name).write_text(s)
             return tmp / name
@@ -64,5 +89,6 @@ if __name__ == "__main__":
     a = argparse.ArgumentParser()
     a.add_argument("src"); a.add_argument("out")
     a.add_argument("--title", required=True); a.add_argument("--credit", required=True)
+    a.add_argument("--photos", nargs="+", default=[], help="src is audio: show these photos over it, in order")
     a = a.parse_args()
-    main(a.src, a.out, a.title, a.credit)
+    main(a.src, a.out, a.title, a.credit, a.photos)

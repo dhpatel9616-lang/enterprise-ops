@@ -31,6 +31,22 @@ are the promo/media account), and never post clips anywhere else.
      speech) and
      `python3 studio/clip_reel.py seg.mp4 clip.mp4 --title "<hook>" --credit "<source>"`.
      Look at three frames before posting.
+   - **2–3 days a week: an archive recording with photos** (owner, 2026-11-17;
+     this format does well, e.g. "Ronald Reagan Apologizes to Margaret
+     Thatcher in a Private Phone Call After the U.S. Invasion of Grenada,
+     1983"): a real recorded phone call, speech or radio address (presidential
+     library tapes such as the LBJ, Nixon, JFK and Reagan recordings; old
+     radio). Find the audio with `find_footage.py find "<words>" --source
+     archive-audio`, the photos with `--source photos` (photos of the people
+     and the event, public domain or CC BY; 3–6 of them), then
+     `find_footage.py get URL call.m4a --start S --len N --keep-audio`,
+     download each photo (urllib through the proxy, like `get`), and
+     `python3 studio/clip_reel.py call.m4a clip.mp4 --photos a.jpg b.jpg ...
+     --title "<who, what, year>" --credit "<recording source> · photos: <credits>"`.
+     30–90 s is fine for a call. The title says exactly who is talking and
+     when; the photos show those people, never a different event passed off
+     as this one. Save `"photos"` in `clip.json` too (the Sunday montage
+     takes footage only, so it skips these).
    - Title and caption follow the campaign's Round 4 voice: funny or
      surprising first, never preachy ("In 1951 the government's plan for a
      nuclear blast was: get under your desk").

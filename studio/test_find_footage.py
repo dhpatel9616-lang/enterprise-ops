@@ -17,4 +17,6 @@ assert ff.resolve("https://archive.org/details/abc") == "https://archive.org/dow
 ff.get_json = lambda url: ["https://n/x~small.mp4", "https://n/x~orig.mp4"]
 assert ff.resolve("https://n/collection.json") == "https://n/x~orig.mp4"
 assert ff.resolve("https://cdn.pixabay.com/v.mp4") == "https://cdn.pixabay.com/v.mp4"
+ff.get_json = lambda url: {"files": [{"name": "call.mp3", "size": "5"}, {"name": "call.ogg", "size": "9"}]}
+assert ff.resolve("https://archive.org/details/call") == "https://archive.org/download/call/call.mp3"  # audio items
 print("find_footage self-check: ok")

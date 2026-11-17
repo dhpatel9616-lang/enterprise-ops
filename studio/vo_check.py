@@ -11,7 +11,16 @@ captions.json written; exit 1 = the voice doesn't match (the reason is printed):
 re-run studio/ai_voice.py (each take is different) and check again. Uses the
 free faster-whisper model (pip install faster-whisper; ~150 MB, cached).
 """
-import difflib, json, re, sys
+import difflib, json, re, subprocess, sys
+
+
+def audio16k(path):
+    """Any audio/video file -> 16 kHz mono samples for faster-whisper, decoded by ffmpeg. faster-whisper's own
+    decoder (PyAV) breaks when PyAV updates (av 19: "unexpected keyword argument 'metadata_errors'")."""
+    import numpy as np
+    raw = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", str(path), "-f", "f32le", "-ac", "1", "-ar", "16000", "-"],
+                         capture_output=True, check=True).stdout
+    return np.frombuffer(raw, np.float32)
 
 NUMBER_WORDS = set("zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen "
                    "seventeen eighteen nineteen twenty thirty forty fifty sixty seventy eighty ninety hundred thousand "
@@ -75,7 +84,7 @@ def caption_times(lines, words, total):
 def main(audio, lines_path, out):
     from faster_whisper import WhisperModel
     lines = [l.strip() for l in open(lines_path) if l.strip()]
-    segs, info = WhisperModel("base.en", device="cpu", compute_type="int8").transcribe(audio, word_timestamps=True)
+    segs, info = WhisperModel("base.en", device="cpu", compute_type="int8").transcribe(audio16k(audio), word_timestamps=True)
     words = [(t, w.start) for s in segs for w in s.words for t in tokens(w.word)]
     problems = check([t for l in lines for t in tokens(l)], [w[0] for w in words])
     if problems:

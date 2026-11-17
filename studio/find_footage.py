@@ -15,6 +15,9 @@ Sources, cheapest legal first:
   nasa     NASA video (US government work, public domain)
   commons  Wikimedia Commons: public domain / CC0 / CC BY(-SA) only (credit required)
   pixabay  Pixabay stock video (free, commercial use, no credit needed). Needs PIXABAY_API_KEY.
+  archive-audio  Internet Archive audio: old speeches, phone calls, radio (public domain / US government)
+  photos   Wikimedia Commons photos: public domain / CC0 / CC BY(-SA) only (credit required)
+For an archive audio clip with photos (clip_reel.py --photos): `get URL call.m4a --keep-audio`.
 Network hosts: archive.org (+ its *.archive.org file servers), images-api.nasa.gov, images-assets.nasa.gov,
 commons.wikimedia.org, upload.wikimedia.org, pixabay.com, cdn.pixabay.com.
 """
@@ -43,8 +46,8 @@ def pixabay(term, n):
              "page": h["pageURL"], "seconds": h["duration"], "license": "Pixabay Content License", "credit": ""} for h in hits[:n]]
 
 
-def archive(term, n):
-    query = f'({term}) AND mediatype:movies AND (licenseurl:*publicdomain* OR collection:prelinger_library OR collection:prelinger OR collection:us_government)'
+def archive(term, n, media="movies"):
+    query = f'({term}) AND mediatype:{media} AND (licenseurl:*publicdomain* OR collection:prelinger_library OR collection:prelinger OR collection:us_government)'
     docs = get_json("https://archive.org/advancedsearch.php?" + q({"q": query, "fl[]": ["identifier", "title", "year", "licenseurl"],
                                                                    "rows": n, "output": "json"}))["response"]["docs"]
     return [{"source": "archive", "title": f"{d.get('title')} ({d.get('year', 'n.d.')})", "url": f"https://archive.org/details/{d['identifier']}",
@@ -58,9 +61,13 @@ def nasa(term, n):
              "credit": "Video: NASA"} for i in items]
 
 
-def commons(term, n):
+def archive_audio(term, n):
+    return archive(term, n, "audio")
+
+
+def commons(term, n, kind="video"):
     pages = get_json("https://commons.wikimedia.org/w/api.php?" + q({
-        "action": "query", "format": "json", "generator": "search", "gsrsearch": f"filetype:video {term}", "gsrnamespace": 6,
+        "action": "query", "format": "json", "generator": "search", "gsrsearch": f"filetype:{kind} {term}", "gsrnamespace": 6,
         "gsrlimit": n * 3, "prop": "imageinfo", "iiprop": "url|extmetadata"})).get("query", {}).get("pages", {}).values()
     out = []
     for p in pages:
@@ -73,13 +80,19 @@ def commons(term, n):
     return out[:n]
 
 
+def photos(term, n):
+    return commons(term, n, "bitmap")
+
+
 def resolve(url):
     """A page or manifest from `find` -> a direct video file URL."""
     if m := re.match(r"https://archive\.org/details/([^/?#]+)", url):
         files = get_json(f"https://archive.org/metadata/{m.group(1)}")["files"]
         mp4s = sorted((f for f in files if f["name"].lower().endswith(".mp4")), key=lambda f: int(f.get("size", 0)))
+        if not mp4s:  # an audio item (speech, phone call): its MP3
+            mp4s = sorted((f for f in files if f["name"].lower().endswith(".mp3")), key=lambda f: int(f.get("size", 0)))
         if not mp4s:
-            sys.exit(f"find_footage: no MP4 in {url}")
+            sys.exit(f"find_footage: no MP4 or MP3 in {url}")
         best = next((f for f in mp4s if "512kb" not in f["name"]), mp4s[-1])  # prefer the full-quality derivative
         return f"https://archive.org/download/{m.group(1)}/{urllib.parse.quote(best['name'])}"
     if url.endswith("collection.json"):  # NASA manifest
@@ -130,7 +143,7 @@ if __name__ == "__main__":
     else:
         for name in (["archive", "nasa", "commons", "pixabay"] if a.source == "all" else [a.source]):
             try:
-                for hit in globals()[name](a.term, a.n):
+                for hit in globals()[name.replace("-", "_")](a.term, a.n):
                     print(json.dumps(hit))
             except Exception as e:  # one source down shouldn't stop the others
                 print(f"find_footage: {name} failed ({e}); trying the next source.", file=sys.stderr)
