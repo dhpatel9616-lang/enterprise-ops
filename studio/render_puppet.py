@@ -7,7 +7,7 @@
 captions.json (optional): [{"start": 0.0, "end": 1.8, "text": "Hi!"}, ...]
 --sheet out.png renders a mouth-shape reference sheet instead of a clip.
 """
-import argparse, importlib.util, json, os, shutil, subprocess, tempfile
+import argparse, importlib.util, json, os, shutil, subprocess, tempfile, textwrap
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from xml.sax.saxutils import escape
@@ -46,11 +46,13 @@ def blink_at(t):
 def caption(t, captions):
     for c in captions:
         if c["start"] <= t < c["end"]:
-            text = escape(c["text"])
             x, y, w, h = L["box"]
+            rows = textwrap.wrap(c["text"], int(w / 27)) or [""]  # bold 42 px is ~27 px a character; long lines wrap
+            size = 42 if len(rows) == 1 else 36
+            top = y + h / 2 - (len(rows) - 1) * size * 0.55 + size * 0.38
+            text = "".join(f'<tspan x="{x + w / 2}" y="{top + i * size * 1.1}">{escape(r)}</tspan>' for i, r in enumerate(rows))
             return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="36" fill="#23313F" fill-opacity="0.92"/>'
-                    f'<text x="{x + w / 2}" y="{y + h / 2 + 16}" font-family="DejaVu Sans" font-weight="bold" font-size="42" '
-                    f'fill="#fff" text-anchor="middle">{text}</text>')
+                    f'<text font-family="DejaVu Sans" font-weight="bold" font-size="{size}" fill="#fff" text-anchor="middle">{text}</text>')
     return ""
 
 
