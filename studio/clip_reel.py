@@ -29,13 +29,23 @@ def caption_lines(video, words_per_line=5):
     except ImportError:
         return []
     segs, _ = WhisperModel("small.en", device="cpu", compute_type="int8").transcribe(audio16k(video), word_timestamps=True)
-    words = [w for s in segs for w in (s.words or [])]
+    return chunk_words([(w.start, w.end, w.word) for s in segs for w in (s.words or [])], words_per_line)
+
+
+def chunk_words(words, words_per_line=5):
+    """[(start, end, word)] -> caption lines; a token without a leading space ("10" ",000") joins the word before it."""
+    merged = []
+    for st, en, w in words:
+        if merged and not w.startswith(" "):
+            merged[-1] = (merged[-1][0], en, merged[-1][2] + w)
+        else:
+            merged.append((st, en, w))
     lines = []
-    for i in range(0, len(words), words_per_line):
-        chunk = words[i:i + words_per_line]
-        text = "".join(w.word for w in chunk).strip()
+    for i in range(0, len(merged), words_per_line):
+        chunk = merged[i:i + words_per_line]
+        text = "".join(w for _, _, w in chunk).strip()
         if any(ch.isalpha() for ch in text):  # whisper writes "....." over music and tones
-            lines.append((chunk[0].start, chunk[-1].end, text))
+            lines.append((chunk[0][0], chunk[-1][1], text))
     return lines
 
 
