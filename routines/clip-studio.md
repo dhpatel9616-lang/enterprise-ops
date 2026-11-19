@@ -96,4 +96,9 @@ clip, on Sundays only:
 3. Upload it (`python3 studio/upload_video.py montage.mp4`) and post it to
    **YouTube only** with `python3 studio/buffer_clips.py post` (`videos` has
    just `youtube`; description lists each clip with its source; same draft
-   rules as step 4).
+   rules as step 4). **Known gap (2026-11-15):** Buffer's API only takes
+   YouTube *Shorts* (vertical, under 3 min) and refuses the montage, and
+   `studio/youtube_upload.py` signs in to the promo channel @WadeCapital
+   (never post clips there). Until the owner connects a clip-channel
+   uploader, stop after the upload and put the montage link, title and
+   description in the Notes for the owner to upload by hand.
