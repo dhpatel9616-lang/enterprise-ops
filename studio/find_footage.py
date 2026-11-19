@@ -25,7 +25,7 @@ import argparse, json, os, re, subprocess, sys, tempfile, urllib.parse, urllib.r
 from pathlib import Path
 
 MAX_DOWNLOAD = 400 << 20  # bytes
-UA = {"User-Agent": "Mozilla/5.0 (WadeCapital footage finder)"}
+UA = {"User-Agent": "WadeCapitalFootageFinder/1.0 (https://github.com/dhpatel9616-lang/enterprise-ops)"}  # Wikimedia 429s browser-like UAs
 OK_COMMONS = re.compile(r"^(public domain|pd|cc0|cc[ -]by(-sa)?( \d\.\d)?)", re.I)  # no NC/ND: we cut and publish
 
 
@@ -72,7 +72,7 @@ def commons(term, n, kind="video"):
     out = []
     for p in pages:
         ii = p["imageinfo"][0]
-        meta = {k: re.sub(r"<[^>]+>", "", v.get("value", "")) for k, v in ii.get("extmetadata", {}).items()}
+        meta = {k: re.sub(r"<[^>]+>", "", str(v.get("value", ""))) for k, v in ii.get("extmetadata", {}).items()}
         lic = meta.get("LicenseShortName", "")
         if OK_COMMONS.match(lic) and not re.search(r"\b(nc|nd)\b", lic, re.I):
             out.append({"source": "commons", "title": p["title"][5:], "url": ii["url"], "page": ii.get("descriptionurl"), "license": lic,

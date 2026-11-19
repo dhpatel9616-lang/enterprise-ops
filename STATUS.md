@@ -189,6 +189,8 @@ full context. **Read this after CLAUDE.md, before doing anything.** Update it
 - Check a PR's merged state before telling the owner it's live, and before
   resetting a branch (a PR merged minutes before its last commit once lost
   the law-firm code; it was restored in PR 16).
+- Wikimedia Commons 429s ("too many requests") full-size image downloads from sessions; 960px thumbnails
+  (`/thumb/.../960px-<name>`) worked once, then were blocked too (2026-11-18). Space requests out.
 - `find_footage.py get` must download through urllib (proxy); ffmpeg can't
   reach the web in the sandbox. Clips use `--keep-audio`.
 - Classifier blocks: writing Supabase settings, mass storage deletes, probing
