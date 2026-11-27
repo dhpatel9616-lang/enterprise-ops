@@ -16,7 +16,9 @@ row (Notion → Automation Control) to Error with the reason, and stop.
    what to repeat. Friday's slot goes to the series with the most views.
 1. Read the "Autopost — Social" row. Enabled = schedule in Buffer with
    automatic publishing; unchecked = Buffer drafts only.
-2. Make this week's five ads from `campaigns/launch-campaign.md` (Mon–Fri,
+2. Make this week's five ads from `campaigns/launch-campaign.md` (Mon–Fri;
+   Global Aggregate ads Mon/Wed/Fri follow content-mix → "Global Aggregate
+   ads, v2", which overrides the campaign for them;
    its rhythm table and story series), following content-mix and, above
    all, the campaign's **Round 4** rules (owner, 2026-11-04: funny and
    relatable, never preachy or AI-looking; its five formats, at least two

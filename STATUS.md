@@ -24,6 +24,10 @@ full context. **Read this after CLAUDE.md, before doing anything.** Update it
   morals, good humor, nothing too controversial (`brand-voice`).
 - **Voices (2026-11-12):** AI voice for Shorts, ads, Robot, lighter videos;
   the owner records one voiceover a week for the Sovereign essay (Friday).
+- **Global Aggregate ads v2 (2026-11-27):** 3 a week (Mon/Wed/Fri), 7–15 s,
+  question hook, fast text or a young fast casual AI voice, face-off /
+  fast-cut footage / POV looks, tone by story, endings A/B tested
+  (`content-mix`). Owner picking the voice from 3 samples (default am_adam).
 - **Clips: archive recordings with photos (2026-11-17):** 2–3 a week, old
   phone calls/speeches over photos (`clip_reel.py --photos`, `find_footage
   --source archive-audio / photos`).
