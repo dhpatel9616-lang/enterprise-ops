@@ -19,6 +19,10 @@ Captions must come from studio/vo_check.py (timed to the spoken words).
   {"at": 0, "video": "airport.mp4"}, {"at": 3, "card": {...}}, {"at": 9, "image": "../brand/ga-endcard.png"}
 "image" = a still (for example the product's own page) shown full-window.
 
+No Robot (Global Aggregate ads, owner 2026-11-27): leave out "puppet".
+No voice (fast-text version): leave out "audio" and give "seconds": N; the captions
+file is then the on-screen text, timed by hand ([{"start": 0, "end": 1.4, "text": "..."}]).
+
 puppet = Robot rendered WITHOUT captions (`render_puppet.py --layout tall`); only the head is used.
 Videos are slowed (or looped) to fill their slot; cards are rendered once.
 """
@@ -61,7 +65,7 @@ def card_png(card, out):
 def main(spec_path, out):
     base = Path(spec_path).parent
     spec = json.loads(Path(spec_path).read_text())
-    total = dur(base / spec["audio"])
+    total = dur(base / spec["audio"]) if spec.get("audio") else float(spec["seconds"])
     caps = json.loads((base / spec["captions"]).read_text())
     top = spec["top"]
     for seg in top:  # "at": caption line -> start time of that spoken line
@@ -73,9 +77,11 @@ def main(spec_path, out):
     try:
         # Scenes and cards are composed into one window first, then laid over a blurred, dimmed copy of
         # that same window, so the whole 9:16 frame is the story.
-        inputs = ["-f", "lavfi", "-i", f"color=c={BG}:s={W}x{TOP_H}:r={FPS}:d={total:.2f}",
-                  "-i", str(base / spec["puppet"]), "-i", str(base / spec["audio"])]
-        graph, last, n = [], "0:v", 3
+        inputs = ["-f", "lavfi", "-i", f"color=c={BG}:s={W}x{TOP_H}:r={FPS}:d={total:.2f}"]
+        inputs += ["-i", str(base / spec["audio"])] if spec.get("audio") else ["-f", "lavfi", "-t", f"{total:.2f}", "-i", "anullsrc=r=44100:cl=stereo"]
+        if spec.get("puppet"):
+            inputs += ["-i", str(base / spec["puppet"])]
+        graph, last, n = [], "0:v", inputs.count("-i")  # next input index
         for i, seg in enumerate(top):
             a, b = seg["start"], min(seg["end"], total)
             if "video" in seg:
@@ -101,17 +107,19 @@ def main(spec_path, out):
                              f"fontsize=30:fontcolor=white@0.85:borderw=2:bordercolor=black:x=28:y=h-56:"
                              f"enable='between(t,{a:.2f},{b:.2f})'[cr{i}]")
                 last = f"cr{i}"
+        graph += [f"[{last}]split[w1][w2]",
+                  f"[w1]scale=-2:{H},crop={W}:{H},boxblur=40,eq=brightness=-0.04:saturation=1.2[bg]", f"[bg][w2]overlay=0:{TOP_Y}[v]"]
+        last = "v"
         # Robot: just the head (from the tall puppet frame), in a round bubble with a thin ring, bottom right of the scene.
         r = PIP // 2
-        graph += [f"[{last}]split[w1][w2]",
-                  f"[w1]scale=-2:{H},crop={W}:{H},boxblur=40,eq=brightness=-0.04:saturation=1.2[bg]", f"[bg][w2]overlay=0:{TOP_Y}[v]",
-                  f"[1:v]crop=640:640:220:430,scale={PIP}:{PIP},format=rgba,"
-                  f"geq=r='r(X,Y)':g='g(X,Y)':b='b(X,Y)':a='if(lt(hypot(X-{r},Y-{r}),{r - 6}),255,0)'[head]",
-                  f"color=c={MIST}:s={PIP}x{PIP},format=rgba,geq=r='r(X,Y)':g='g(X,Y)':b='b(X,Y)':"
-                  f"a='if(lt(hypot(X-{r},Y-{r}),{r}),255,0)'[ring]",
-                  f"[ring][head]overlay=0:0:shortest=1[pip]",
-                  f"[v][pip]overlay={W - PIP - 30}:{TOP_Y + TOP_H - PIP // 2 - 40}:shortest=1[vr]"]
-        last = "vr"
+        if spec.get("puppet"):
+            graph += [f"[2:v]crop=640:640:220:430,scale={PIP}:{PIP},format=rgba,"
+                    f"geq=r='r(X,Y)':g='g(X,Y)':b='b(X,Y)':a='if(lt(hypot(X-{r},Y-{r}),{r - 6}),255,0)'[head]",
+                    f"color=c={MIST}:s={PIP}x{PIP},format=rgba,geq=r='r(X,Y)':g='g(X,Y)':b='b(X,Y)':"
+                    f"a='if(lt(hypot(X-{r},Y-{r}),{r}),255,0)'[ring]",
+                    f"[ring][head]overlay=0:0:shortest=1[pip]",
+                    f"[v][pip]overlay={W - PIP - 30}:{TOP_Y + TOP_H - PIP // 2 - 40}:shortest=1[vr]"]
+            last = "vr"
         # Series label above the scene window, captions below it (pre-wrapped; textfile avoids escaping).
         if spec.get("series"):
             (tmp / "series.txt").write_text(spec["series"])
@@ -126,7 +134,7 @@ def main(spec_path, out):
                              f"borderw=5:bordercolor=black:x=(w-text_w)/2:y={TOP_Y + TOP_H + 120 + j * 82}:enable='gte(t,{c['start']:.2f})*lt(t,{c['end']:.2f})'[c{i}_{j}]")
                 last = f"c{i}_{j}"
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *inputs, "-filter_complex", ";".join(graph),
-                        "-map", f"[{last}]", "-map", "2:a", "-t", f"{total:.2f}", "-r", str(FPS), "-c:v", "libx264",
+                        "-map", f"[{last}]", "-map", "1:a", "-t", f"{total:.2f}", "-r", str(FPS), "-c:v", "libx264",
                         "-pix_fmt", "yuv420p", "-crf", "20", "-c:a", "aac", "-movflags", "+faststart", out], check=True)
     finally:
         shutil.rmtree(tmp)

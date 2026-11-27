@@ -76,7 +76,7 @@ cut from it like Robot's.
 
 ## Weekly short-form slate
 The launch campaign (`campaigns/launch-campaign.md`) sets the week: five ads
-Mon–Fri alternating The Sovereign and The Global Aggregate, each on Instagram
+Mon–Fri: The Global Aggregate Mon/Wed/Fri, The Sovereign Tue/Thu (owner, 2026-11-27), each on Instagram
 Reels, TikTok and YouTube Shorts, plus Robot's Short on Sunday. PoolParty
 joins after launch; clipping ads when a source exists.
 
@@ -155,16 +155,52 @@ Sovereign or Global Aggregate promos.
   visitor):
   `trending_clusters?select=cluster_id,country_count,source_count,article_count,latest_activity&order=country_count.desc&limit=30`,
   then `articles?select=title,source,country,url,published_at&cluster_id=eq.<id>`.
-- Story ads: pick a cluster from the last 48 hours with 3+ countries, preferring
-  science, economy, sport, culture, space, health, business. Rule 1 clusters
-  (alleged crimes against identifiable people, private people)
-  are made as drafts.
-- Generic brand ads (By the numbers, How it works, Who it's for) need no
-  story and can always post; see `campaigns/launch-campaign.md`.
-- Beats: two or three real headlines from different countries (outlet +
-  country + date, exactly as published) → "covered by N outlets in M
-  countries" → "Use The Global Aggregate". Render the headline cards with
-  `text_reel.py` image scenes (our own branded cards; no screenshots needed).
+### Global Aggregate ads, v2 (owner, 2026-11-27; replaces the old beats)
+Why: captioned photos read by a flat voice got no engagement, even with a
+huge story behind them (Jensen Huang, 36 countries, 65 outlets).
+- **Three a week: Monday, Wednesday, Friday** (The Sovereign gets Tuesday and
+  Thursday). Only stories with a real "wait, what?" detail: from the
+  most-covered clusters of the last 48 hours (highest `country_count`), pick
+  the one with the most surprising true detail, not just the biggest. No
+  good story that day: a generic brand ad instead (By the numbers, How it
+  works, Who it's for; `campaigns/launch-campaign.md`).
+- **7–15 seconds.** Loop-friendly; no slow intro, no logo first.
+- **The hook is a question, in the first 1.5 s**, big on screen (and spoken
+  in the voiced version): "Can the US government force a CEO to come back to
+  work?" Then the answer, one twist, the reach ("36 countries covered it"),
+  the ending.
+- **Two versions, alternating** (run notes say which):
+  1. *Fast text, no voice:* 5–7 big text beats, about 1.5 s each, every beat
+     a new picture.
+  2. *Energetic AI voice:* young, fast, casual, like a 22-year-old news
+     TikToker telling a friend; never a newsreader. Kokoro, `--speed 1.25`,
+     voice chosen by the owner (until they pick: `am_adam`). Captions from
+     `vo_check.py`.
+- **Pick the look per story, never captioned photos alone and never a
+  static card for more than 2 s:**
+  - *Headline face-off:* 2–3 countries' real headlines slammed on screen
+    side by side (outlet + country, word for word), plus one line on who
+    spun it hardest.
+  - *Real footage, fast cuts:* the government's own video of the people
+    involved (briefings, hearings, White House / Pentagon), a cut every 1–2 s.
+  - *Meme / POV:* "POV: you're Jensen Huang and the Pentagon just found a
+    Cold War law"; the real story is the punchline.
+- **Tone depends on the story:** roast the absurd ones; wars, disasters and
+  deaths get a straight, serious version (no jokes at victims).
+- **Ending: test all three and keep what works** (rotate; name the ending in
+  the run notes so the Strategist can compare views, watch time and comments
+  after two weeks): *cliffhanger* ("See how the other 35 countries covered
+  it, link in bio"), *quick brand tag* (1 s GA end card + globalaggregate.org),
+  *comment bait* (a real question for the comments; link in the caption).
+- **Honesty:** headlines word for word with outlet and country; "reports say"
+  for anything unconfirmed. Rule 1 still decides drafts: keep the ad on the
+  public figures and the government, never on a private person caught up in
+  the story (in the Huang story, the ad is about the Pentagon and the law,
+  not the affair).
+- **Build:** `studio/story_reel.py` with no `"puppet"` (no Robot in GA ads);
+  for the fast-text version also no `"audio"`, a `"seconds"` length and
+  hand-timed captions (the script's docstring shows how). Footage from
+  `studio/find_footage.py`. Look at three frames before posting.
 - If `GA_SUPABASE_ANON_KEY` isn't set, skip and say so in the run notes.
   Add the ownership disclosure when branded as The Sovereign (`monetization`).
 
